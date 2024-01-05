@@ -9,7 +9,7 @@
 			<Target title="Debug">
 				<Option output="bin/Debug/cruzARG" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
-				<Option type="1" />
+				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
@@ -31,7 +31,18 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="SFML/include" />
+			<Add directory="SFML/bin" />
 		</Compiler>
+		<Linker>
+			<Add library="sfml-graphics" />
+			<Add library="sfml-audio" />
+			<Add library="sfml-window" />
+			<Add library="sfml-network" />
+			<Add library="sfml-system" />
+			<Add directory="SFML/lib" />
+			<Add directory="SFML/bin" />
+		</Linker>
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
