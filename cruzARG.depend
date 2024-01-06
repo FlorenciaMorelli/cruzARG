@@ -851,11 +851,18 @@
 	"Personaje.h"
 	<SFML/Graphics.hpp>
 
+<<<<<<< HEAD
 1704543112 source:e:\2cuat2023\programacionii\proyectofinal\cruzarg\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Personaje.h"
 	"Taxi.h"
+=======
+1704551162 source:e:\2cuat2023\programacionii\proyectofinal\cruzarg\main.cpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	"Juego.h"
+>>>>>>> controlador-feature_logica
 
 1704420616 e:\2cuat2023\programacionii\proyectofinal\cruzarg\sfml\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -1275,6 +1282,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
+<<<<<<< HEAD
 1704511750 e:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.h
 	<SFML/Graphics.hpp>
 
@@ -1289,3 +1297,27 @@
 	"Taxi.h"
 	<SFML/Graphics.hpp>
 
+=======
+1704546998 e:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.h
+	<SFML/Graphics.hpp>
+
+1704546998 e:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.h
+	<SFML/Graphics.hpp>
+
+1704547454 source:e:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.cpp
+	"Personaje.h"
+	<SFML/Graphics.hpp>
+
+1704546998 source:e:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.cpp
+	"Taxi.h"
+	<SFML/Graphics.hpp>
+
+1704550982 e:\2cuat2023\programacionii\proyectofinal\cruzarg\include\juego.h
+	<SFML/Graphics.hpp>
+	"../Personaje.h"
+	"../Taxi.h"
+
+1704551200 source:e:\2cuat2023\programacionii\proyectofinal\cruzarg\src\juego.cpp
+	"Juego.h"
+
+>>>>>>> controlador-feature_logica

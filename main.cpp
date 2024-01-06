@@ -1,12 +1,17 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+<<<<<<< HEAD
 #include "Personaje.h"
 #include "Taxi.h"
+=======
+#include "Juego.h"
+>>>>>>> controlador-feature_logica
 
 using namespace sf;
 
 int main()
 {
+<<<<<<< HEAD
     //Ventana general
     RenderWindow window(VideoMode(960, 540), "CruzARG", Style::Close);
     Personaje chaboncito(window.getSize());
@@ -64,6 +69,11 @@ int main()
 
         window.display(); //Mostrar
     }
+=======
+    Juego juego;
+
+    juego.loop();
+>>>>>>> controlador-feature_logica
 
     return 0;
 }
