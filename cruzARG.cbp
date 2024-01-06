@@ -45,6 +45,8 @@
 			<Add directory="SFML/lib" />
 			<Add directory="SFML/bin" />
 		</Linker>
+		<Unit filename="Juego.cpp" />
+		<Unit filename="Juego.h" />
 		<Unit filename="Personaje.cpp" />
 		<Unit filename="Personaje.h" />
 		<Unit filename="Taxi.cpp" />

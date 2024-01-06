@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1704511394 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\main.cpp
+1704583010 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
-	"Personaje.h"
+	"Juego.h"
 
 1704420616 d:\2cuat2023\programacionii\proyectofinal\cruzarg\sfml\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -844,25 +844,17 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1704511750 d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.h
+1704546998 d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.h
 	<SFML/Graphics.hpp>
 
-1704511750 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.cpp
+1704580150 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.cpp
 	"Personaje.h"
 	<SFML/Graphics.hpp>
 
-<<<<<<< HEAD
-1704543112 source:e:\2cuat2023\programacionii\proyectofinal\cruzarg\main.cpp
-	<SFML/Graphics.hpp>
-	<iostream>
-	"Personaje.h"
-	"Taxi.h"
-=======
 1704551162 source:e:\2cuat2023\programacionii\proyectofinal\cruzarg\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Juego.h"
->>>>>>> controlador-feature_logica
 
 1704420616 e:\2cuat2023\programacionii\proyectofinal\cruzarg\sfml\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -1282,22 +1274,6 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-<<<<<<< HEAD
-1704511750 e:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.h
-	<SFML/Graphics.hpp>
-
-1704542876 e:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.h
-	<SFML/Graphics.hpp>
-
-1704542516 source:e:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.cpp
-	"Personaje.h"
-	<SFML/Graphics.hpp>
-
-1704542974 source:e:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.cpp
-	"Taxi.h"
-	<SFML/Graphics.hpp>
-
-=======
 1704546998 e:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.h
 	<SFML/Graphics.hpp>
 
@@ -1320,4 +1296,18 @@
 1704551200 source:e:\2cuat2023\programacionii\proyectofinal\cruzarg\src\juego.cpp
 	"Juego.h"
 
->>>>>>> controlador-feature_logica
+1704580150 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.cpp
+	"Taxi.h"
+	<SFML/Graphics.hpp>
+
+1704580150 d:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.h
+	<SFML/Graphics.hpp>
+
+1704583138 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.cpp
+	"Juego.h"
+
+1704583148 d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.h
+	<SFML/Graphics.hpp>
+	"Personaje.h"
+	"Taxi.h"
+

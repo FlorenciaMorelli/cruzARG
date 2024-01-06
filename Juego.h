@@ -2,8 +2,8 @@
 #define JUEGO_H
 
 #include <SFML/Graphics.hpp>
-#include "../Personaje.h"
-#include "../Taxi.h"
+#include "Personaje.h"
+#include "Taxi.h"
 
 using namespace sf;
 
