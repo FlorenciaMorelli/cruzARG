@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "Personaje.h"
 
 using namespace sf;
 
@@ -7,11 +8,7 @@ int main()
 {
     //Ventana general
     RenderWindow window(VideoMode(960, 540), "CruzARG", Style::Close);
-    RectangleShape chaboncito;
-
-    chaboncito.setSize(Vector2f(50.0f, 50.0f));
-    //chaboncito.setOrigin(Vector2f(chaboncito.getSize().x / 2.0f, chaboncito.getSize().y / 2.0f));
-    chaboncito.setPosition(Vector2f(window.getSize().x / 2.0f, window.getSize().y - chaboncito.getSize().y));
+    Personaje chaboncito(window.getSize());
 
     RectangleShape taxi;
 
@@ -34,18 +31,8 @@ int main()
                 case Event::Closed: //Si se toca para cerrar
                     window.close(); //Cerrar
                     break;
-                case Event::KeyPressed:
-                    if(Keyboard::Key::Up == evnt.key.code)
-                        chaboncito.move(0.0f, -50.0f);
-                    if(Keyboard::Key::Down == evnt.key.code)
-                        chaboncito.move(0.0f, 50.0f);
-                    if(Keyboard::Key::Left == evnt.key.code)
-                        chaboncito.move(-50.0f, 0.0f);
-                    if(Keyboard::Key::Right == evnt.key.code)
-                        chaboncito.move(50.0f, 0.0f);
-
-
-                    break;
+                case Event::KeyReleased:
+                    chaboncito.move(evnt);
             }
         }
 
@@ -57,11 +44,12 @@ int main()
             taxi.setPosition(Vector2f(-taxi.getSize().x, window.getSize().y / 2.0f - taxi.getSize().y)); //Reaparece en el x = 0, manteniendo la posición de y
         }
 
-        if(chaboncito.getGlobalBounds().intersects(taxi.getGlobalBounds()))
+        if(chaboncito.getShape().getGlobalBounds().intersects(taxi.getGlobalBounds()))
             window.close();
 
         window.clear(Color(150, 150, 150)); //Color gris para el fondo de la ventana
-        window.draw(chaboncito);
+
+        chaboncito.draw(window);
         window.draw(taxi);
 
 

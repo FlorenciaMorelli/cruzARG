@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1704504912 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\main.cpp
+1704511394 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
+	"Personaje.h"
 
 1704420616 d:\2cuat2023\programacionii\proyectofinal\cruzarg\sfml\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -842,4 +843,11 @@
 	<SFML/Graphics/PrimitiveType.hpp>
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
+
+1704511750 d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.h
+	<SFML/Graphics.hpp>
+
+1704511750 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.cpp
+	"Personaje.h"
+	<SFML/Graphics.hpp>
 
