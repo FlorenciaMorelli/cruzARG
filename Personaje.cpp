@@ -1,6 +1,9 @@
 #include "Personaje.h"
 #include <SFML/Graphics.hpp>
 
+using namespace sf;
+
+
 Personaje::Personaje(Vector2u tamanio)
 {
     personaje.setSize(Vector2f(50.0f, 50.0f));

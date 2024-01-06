@@ -9,16 +9,16 @@ class Taxi
 {
     private:
         RectangleShape taxi;
+        float posOriginalX, posOriginalY;
 
     public:
-        Taxi(Vector2u tamanio);
+        Taxi(float posX, float posY);
         ~Taxi();
 
         void draw(RenderWindow& window);
-        void move(Vector2u tam);
+        void move(Vector2u tamanioVentana);
 
         RectangleShape getShape() { return this->taxi; } //Para detectar colisiones
-        float originalPosEx, originalPosY;
 };
 
 #endif // TAXI_H
