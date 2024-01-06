@@ -57,6 +57,9 @@ int main()
             taxi.setPosition(Vector2f(-taxi.getSize().x, window.getSize().y / 2.0f - taxi.getSize().y)); //Reaparece en el x = 0, manteniendo la posición de y
         }
 
+        if(chaboncito.getGlobalBounds().intersects(taxi.getGlobalBounds()))
+            window.close();
+
         window.clear(Color(150, 150, 150)); //Color gris para el fondo de la ventana
         window.draw(chaboncito);
         window.draw(taxi);
