@@ -2,22 +2,19 @@
 #define PERSONAJE_H
 
 #include <SFML/Graphics.hpp>
+#include "BaseObject.h"
 
 using namespace sf;
 
-class Personaje
+class Personaje : public BaseObject
 {
-    private:
-        RectangleShape personaje;
-
     public:
         Personaje(Vector2u tamanio);
         ~Personaje();
 
-        void draw(RenderWindow& window);
         void move(Event evnt);
 
-        RectangleShape getShape() { return this->personaje; } //Para detectar colisiones
+
 };
 
 #endif // PERSONAJE_H
