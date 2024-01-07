@@ -12,7 +12,7 @@ class Taxi : public BaseObject
         float posOriginalX, posOriginalY;
 
     public:
-        Taxi(float posX, float posY, Texture texture);
+        Taxi(float posX, float posY);
         ~Taxi();
 
         void move(Vector2u tamanioVentana);

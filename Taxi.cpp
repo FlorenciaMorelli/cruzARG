@@ -6,10 +6,13 @@
 
 using namespace sf;
 
-Taxi::Taxi(float posX, float posY, Texture texture)
+Taxi::Taxi(float posX, float posY)
 {
     shape.setSize(Vector2f(ANCHO_TAXI, ALTURA_TAXI));
-    shape.setTexture(&texture);
+
+    this->shapeTexture.loadFromFile("./assets/taxi.png");
+    shape.setTexture(&shapeTexture);
+
     shape.setPosition(Vector2f(posX, posY));
 
     this->posOriginalX = posX;
