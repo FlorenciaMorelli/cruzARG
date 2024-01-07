@@ -9,7 +9,10 @@ using namespace sf;
 Taxi::Taxi(float posX, float posY)
 {
     shape.setSize(Vector2f(ANCHO_TAXI, ALTURA_TAXI));
-    shape.setFillColor(Color::Yellow);
+
+    this->shapeTexture.loadFromFile("./assets/taxi.png");
+    shape.setTexture(&shapeTexture);
+
     shape.setPosition(Vector2f(posX, posY));
 
     this->posOriginalX = posX;
