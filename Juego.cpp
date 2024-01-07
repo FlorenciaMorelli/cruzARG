@@ -1,5 +1,7 @@
 #include "Juego.h"
 
+using namespace sf;
+
 Juego::Juego()
 {
     this->window = new RenderWindow(VideoMode(960, 540), "CruzARG", Style::Close);

@@ -844,10 +844,11 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1704546998 d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.h
+1704585172 d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.h
 	<SFML/Graphics.hpp>
+	"BaseObject.h"
 
-1704580150 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.cpp
+1704585250 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.cpp
 	"Personaje.h"
 	<SFML/Graphics.hpp>
 
@@ -1296,18 +1297,27 @@
 1704551200 source:e:\2cuat2023\programacionii\proyectofinal\cruzarg\src\juego.cpp
 	"Juego.h"
 
-1704580150 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.cpp
+1704585454 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.cpp
 	"Taxi.h"
 	<SFML/Graphics.hpp>
+	"BaseObject.h"
 
-1704580150 d:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.h
+1704585454 d:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.h
 	<SFML/Graphics.hpp>
+	"BaseObject.h"
 
-1704583138 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.cpp
+1704585228 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.cpp
 	"Juego.h"
 
 1704583148 d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.h
 	<SFML/Graphics.hpp>
 	"Personaje.h"
 	"Taxi.h"
+
+1704585228 d:\2cuat2023\programacionii\proyectofinal\cruzarg\baseobject.h
+	<SFML/Graphics.hpp>
+
+1704585228 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\baseobject.cpp
+	"BaseObject.h"
+	<SFML/Graphics.hpp>
 

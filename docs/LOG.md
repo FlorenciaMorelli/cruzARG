@@ -8,3 +8,5 @@
 | 06-01-2024 | 00:30 | Modelo | Media | Bases de la clase "Personaje" |
 | 06-01-2024 | 09:30 | Modelo | Media | Bases de la clase "Taxi" |
 | 06-01-2024 | 11:30 | Controlador | Alta | Clase Juego y despejado del main |
+| 06-01-2024 | 21:00 | Modelo | Alta | Herencia de clases |
+
