@@ -10,3 +10,4 @@
 | 06-01-2024 | 11:30 | Controlador | Alta | Clase Juego y despejado del main |
 | 06-01-2024 | 21:00 | Modelo | Alta | Herencia de clases |
 | 06-01-2024 | 21:00 | Modelo | Media | Definición de datos |
+| 07-01-2024 | 15:00 | Modelo | Media | Prueba de texturas |
