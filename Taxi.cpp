@@ -6,10 +6,10 @@
 
 using namespace sf;
 
-Taxi::Taxi(float posX, float posY)
+Taxi::Taxi(float posX, float posY, Texture texture)
 {
     shape.setSize(Vector2f(ANCHO_TAXI, ALTURA_TAXI));
-    shape.setFillColor(Color::Yellow);
+    shape.setTexture(&texture);
     shape.setPosition(Vector2f(posX, posY));
 
     this->posOriginalX = posX;

@@ -6,9 +6,12 @@ using namespace sf;
 
 Juego::Juego()
 {
+    Texture taxiTexture;
+    taxiTexture.loadFromFile("./assets/taxi.png");
+
     this->window = new RenderWindow(VideoMode(ANCHO_VENTANA, ALTURA_VENTANA), TITULO_JUEGO, Style::Close);
     this->personaje = new Personaje(window->getSize());
-    this->taxi = new Taxi(0.0, window->getSize().y / 2);
+    this->taxi = new Taxi(0.0, window->getSize().y / 2, taxiTexture);
 
     Image image;
     image.loadFromFile("./assets/icon.png");
