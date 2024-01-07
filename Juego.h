@@ -14,6 +14,8 @@ class Juego
         Personaje *personaje;
         Taxi *taxi;
         Taxi *taxi2;
+        Taxi *taxi3;
+
 
 
     public:

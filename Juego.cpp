@@ -9,7 +9,8 @@ Juego::Juego()
     this->window = new RenderWindow(VideoMode(ANCHO_VENTANA, ALTURA_VENTANA), TITULO_JUEGO, Style::Close);
     this->personaje = new Personaje(window->getSize());
     this->taxi = new Taxi(0.0, window->getSize().y / 2);
-    this->taxi2 = new Taxi((ANCHO_PERSONAJE + ANCHO_TAXI) + 2.5f, window->getSize().y / 2);
+    this->taxi2 = new Taxi(taxi->getPosOriginalX() - SEPARACION_TAXI, window->getSize().y / 2);
+    this->taxi3 = new Taxi(taxi2->getPosOriginalX() - SEPARACION_TAXI, window->getSize().y / 2);
 
 
     Image image;
@@ -50,6 +51,8 @@ void Juego::loop()
 
         taxi->move(window->getSize());
         taxi2->move(window->getSize());
+        taxi3->move(window->getSize());
+
 
 
 
@@ -63,12 +66,20 @@ void Juego::loop()
             window->close();
         }
 
+        if(personaje->getShape().getGlobalBounds().intersects(taxi3->getShape().getGlobalBounds()))
+        {
+            window->close();
+        }
+
+
+
 
         window->clear(Color(150, 150, 150)); //Color gris para el fondo de la ventana
 
         personaje->draw(*window);
-        taxi->draw(*window);
+        taxi3->draw(*window);
         taxi2->draw(*window);
+        taxi->draw(*window);
 
 
 

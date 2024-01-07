@@ -14,6 +14,7 @@ Taxi::Taxi(float posX, float posY)
     shape.setTexture(&shapeTexture);
 
     shape.setPosition(Vector2f(posX, posY));
+    shape.setOrigin(Vector2f(shape.getSize().x / 2.0f, shape.getSize().y / 2.0f));
 
     this->posOriginalX = posX;
     this->posOriginalY = posY;
@@ -31,6 +32,6 @@ void Taxi::move(Vector2u tamanioVentana)
 
     if(shape.getPosition().x > tamanioVentana.x) //Si el taxi está fuera de la ventana
     {
-        shape.setPosition(Vector2f(-shape.getSize().x, posOriginalY)); //Reaparece en el x = 0, manteniendo la posición de y
+        shape.setPosition(Vector2f(posOriginalX, posOriginalY)); //Reaparece en el x = 0, manteniendo la posición de y
     }
 }
