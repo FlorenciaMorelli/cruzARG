@@ -9,7 +9,7 @@ Personaje::Personaje(Vector2u tamanio)
 {
     shape.setSize(Vector2f(ANCHO_PERSONAJE, ALTURA_PERSONAJE));
     //Prueba de textura, no es la imagen correcta
-    this->shapeTexture.loadFromFile("./assets/personajeprueba.png");
+    this->shapeTexture.loadFromFile("./assets/messi.png");
     shape.setTexture(&shapeTexture);
 
     shape.setPosition(Vector2f(tamanio.x / 2.0f, tamanio.y - shape.getSize().y));
