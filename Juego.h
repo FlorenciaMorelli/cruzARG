@@ -13,6 +13,8 @@ class Juego
         RenderWindow *window;
         Personaje *personaje;
         Taxi *taxi;
+        Taxi *taxi2;
+
 
     public:
         Juego();

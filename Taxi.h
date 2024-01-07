@@ -16,6 +16,9 @@ class Taxi : public BaseObject
         ~Taxi();
 
         void move(Vector2u tamanioVentana);
+        float getPosOriginalX() { return this->posOriginalX; }
+        float getPosOriginalY() { return this->posOriginalY; }
+
 };
 
 #endif // TAXI_H

@@ -9,6 +9,8 @@ Juego::Juego()
     this->window = new RenderWindow(VideoMode(ANCHO_VENTANA, ALTURA_VENTANA), TITULO_JUEGO, Style::Close);
     this->personaje = new Personaje(window->getSize());
     this->taxi = new Taxi(0.0, window->getSize().y / 2);
+    this->taxi2 = new Taxi((ANCHO_PERSONAJE + ANCHO_TAXI) + 2.5f, window->getSize().y / 2);
+
 
     Image image;
     image.loadFromFile("./assets/icon.png");
@@ -47,6 +49,8 @@ void Juego::loop()
         //Esto pasa en todos los frames
 
         taxi->move(window->getSize());
+        taxi2->move(window->getSize());
+
 
 
         if(personaje->getShape().getGlobalBounds().intersects(taxi->getShape().getGlobalBounds()))
@@ -54,10 +58,18 @@ void Juego::loop()
             window->close();
         }
 
+        if(personaje->getShape().getGlobalBounds().intersects(taxi2->getShape().getGlobalBounds()))
+        {
+            window->close();
+        }
+
+
         window->clear(Color(150, 150, 150)); //Color gris para el fondo de la ventana
 
         personaje->draw(*window);
         taxi->draw(*window);
+        taxi2->draw(*window);
+
 
 
 
