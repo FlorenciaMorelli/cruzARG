@@ -2,12 +2,13 @@
 
 #include <SFML/Graphics.hpp>
 #include "BaseObject.h"
+#include "DEFINITIONS.h"
 
 using namespace sf;
 
 Taxi::Taxi(float posX, float posY)
 {
-    shape.setSize(Vector2f(90.0f, 60.0f));
+    shape.setSize(Vector2f(ANCHO_TAXI, ALTURA_TAXI));
     shape.setFillColor(Color::Yellow);
     shape.setPosition(Vector2f(posX, posY));
 
@@ -23,7 +24,7 @@ Taxi::~Taxi()
 
 void Taxi::move(Vector2u tamanioVentana)
 {
-    shape.move(0.2f, 0.0f);
+    shape.move(TAXI_VEL_MOVIMIENTO_X, TAXI_VEL_MOVIMIENTO_Y);
 
     if(shape.getPosition().x > tamanioVentana.x) //Si el taxi está fuera de la ventana
     {

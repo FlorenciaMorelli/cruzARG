@@ -1,10 +1,12 @@
 #include "Juego.h"
+#include "DEFINITIONS.h"
+
 
 using namespace sf;
 
 Juego::Juego()
 {
-    this->window = new RenderWindow(VideoMode(960, 540), "CruzARG", Style::Close);
+    this->window = new RenderWindow(VideoMode(ANCHO_VENTANA, ALTURA_VENTANA), TITULO_JUEGO, Style::Close);
     this->personaje = new Personaje(window->getSize());
     this->taxi = new Taxi(0.0, window->getSize().y / 2);
 
