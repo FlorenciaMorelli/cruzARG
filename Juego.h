@@ -6,6 +6,7 @@
 #include "Taxi.h"
 #include "Auto.h"
 #include "BarreraJersey.h"
+#include "Tiles.h"
 
 using namespace sf;
 
@@ -53,6 +54,33 @@ class Juego
         BarreraJersey *barrera22;
         BarreraJersey *barrera23;
         BarreraJersey *barrera24;
+
+        Tiles *asfalto;
+        Tiles *asfalto2;
+        Tiles *asfalto3;
+        Tiles *asfalto4;
+        Tiles *asfalto5;
+        Tiles *asfalto6;
+        Tiles *asfalto7;
+        Tiles *asfalto8;
+        Tiles *asfalto9;
+        Tiles *asfalto10;
+        Tiles *asfalto11;
+        Tiles *asfalto12;
+        Tiles *asfalto13;
+        Tiles *asfalto14;
+        Tiles *asfalto15;
+        Tiles *asfalto16;
+        Tiles *asfalto17;
+        Tiles *asfalto18;
+        Tiles *asfalto19;
+        Tiles *asfalto20;
+        Tiles *asfalto21;
+        Tiles *asfalto22;
+        Tiles *asfalto23;
+        Tiles *asfalto24;
+
+
 
 
 
