@@ -6,12 +6,18 @@
 
 using namespace sf;
 
-Auto::Auto(float posX, float posY)
+Auto::Auto(float posX, float posY, bool direccion)
 {
-    shape.setSize(Vector2f(100.0f, 40.0f));
+    shape.setSize(Vector2f(ANCHO_AUTO, ALTURA_AUTO));
 
-    this->shapeTexture.loadFromFile("./assets/car.png");
-    shape.setTexture(&shapeTexture);
+    this->direccion = direccion;
+    if(direccion){
+        this->shapeTexture.loadFromFile("./assets/carTrue.png");
+        shape.setTexture(&shapeTexture);
+    } else {
+        this->shapeTexture.loadFromFile("./assets/carFalse.png");
+        shape.setTexture(&shapeTexture);
+    }
 
     shape.setPosition(Vector2f(posX, posY));
     shape.setOrigin(Vector2f(shape.getSize().x / 2.0f, shape.getSize().y / 2.0f));
@@ -25,11 +31,19 @@ Auto::~Auto()
     //dtor
 }
 
-void Auto::move()
+void Auto::move(Vector2u tamanioVentana)
 {
-    shape.move(-0.2f, 0.0);
-    if(shape.getPosition().x < 0) //Si el taxi está fuera de la ventana
-    {
-        shape.setPosition(Vector2f(posOriginalX, posOriginalY)); //Reaparece en el x = 0, manteniendo la posición de y
+    if(direccion){
+        shape.move(AUTO_VEL_MOVIMIENTO_X, AUTO_VEL_MOVIMIENTO_Y);
+        if(shape.getPosition().x > tamanioVentana.x)
+        {
+            shape.setPosition(Vector2f(-ANCHO_AUTO, posOriginalY));
+        }
+    } else {
+        shape.move(-AUTO_VEL_MOVIMIENTO_X, AUTO_VEL_MOVIMIENTO_Y);
+        if(shape.getPosition().x < 0)
+        {
+            shape.setPosition(Vector2f(tamanioVentana.x + ANCHO_AUTO, posOriginalY));
+        }
     }
 }

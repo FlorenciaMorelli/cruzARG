@@ -10,9 +10,10 @@ class Taxi : public BaseObject
 {
     private:
         float posOriginalX, posOriginalY;
+        bool direccion;
 
     public:
-        Taxi(float posX, float posY);
+        Taxi(float posX, float posY, bool direccion);
         ~Taxi();
 
         void move(Vector2u tamanioVentana);
