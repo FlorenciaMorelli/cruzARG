@@ -32,6 +32,8 @@ void Taxi::move(Vector2u tamanioVentana)
 
     if(shape.getPosition().x > tamanioVentana.x) //Si el taxi está fuera de la ventana
     {
-        shape.setPosition(Vector2f(posOriginalX, posOriginalY)); //Reaparece en el x = 0, manteniendo la posición de y
+        shape.setPosition(Vector2f(posOriginalX + ANCHO_TAXI, posOriginalY)); //Reaparece en el x = 0, manteniendo la posición de y
     }
+
+    //tengo que resolver la latencia de cuanod sale el taxi 1 de la ventana y todavía está el taxi 2 en la ventana
 }

@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include "Personaje.h"
 #include "Taxi.h"
+#include "Auto.h"
 
 using namespace sf;
 
@@ -15,6 +16,7 @@ class Juego
         Taxi *taxi;
         Taxi *taxi2;
         Taxi *taxi3;
+        Auto *autito;
 
 
 
