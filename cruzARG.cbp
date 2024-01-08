@@ -45,6 +45,8 @@
 			<Add directory="SFML/lib" />
 			<Add directory="SFML/bin" />
 		</Linker>
+		<Unit filename="Auto.cpp" />
+		<Unit filename="Auto.h" />
 		<Unit filename="BaseObject.cpp" />
 		<Unit filename="BaseObject.h" />
 		<Unit filename="DEFINITIONS.h">
