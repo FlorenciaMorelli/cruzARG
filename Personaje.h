@@ -9,10 +9,10 @@ using namespace sf;
 class Personaje : public BaseObject
 {
     public:
-        Personaje(Vector2u tamanio);
+        Personaje(Vector2u tamanioVentana);
         ~Personaje();
 
-        void move(Event evnt);
+        void move(Event evnt, Vector2u tamanioVentana);
 
 
 };

@@ -6,7 +6,7 @@ using namespace sf;
 
 Juego::Juego()
 {
-    this->window = new RenderWindow(VideoMode(ANCHO_VENTANA, ALTURA_VENTANA), TITULO_JUEGO, Style::Close);
+    this->window = new RenderWindow(VideoMode::getDesktopMode(), TITULO_JUEGO, Style::Close | Style::Fullscreen);
     this->personaje = new Personaje(window->getSize());
     this->taxi = new Taxi(-ANCHO_TAXI, window->getSize().y / 2);
     this->taxi2 = new Taxi(taxi->getPosOriginalX() - SEPARACION_ENTRE_TAXIS, window->getSize().y / 2);
@@ -48,7 +48,7 @@ void Juego::loop()
                     }
                     break;
                 case Event::KeyReleased:
-                    personaje->move(evnt);
+                    personaje->move(evnt, window->getSize());
             }
         }
 
