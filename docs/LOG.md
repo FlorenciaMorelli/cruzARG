@@ -16,3 +16,4 @@
 | 07-01-2024 | 22:30 | Vista | Alta | FullScreen y corrección del personaje |
 | 08-01-2024 | 12:30 | Modelo | Alta | Creación de carriles, propiedad dirección y múltiples objetos |
 | 08-01-2024 | 13:30 | Modelo | Alta | Barreras New Jersey |
+| 08-01-2024 | 15:00 | Modelo | Alta | Asfalto perpendiculares |

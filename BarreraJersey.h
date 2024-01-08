@@ -8,10 +8,6 @@ class BarreraJersey : public BaseObject
     public:
         BarreraJersey(float posX, float posY);
         ~BarreraJersey();
-
-    protected:
-
-    private:
 };
 
 #endif // BARRERAJERSEY_H
