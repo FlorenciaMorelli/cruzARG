@@ -24,13 +24,18 @@ Juego::Juego()
     float carlosPellegrini = carriles * 12.0f;
 
 
-    this->taxi = new Taxi(-ANCHO_TAXI, cerrito);
-    this->taxi2 = new Taxi(taxi->getPosOriginalX() - SEPARACION_ENTRE_TAXIS, cerrito);
-    this->taxi3 = new Taxi(taxi2->getPosOriginalX() - SEPARACION_ENTRE_TAXIS, cerrito);
-    this->taxi4 = new Taxi(taxi3->getPosOriginalX() - SEPARACION_PARA_PERSONAJE, cerrito);
-    this->taxi5 = new Taxi(taxi4->getPosOriginalX() - SEPARACION_ENTRE_TAXIS, cerrito);
+    this->taxi = new Taxi(-ANCHO_TAXI, cerrito, true);
+    this->taxi2 = new Taxi(taxi->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, cerrito, true);
+    this->taxi3 = new Taxi(taxi2->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, carlosPellegrini, false);
+    this->taxi4 = new Taxi(taxi3->getPosOriginalX() - SEPARACION_PARA_PERSONAJE, nueveJulioAutos1, true);
+    this->taxi5 = new Taxi(taxi4->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, nueveJulioAutos2, false);
 
-    this->autito = new Auto(window->getSize().x, nueveJulioAutos1);
+    this->autito = new Auto(window->getSize().x, nueveJulioAutos1, true);
+    this->autito2 = new Auto(autito->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, nueveJulioAutos2, false);
+    this->autito3 = new Auto(autito2->getPosOriginalX() - SEPARACION_PARA_PERSONAJE, nueveJulioAutos1, true);
+    this->autito4 = new Auto(autito3->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, carlosPellegrini, false);
+    this->autito5 = new Auto(autito4->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, cerrito, true);
+    this->autito6 = new Auto(autito5->getPosOriginalX() - SEPARACION_PARA_PERSONAJE, nueveJulioAutos2, false);
 
 
     Image image;
@@ -76,8 +81,12 @@ void Juego::loop()
         taxi5->move(window->getSize());
 
 
-        autito->move();
-
+        autito->move(window->getSize());
+        autito2->move(window->getSize());
+        autito3->move(window->getSize());
+        autito4->move(window->getSize());
+        autito5->move(window->getSize());
+        autito6->move(window->getSize());
 
 
 
@@ -112,6 +121,32 @@ void Juego::loop()
             window->close();
         }
 
+        if(personaje->getShape().getGlobalBounds().intersects(autito2->getShape().getGlobalBounds()))
+        {
+            window->close();
+        }
+
+        if(personaje->getShape().getGlobalBounds().intersects(autito3->getShape().getGlobalBounds()))
+        {
+            window->close();
+        }
+
+        if(personaje->getShape().getGlobalBounds().intersects(autito4->getShape().getGlobalBounds()))
+        {
+            window->close();
+        }
+
+        if(personaje->getShape().getGlobalBounds().intersects(autito5->getShape().getGlobalBounds()))
+        {
+            window->close();
+        }
+
+        if(personaje->getShape().getGlobalBounds().intersects(autito6->getShape().getGlobalBounds()))
+        {
+            window->close();
+        }
+
+
 
 
 
@@ -124,7 +159,13 @@ void Juego::loop()
         taxi2->draw(*window);
         taxi->draw(*window);
 
+        autito6->draw(*window);
         autito->draw(*window);
+        autito2->draw(*window);
+        autito3->draw(*window);
+        autito4->draw(*window);
+        autito5->draw(*window);
+
 
 
         window->display(); //Mostrar

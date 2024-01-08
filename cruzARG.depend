@@ -422,9 +422,10 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1704476122 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\main.cpp
+1704723544 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
+	"Juego.h"
 
 1699047563 c:\users\fmorelli.diagmaipu\documents\cruzarg\sfml\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -1336,4 +1337,52 @@
 1704675186 d:\2cuat2023\programacionii\proyectofinal\cruzarg\auto.h
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
+
+1704727742 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\auto.cpp
+	"Auto.h"
+	<SFML/Graphics.hpp>
+	"BaseObject.h"
+	"DEFINITIONS.h"
+
+1704726874 c:\users\fmorelli.diagmaipu\documents\cruzarg\auto.h
+	<SFML/Graphics.hpp>
+	"BaseObject.h"
+
+1704723544 c:\users\fmorelli.diagmaipu\documents\cruzarg\baseobject.h
+	<SFML/Graphics.hpp>
+
+1704727581 c:\users\fmorelli.diagmaipu\documents\cruzarg\definitions.h
+
+1704723544 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\baseobject.cpp
+	"BaseObject.h"
+	<SFML/Graphics.hpp>
+
+1704727881 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.cpp
+	"Juego.h"
+	"DEFINITIONS.h"
+
+1704727149 c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.h
+	<SFML/Graphics.hpp>
+	"Personaje.h"
+	"Taxi.h"
+	"Auto.h"
+
+1704723544 c:\users\fmorelli.diagmaipu\documents\cruzarg\personaje.h
+	<SFML/Graphics.hpp>
+	"BaseObject.h"
+
+1704727742 c:\users\fmorelli.diagmaipu\documents\cruzarg\taxi.h
+	<SFML/Graphics.hpp>
+	"BaseObject.h"
+
+1704723544 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\personaje.cpp
+	"Personaje.h"
+	<SFML/Graphics.hpp>
+	"DEFINITIONS.h"
+
+1704727881 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\taxi.cpp
+	"Taxi.h"
+	<SFML/Graphics.hpp>
+	"BaseObject.h"
+	"DEFINITIONS.h"
 

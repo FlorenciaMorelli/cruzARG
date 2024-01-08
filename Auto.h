@@ -11,12 +11,13 @@ class Auto : public BaseObject
 {
     private:
         float posOriginalX, posOriginalY;
+        bool direccion;
 
     public:
-        Auto(float posX, float Y);
+        Auto(float posX, float Y, bool direccion);
         ~Auto();
 
-        void move();
+        void move(Vector2u tamanioVentana);
         float getPosOriginalX() { return this->posOriginalX; }
         float getPosOriginalY() { return this->posOriginalY; }
 

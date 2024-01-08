@@ -22,6 +22,13 @@ class Juego
         Taxi *taxi7;
 
         Auto *autito;
+        Auto *autito2;
+        Auto *autito3;
+        Auto *autito4;
+        Auto *autito5;
+        Auto *autito6;
+
+
 
 
 
