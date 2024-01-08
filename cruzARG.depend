@@ -1338,40 +1338,41 @@
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
 
-1704727742 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\auto.cpp
+1704728585 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\auto.cpp
 	"Auto.h"
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
 	"DEFINITIONS.h"
 
-1704726874 c:\users\fmorelli.diagmaipu\documents\cruzarg\auto.h
+1704728585 c:\users\fmorelli.diagmaipu\documents\cruzarg\auto.h
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
 
 1704723544 c:\users\fmorelli.diagmaipu\documents\cruzarg\baseobject.h
 	<SFML/Graphics.hpp>
 
-1704727581 c:\users\fmorelli.diagmaipu\documents\cruzarg\definitions.h
+1704731735 c:\users\fmorelli.diagmaipu\documents\cruzarg\definitions.h
 
 1704723544 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\baseobject.cpp
 	"BaseObject.h"
 	<SFML/Graphics.hpp>
 
-1704727881 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.cpp
+1704732211 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.cpp
 	"Juego.h"
 	"DEFINITIONS.h"
 
-1704727149 c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.h
+1704732336 c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.h
 	<SFML/Graphics.hpp>
 	"Personaje.h"
 	"Taxi.h"
 	"Auto.h"
+	"BarreraJersey.h"
 
 1704723544 c:\users\fmorelli.diagmaipu\documents\cruzarg\personaje.h
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
 
-1704727742 c:\users\fmorelli.diagmaipu\documents\cruzarg\taxi.h
+1704728585 c:\users\fmorelli.diagmaipu\documents\cruzarg\taxi.h
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
 
@@ -1380,9 +1381,16 @@
 	<SFML/Graphics.hpp>
 	"DEFINITIONS.h"
 
-1704727881 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\taxi.cpp
+1704728585 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\taxi.cpp
 	"Taxi.h"
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
+	"DEFINITIONS.h"
+
+1704730111 c:\users\fmorelli.diagmaipu\documents\cruzarg\barrerajersey.h
+	"BaseObject.h"
+
+1704730140 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\barrerajersey.cpp
+	"BarreraJersey.h"
 	"DEFINITIONS.h"
 
