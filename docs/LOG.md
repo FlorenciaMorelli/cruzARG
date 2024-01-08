@@ -14,3 +14,4 @@
 | 07-01-2024 | 15:30 | Modelo | Alta | Agregado de obstáculos |
 | 07-01-2024 | 21:30 | Modelo | Alta | Creación de clase Auto y movimiento hacia la izquierda |
 | 07-01-2024 | 22:30 | Vista | Alta | FullScreen y corrección del personaje |
+| 08-01-2024 | 12:30 | Modelo | Alta | Creación de carriles, propiedad dirección y múltiples objetos |
