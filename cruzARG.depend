@@ -844,11 +844,11 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1704586078 d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.h
+1704676946 d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.h
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
 
-1704650196 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.cpp
+1704677564 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.cpp
 	"Personaje.h"
 	<SFML/Graphics.hpp>
 	"DEFINITIONS.h"
@@ -1298,21 +1298,21 @@
 1704551200 source:e:\2cuat2023\programacionii\proyectofinal\cruzarg\src\juego.cpp
 	"Juego.h"
 
-1704674068 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.cpp
+1704675186 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.cpp
 	"Taxi.h"
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
 	"DEFINITIONS.h"
 
-1704651648 d:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.h
+1704675186 d:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.h
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
 
-1704674068 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.cpp
+1704676332 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.cpp
 	"Juego.h"
 	"DEFINITIONS.h"
 
-1704674252 d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.h
+1704675186 d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.h
 	<SFML/Graphics.hpp>
 	"Personaje.h"
 	"Taxi.h"
@@ -1325,15 +1325,15 @@
 	"BaseObject.h"
 	<SFML/Graphics.hpp>
 
-1704674572 d:\2cuat2023\programacionii\proyectofinal\cruzarg\definitions.h
+1704677212 d:\2cuat2023\programacionii\proyectofinal\cruzarg\definitions.h
 
-1704673666 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\auto.cpp
+1704675186 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\auto.cpp
 	"Auto.h"
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
 	"DEFINITIONS.h"
 
-1704673660 d:\2cuat2023\programacionii\proyectofinal\cruzarg\auto.h
+1704675186 d:\2cuat2023\programacionii\proyectofinal\cruzarg\auto.h
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
 
