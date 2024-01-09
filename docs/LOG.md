@@ -20,3 +20,4 @@
 | 09-01-2024 | 12:40 | Modelo | Alta | Veredas Pellegrini y Cerrito creadas manualmente |
 | 09-01-2024 | 14:00 | Modelo | Alta | Metrobus creado manualmente |
 | 09-01-2024 | 15:30 | Modelo | Alta | Función de creación automática de carriles |
+| 09-01-2024 | 20:00 | Modelo | Alta | Funciones para carriles estáticos sin coalisión: veredas, canteros, metrobus |

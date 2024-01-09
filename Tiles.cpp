@@ -5,6 +5,7 @@
 Tiles::Tiles(float posX, float posY, int tipo)
 {
     shape.setSize(Vector2f(ANCHO_BARRERA, ALTURA_BARRERA));
+    this->tipoDePiso = tipo;
 
     if(tipo == 1){ //Asfalto
         this->shapeTexture.loadFromFile("./assets/asfaltoPerpendicular.png");
@@ -38,6 +39,9 @@ Tiles::Tiles(float posX, float posY, int tipo)
         shape.setTexture(&shapeTexture);
     } else if (tipo == 11){
         this->shapeTexture.loadFromFile("./assets/metrobus.png");
+        shape.setTexture(&shapeTexture);
+    } else if (tipo == 12){
+        this->shapeTexture.loadFromFile("./assets/planta.png");
         shape.setTexture(&shapeTexture);
     }
 

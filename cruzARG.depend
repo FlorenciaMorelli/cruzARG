@@ -1309,12 +1309,15 @@
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
 
-1704760084 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.cpp
+1704840332 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.cpp
 	"Juego.h"
 	"DEFINITIONS.h"
+	<vector>
+	"Tiles.h"
 
-1704750182 d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.h
+1704841404 d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.h
 	<SFML/Graphics.hpp>
+	<vector>
 	"Personaje.h"
 	"Taxi.h"
 	"Auto.h"
@@ -1328,7 +1331,7 @@
 	"BaseObject.h"
 	<SFML/Graphics.hpp>
 
-1704748378 d:\2cuat2023\programacionii\proyectofinal\cruzarg\definitions.h
+1704839632 d:\2cuat2023\programacionii\proyectofinal\cruzarg\definitions.h
 
 1704748378 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\auto.cpp
 	"Auto.h"
@@ -1416,10 +1419,12 @@
 1704748378 d:\2cuat2023\programacionii\proyectofinal\cruzarg\barrerajersey.h
 	"BaseObject.h"
 
-1704748378 d:\2cuat2023\programacionii\proyectofinal\cruzarg\tiles.h
+1704837266 d:\2cuat2023\programacionii\proyectofinal\cruzarg\tiles.h
 	"BaseObject.h"
+	<vector>
 
-1704748378 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\tiles.cpp
+1704841396 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\tiles.cpp
 	"Tiles.h"
 	"DEFINITIONS.h"
+	<vector>
 
