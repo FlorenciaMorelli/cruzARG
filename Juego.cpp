@@ -1,5 +1,7 @@
 #include "Juego.h"
 #include "DEFINITIONS.h"
+#include <vector>
+#include "Tiles.h"
 
 
 using namespace sf;
@@ -9,34 +11,41 @@ Juego::Juego()
     this->window = new RenderWindow(VideoMode::getDesktopMode(), TITULO_JUEGO, Style::Close | Style::Fullscreen);
     this->personaje = new Personaje(window->getSize());
 
-    float carriles =  window->getSize().y / 14.0f;
-    float veredaCerrito = carriles * 1.0f;
-    float cerrito = carriles * 2.0f;
-    float cantero1 = carriles * 3.0f;
-    float nueveJulioAutos1 = carriles * 4.0f;
-    float newJersey1 = carriles * 5.0f;
-    float nueveJulioColectivos1 = carriles * 6.0f;
-    float metrobus = carriles * 7.0f;
-    float nueveJulioColectivos2 = carriles * 8.0f;
-    float newJersey2 = carriles * 9.0f;
-    float nueveJulioAutos2 = carriles * 10.0f;
-    float cantero2 = carriles * 11.0f;
-    float carlosPellegrini = carriles * 12.0f;
+    this->carriles =  window->getSize().y / 14.0f;
+    this->veredaCerrito1 = carriles * 0.0f;
+    this->veredaCerrito2 = carriles * 1.0f;
+    this->cerrito = carriles * 2.0f;
+    this->cantero1 = carriles * 3.0f;
+    this->nueveJulioAutos1 = carriles * 4.0f;
+    this->newJersey1 = carriles * 5.0f;
+    this->nueveJulioColectivos1 = carriles * 6.0f;
+    this->metrobus = carriles * 7.0f;
+    this->nueveJulioColectivos2 = carriles * 8.0f;
+    this->newJersey2 = carriles * 9.0f;
+    this->nueveJulioAutos2 = carriles * 10.0f;
+    this->cantero2 = carriles * 11.0f;
+    this->carlosPellegrini = carriles * 12.0f;
+    this->veredaPellegrini1 = carriles * 13.0f;
+    this->veredaPellegrini2 = carriles * 14.0f;
 
 
-    this->taxi = new Taxi(-ANCHO_TAXI, cerrito, true);
-    this->taxi2 = new Taxi(taxi->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, cerrito, true);
-    this->taxi3 = new Taxi(taxi2->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, carlosPellegrini, false);
-    this->taxi4 = new Taxi(taxi3->getPosOriginalX() - SEPARACION_PARA_PERSONAJE, nueveJulioAutos1, true);
-    this->taxi5 = new Taxi(taxi4->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, nueveJulioAutos2, false);
+    //Vereda Cerrito
+    crearCerrito(window->getSize(), this->veredaCerrito2, this->veredaCerrito1);
 
-    this->autito = new Auto(window->getSize().x, nueveJulioAutos1, true);
-    this->autito2 = new Auto(autito->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, nueveJulioAutos2, false);
-    this->autito3 = new Auto(autito2->getPosOriginalX() - SEPARACION_PARA_PERSONAJE, nueveJulioAutos1, true);
-    this->autito4 = new Auto(autito3->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, carlosPellegrini, false);
-    this->autito5 = new Auto(autito4->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, cerrito, true);
-    this->autito6 = new Auto(autito5->getPosOriginalX() - SEPARACION_PARA_PERSONAJE, nueveJulioAutos2, false);
+    // ← Cerrito
+    this->taxi = new Taxi(window->getSize().x + ANCHO_TAXI, cerrito, false);
+    this->taxi2 = new Taxi(taxi->getPosOriginalX() + SEPARACION_ENTRE_VEHICULOS, cerrito, false);
+    this->autito = new Auto(taxi2->getPosOriginalX() + SEPARACION_ENTRE_VEHICULOS, cerrito, false);
 
+    // Cantero
+    crearCantero(this->canteroVector1, window->getSize(), cantero1);
+
+    // ← 9 de Julio (autos)
+    this->autito2 = new Auto(window->getSize().x + ANCHO_AUTO, nueveJulioAutos1, false);
+    this->taxi3 = new Taxi(autito2->getPosOriginalX() + SEPARACION_PARA_PERSONAJE, nueveJulioAutos1, false);
+    this->autito3 = new Auto(taxi3->getPosOriginalX() + SEPARACION_PARA_PERSONAJE, nueveJulioAutos1, false);
+
+    //Barrera Jersey1
     this->barrera = new BarreraJersey(0.0f, newJersey1);
     this->barrera2 = new BarreraJersey(barrera->getShape().getPosition().x + ANCHO_BARRERA, newJersey1);
     this->barrera3 = new BarreraJersey(barrera2->getShape().getPosition().x + ANCHO_BARRERA, newJersey1);
@@ -67,7 +76,17 @@ Juego::Juego()
     this->asfalto11 = new Tiles(asfalto10->getShape().getPosition().x + ANCHO_BARRERA, newJersey1, 1);
     this->asfalto12 = new Tiles(asfalto11->getShape().getPosition().x + ANCHO_BARRERA, newJersey1, 1);
 
+    // → 9 de Julio (colectivos)
 
+
+    // Metrobus
+    crearMetrobus(window->getSize(), this->metrobus);
+
+
+    // ← 9 de Julio (colectivos)
+
+
+    //Barrera Jersey2
     this->barrera13 = new BarreraJersey(0.0f, newJersey2);
     this->barrera14 = new BarreraJersey(barrera13->getShape().getPosition().x + ANCHO_BARRERA, newJersey2);
     this->barrera15 = new BarreraJersey(barrera14->getShape().getPosition().x + ANCHO_BARRERA, newJersey2);
@@ -98,8 +117,20 @@ Juego::Juego()
     this->asfalto23 = new Tiles(asfalto22->getShape().getPosition().x + ANCHO_BARRERA, newJersey2, 1);
     this->asfalto24 = new Tiles(asfalto23->getShape().getPosition().x + ANCHO_BARRERA, newJersey2, 1);
 
+    // → 9 de Julio (autos)
+    this->autito4 = new Auto(-ANCHO_AUTO, nueveJulioAutos2, true);
+    this->autito5 = new Auto(autito4->getPosOriginalX() - SEPARACION_PARA_PERSONAJE, nueveJulioAutos2, true);
+    this->taxi4 = new Taxi(autito5->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, nueveJulioAutos2, true);
 
+    // Cantero
+    crearCantero(this->canteroVector2, window->getSize(), cantero2);
 
+    // → Carlos Pellegrini
+    this->taxi5 = new Taxi(-ANCHO_TAXI, carlosPellegrini, true);
+    this->autito6 = new Auto(taxi5->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, carlosPellegrini, true);
+
+    //Vereda Pellegrini
+    crearPellegrini(window->getSize(), this->veredaPellegrini1, this->veredaPellegrini2);
 
     Image image;
     image.loadFromFile("./assets/icon.png");
@@ -336,30 +367,20 @@ void Juego::loop()
 
 
         window->clear(Color(150, 150, 150)); //Color gris para el fondo de la ventana
-        asfalto->draw(*window);
-        asfalto2->draw(*window);
-        asfalto3->draw(*window);
-        asfalto4->draw(*window);
-        asfalto5->draw(*window);
-        asfalto6->draw(*window);
-        asfalto7->draw(*window);
-        asfalto8->draw(*window);
-        asfalto9->draw(*window);
-        asfalto10->draw(*window);
-        asfalto11->draw(*window);
-        asfalto12->draw(*window);
-        asfalto13->draw(*window);
-        asfalto14->draw(*window);
-        asfalto15->draw(*window);
-        asfalto16->draw(*window);
-        asfalto17->draw(*window);
-        asfalto18->draw(*window);
-        asfalto19->draw(*window);
-        asfalto20->draw(*window);
-        asfalto21->draw(*window);
-        asfalto22->draw(*window);
-        asfalto23->draw(*window);
-        asfalto24->draw(*window);
+        for(Tiles* metrobus : metrobusVector)
+            metrobus->draw(*window);
+
+        for(Tiles* vereda: calleCerrito)
+            vereda->draw(*window);
+
+        for(Tiles* vereda: pellegriniVereda)
+            vereda->draw(*window);
+
+        for(Tiles* cantero: canteroVector1)
+            cantero->draw(*window);
+
+        for(Tiles* cantero: canteroVector2)
+            cantero->draw(*window);
 
 
 
@@ -404,7 +425,134 @@ void Juego::loop()
 
 
 
-
         window->display(); //Mostrar
     }
 }
+void Juego::crearMetrobus(Vector2u tamanioVentana, float posY)
+{
+    if (metrobusVector.empty())
+    {
+        this->metrobusVector.push_back(new Tiles(0.0f, posY, 11));
+    } else {
+        this->metrobusVector.push_back(new Tiles(metrobusVector.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, 11));
+    }
+
+    while (metrobusVector.back()->getShape().getPosition().x < tamanioVentana.x)
+    {
+        this->metrobusVector.push_back(new Tiles(metrobusVector.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, 11));
+
+        if (metrobusVector.size() % 4 == 0)
+        {
+            for(unsigned int i = 1; i <= 4; i++)
+            {
+                this->metrobusVector.push_back(new Tiles(metrobusVector.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, 1));
+            }
+        }
+    }
+}
+
+void Juego::crearCerrito(Vector2u tamanioVentana, float posY, float posY2)
+{
+    if (calleCerrito.empty())
+    {
+        this->calleCerrito.push_back(new Tiles(0.0f, posY, 8));
+        this->calleCerrito.push_back(new Tiles(0.0f, posY2, 5));
+
+    }
+
+    while (calleCerrito.back()->getShape().getPosition().x < tamanioVentana.x)
+    {
+        if (calleCerrito.size() > 2)
+        {
+            float posX = calleCerrito.back()->getShape().getPosition().x + ANCHO_BARRERA;
+            this->calleCerrito.push_back(new Tiles(posX, posY, 8));
+            this->calleCerrito.push_back(new Tiles(posX, posY2, 5));
+        }
+
+        float posX8 = calleCerrito.back()->getShape().getPosition().x + ANCHO_BARRERA;
+        this->calleCerrito.push_back(new Tiles(posX8, posY, 9));
+        this->calleCerrito.push_back(new Tiles(posX8, posY2, 6));
+
+        float posX9 = calleCerrito.back()->getShape().getPosition().x + ANCHO_BARRERA;
+        this->calleCerrito.push_back(new Tiles(posX9, posY, 9));
+        this->calleCerrito.push_back(new Tiles(posX9, posY2, 6));
+
+        float posX10 = calleCerrito.back()->getShape().getPosition().x + ANCHO_BARRERA;
+        this->calleCerrito.push_back(new Tiles(posX10, posY, 10));
+        this->calleCerrito.push_back(new Tiles(posX10, posY2, 7));
+
+
+        for (unsigned int i = 1; i <= 4; i++)
+        {
+            float posX11 = calleCerrito.back()->getShape().getPosition().x + ANCHO_BARRERA;
+            this->calleCerrito.push_back(new Tiles(posX11, posY, 1));
+            this->calleCerrito.push_back(new Tiles(posX11, posY2, 1));
+
+        }
+    }
+}
+
+void Juego::crearPellegrini(Vector2u tamanioVentana, float posY, float posY2)
+{
+    if (pellegriniVereda.empty())
+    {
+        this->pellegriniVereda.push_back(new Tiles(0.0f, posY, 2));
+        this->pellegriniVereda.push_back(new Tiles(0.0f, posY2, 5));
+
+    }
+
+    while (pellegriniVereda.back()->getShape().getPosition().x < tamanioVentana.x)
+    {
+        if (pellegriniVereda.size() > 2)
+        {
+            float posX = pellegriniVereda.back()->getShape().getPosition().x + ANCHO_BARRERA;
+            this->pellegriniVereda.push_back(new Tiles(posX, posY, 2));
+            this->pellegriniVereda.push_back(new Tiles(posX, posY2, 5));
+        }
+
+        float posX8 = pellegriniVereda.back()->getShape().getPosition().x + ANCHO_BARRERA;
+        this->pellegriniVereda.push_back(new Tiles(posX8, posY, 3));
+        this->pellegriniVereda.push_back(new Tiles(posX8, posY2, 6));
+
+        float posX9 = pellegriniVereda.back()->getShape().getPosition().x + ANCHO_BARRERA;
+        this->pellegriniVereda.push_back(new Tiles(posX9, posY, 3));
+        this->pellegriniVereda.push_back(new Tiles(posX9, posY2, 6));
+
+        float posX10 = pellegriniVereda.back()->getShape().getPosition().x + ANCHO_BARRERA;
+        this->pellegriniVereda.push_back(new Tiles(posX10, posY, 4));
+        this->pellegriniVereda.push_back(new Tiles(posX10, posY2, 7));
+
+
+        for (unsigned int i = 1; i <= 4; i++)
+        {
+            float posX11 = pellegriniVereda.back()->getShape().getPosition().x + ANCHO_BARRERA;
+            this->pellegriniVereda.push_back(new Tiles(posX11, posY, 1));
+            this->pellegriniVereda.push_back(new Tiles(posX11, posY2, 1));
+
+        }
+    }
+}
+
+void Juego::crearCantero(std::vector<Tiles*>& vect, Vector2u tamanioVentana, float posY)
+{
+    if (vect.empty())
+    {
+        vect.push_back(new Tiles(0.0f, posY, 12));
+    } else {
+        vect.push_back(new Tiles(vect.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, 12));
+    }
+
+    while (vect.back()->getShape().getPosition().x < tamanioVentana.x)
+    {
+        vect.push_back(new Tiles(vect.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, 12));
+
+        if (vect.size() % 4 == 0)
+        {
+            for(unsigned int i = 1; i <= 4; i++)
+            {
+                vect.push_back(new Tiles(vect.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, 1));
+            }
+        }
+    }
+}
+
