@@ -10,7 +10,8 @@ Juego::Juego()
     this->personaje = new Personaje(window->getSize());
 
     float carriles =  window->getSize().y / 14.0f;
-    float veredaCerrito = carriles * 1.0f;
+    float veredaCerrito1 = carriles * 0.0f;
+    float veredaCerrito2 = carriles * 1.0f;
     float cerrito = carriles * 2.0f;
     float cantero1 = carriles * 3.0f;
     float nueveJulioAutos1 = carriles * 4.0f;
@@ -22,7 +23,41 @@ Juego::Juego()
     float nueveJulioAutos2 = carriles * 10.0f;
     float cantero2 = carriles * 11.0f;
     float carlosPellegrini = carriles * 12.0f;
+    float veredaPellegrini1 = carriles * 13.0f;
+    float veredaPellegrini2 = carriles * 14.0f;
 
+
+
+    //Vereda Cerrito
+    this->cerrito1 = new Tiles(0.0, veredaCerrito2, 8);
+    this->cerrito2 = new Tiles(cerrito1->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 9);
+    this->cerrito3 = new Tiles(cerrito2->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 9);
+    this->cerrito4 = new Tiles(cerrito3->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 10);
+
+    this->asfalto37 = new Tiles(cerrito4->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 1);
+    this->asfalto38 = new Tiles(asfalto37->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 1);
+    this->asfalto39 = new Tiles(asfalto38->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 1);
+    this->asfalto40 = new Tiles(asfalto39->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 1);
+
+    this->cerrito5 = new Tiles(asfalto40->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 8);
+    this->cerrito6 = new Tiles(cerrito5->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 9);
+    this->cerrito7 = new Tiles(cerrito6->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 9);
+    this->cerrito8 = new Tiles(cerrito7->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 10);
+
+    this->asfalto41 = new Tiles(cerrito8->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 1);
+    this->asfalto42 = new Tiles(asfalto41->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 1);
+    this->asfalto43 = new Tiles(asfalto42->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 1);
+    this->asfalto44 = new Tiles(asfalto43->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 1);
+
+    this->cerrito9 = new Tiles(asfalto44->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 8);
+    this->cerrito10 = new Tiles(cerrito9->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 9);
+    this->cerrito11 = new Tiles(cerrito10->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 9);
+    this->cerrito12 = new Tiles(cerrito11->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 10);
+
+    this->asfalto45 = new Tiles(cerrito12->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 1);
+    this->asfalto46 = new Tiles(asfalto45->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 1);
+    this->asfalto47 = new Tiles(asfalto46->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 1);
+    this->asfalto48 = new Tiles(asfalto47->getShape().getPosition().x + ANCHO_BARRERA, veredaCerrito2, 1);
 
     // ← Cerrito
     this->taxi = new Taxi(window->getSize().x + ANCHO_TAXI, cerrito, false);
@@ -119,9 +154,36 @@ Juego::Juego()
     this->taxi5 = new Taxi(-ANCHO_TAXI, carlosPellegrini, true);
     this->autito6 = new Auto(taxi5->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, carlosPellegrini, true);
 
+    //Vereda Pellegrini
+    this->pellegrini = new Tiles(0.0, veredaPellegrini1, 2);
+    this->pellegrini2 = new Tiles(pellegrini->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 3);
+    this->pellegrini3 = new Tiles(pellegrini2->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 3);
+    this->pellegrini4 = new Tiles(pellegrini3->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 4);
 
+    this->asfalto25 = new Tiles(pellegrini4->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 1);
+    this->asfalto26 = new Tiles(asfalto25->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 1);
+    this->asfalto27 = new Tiles(asfalto26->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 1);
+    this->asfalto28 = new Tiles(asfalto27->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 1);
 
+    this->pellegrini5 = new Tiles(asfalto28->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 2);
+    this->pellegrini6 = new Tiles(pellegrini5->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 3);
+    this->pellegrini7 = new Tiles(pellegrini6->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 3);
+    this->pellegrini8 = new Tiles(pellegrini7->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 4);
 
+    this->asfalto29 = new Tiles(pellegrini8->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 1);
+    this->asfalto30 = new Tiles(asfalto29->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 1);
+    this->asfalto31 = new Tiles(asfalto30->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 1);
+    this->asfalto32 = new Tiles(asfalto31->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 1);
+
+    this->pellegrini9 = new Tiles(asfalto32->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 2);
+    this->pellegrini10 = new Tiles(pellegrini9->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 3);
+    this->pellegrini11 = new Tiles(pellegrini10->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 3);
+    this->pellegrini12 = new Tiles(pellegrini11->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 4);
+
+    this->asfalto33 = new Tiles(pellegrini12->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 1);
+    this->asfalto34 = new Tiles(asfalto33->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 1);
+    this->asfalto35 = new Tiles(asfalto34->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 1);
+    this->asfalto36 = new Tiles(asfalto35->getShape().getPosition().x + ANCHO_BARRERA, veredaPellegrini1, 1);
 
 
     Image image;
@@ -383,6 +445,59 @@ void Juego::loop()
         asfalto22->draw(*window);
         asfalto23->draw(*window);
         asfalto24->draw(*window);
+        asfalto25->draw(*window);
+        asfalto26->draw(*window);
+        asfalto27->draw(*window);
+        asfalto28->draw(*window);
+        asfalto29->draw(*window);
+        asfalto30->draw(*window);
+        asfalto31->draw(*window);
+        asfalto32->draw(*window);
+        asfalto33->draw(*window);
+        asfalto34->draw(*window);
+        asfalto35->draw(*window);
+        asfalto36->draw(*window);
+        asfalto37->draw(*window);
+        asfalto38->draw(*window);
+        asfalto39->draw(*window);
+        asfalto40->draw(*window);
+        asfalto41->draw(*window);
+        asfalto42->draw(*window);
+        asfalto43->draw(*window);
+        asfalto44->draw(*window);
+        asfalto45->draw(*window);
+        asfalto46->draw(*window);
+        asfalto47->draw(*window);
+        asfalto48->draw(*window);
+
+
+
+        pellegrini->draw(*window);
+        pellegrini2->draw(*window);
+        pellegrini3->draw(*window);
+        pellegrini4->draw(*window);
+        pellegrini5->draw(*window);
+        pellegrini6->draw(*window);
+        pellegrini7->draw(*window);
+        pellegrini8->draw(*window);
+        pellegrini9->draw(*window);
+        pellegrini10->draw(*window);
+        pellegrini11->draw(*window);
+        pellegrini12->draw(*window);
+
+        cerrito1->draw(*window);
+        cerrito2->draw(*window);
+        cerrito3->draw(*window);
+        cerrito4->draw(*window);
+        cerrito5->draw(*window);
+        cerrito6->draw(*window);
+        cerrito7->draw(*window);
+        cerrito8->draw(*window);
+        cerrito9->draw(*window);
+        cerrito10->draw(*window);
+        cerrito11->draw(*window);
+        cerrito12->draw(*window);
+
 
 
 
@@ -424,7 +539,6 @@ void Juego::loop()
         barrera22->draw(*window);
         barrera23->draw(*window);
         barrera24->draw(*window);
-
 
 
 

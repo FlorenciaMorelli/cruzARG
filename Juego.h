@@ -79,6 +79,61 @@ class Juego
         Tiles *asfalto22;
         Tiles *asfalto23;
         Tiles *asfalto24;
+        Tiles *asfalto25;
+        Tiles *asfalto26;
+        Tiles *asfalto27;
+        Tiles *asfalto28;
+        Tiles *asfalto29;
+        Tiles *asfalto30;
+        Tiles *asfalto31;
+        Tiles *asfalto32;
+        Tiles *asfalto33;
+        Tiles *asfalto34;
+        Tiles *asfalto35;
+        Tiles *asfalto36;
+        Tiles *asfalto37;
+        Tiles *asfalto38;
+        Tiles *asfalto39;
+        Tiles *asfalto40;
+        Tiles *asfalto41;
+        Tiles *asfalto42;
+        Tiles *asfalto43;
+        Tiles *asfalto44;
+        Tiles *asfalto45;
+        Tiles *asfalto46;
+        Tiles *asfalto47;
+        Tiles *asfalto48;
+
+
+
+        Tiles *pellegrini;
+        Tiles *pellegrini2;
+        Tiles *pellegrini3;
+        Tiles *pellegrini4;
+        Tiles *pellegrini5;
+        Tiles *pellegrini6;
+        Tiles *pellegrini7;
+        Tiles *pellegrini8;
+        Tiles *pellegrini9;
+        Tiles *pellegrini10;
+        Tiles *pellegrini11;
+        Tiles *pellegrini12;
+
+        Tiles *cerrito1;
+        Tiles *cerrito2;
+        Tiles *cerrito3;
+        Tiles *cerrito4;
+        Tiles *cerrito5;
+        Tiles *cerrito6;
+        Tiles *cerrito7;
+        Tiles *cerrito8;
+        Tiles *cerrito9;
+        Tiles *cerrito10;
+        Tiles *cerrito11;
+        Tiles *cerrito12;
+
+
+
 
 
 
