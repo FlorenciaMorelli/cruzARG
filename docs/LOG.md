@@ -18,3 +18,4 @@
 | 08-01-2024 | 13:30 | Modelo | Alta | Barreras New Jersey |
 | 08-01-2024 | 15:00 | Modelo | Alta | Asfalto perpendiculares |
 | 09-01-2024 | 12:40 | Modelo | Alta | Veredas Pellegrini y Cerrito creadas manualmente |
+| 09-01-2024 | 14:00 | Modelo | Alta | Metrobus creado manualmente |

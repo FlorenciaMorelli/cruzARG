@@ -36,6 +36,9 @@ Tiles::Tiles(float posX, float posY, int tipo)
     } else if (tipo == 10){
         this->shapeTexture.loadFromFile("./assets/veredaCerritoDer.png");
         shape.setTexture(&shapeTexture);
+    } else if (tipo == 11){
+        this->shapeTexture.loadFromFile("./assets/metrobus.png");
+        shape.setTexture(&shapeTexture);
     }
 
     shape.setPosition(Vector2f(posX, posY));

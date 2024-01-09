@@ -106,6 +106,19 @@ Juego::Juego()
 
 
     // Metrobus
+    this->metrobus1 = new Tiles(0.0, metrobus, 11);
+    this->metrobus2 = new Tiles(metrobus1->getShape().getPosition().x + ANCHO_BARRERA, metrobus, 11);
+    this->metrobus3 = new Tiles(metrobus2->getShape().getPosition().x + ANCHO_BARRERA, metrobus, 11);
+    this->metrobus4 = new Tiles(metrobus3->getShape().getPosition().x + ANCHO_BARRERA, metrobus, 11);
+    this->metrobus5= new Tiles(metrobus4->getShape().getPosition().x + ESPACIO_ENTRE_CUADRAS, metrobus, 11);
+    this->metrobus6 = new Tiles(metrobus5->getShape().getPosition().x + ANCHO_BARRERA, metrobus, 11);
+    this->metrobus7= new Tiles(metrobus6->getShape().getPosition().x + ANCHO_BARRERA, metrobus, 11);
+    this->metrobus8 = new Tiles(metrobus7->getShape().getPosition().x + ANCHO_BARRERA, metrobus, 11);
+    this->metrobus9 = new Tiles(metrobus8->getShape().getPosition().x + ESPACIO_ENTRE_CUADRAS, metrobus, 11);
+    this->metrobus10 = new Tiles(metrobus9->getShape().getPosition().x + ANCHO_BARRERA, metrobus, 11);
+    this->metrobus11 = new Tiles(metrobus10->getShape().getPosition().x + ANCHO_BARRERA, metrobus, 11);
+    this->metrobus12 = new Tiles(metrobus11->getShape().getPosition().x + ANCHO_BARRERA, metrobus, 11);
+
 
 
     // ← 9 de Julio (colectivos)
@@ -497,6 +510,19 @@ void Juego::loop()
         cerrito10->draw(*window);
         cerrito11->draw(*window);
         cerrito12->draw(*window);
+
+        metrobus1->draw(*window);
+        metrobus2->draw(*window);
+        metrobus3->draw(*window);
+        metrobus4->draw(*window);
+        metrobus5->draw(*window);
+        metrobus6->draw(*window);
+        metrobus7->draw(*window);
+        metrobus8->draw(*window);
+        metrobus9->draw(*window);
+        metrobus10->draw(*window);
+        metrobus11->draw(*window);
+        metrobus12->draw(*window);
 
 
 

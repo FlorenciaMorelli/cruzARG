@@ -132,6 +132,20 @@ class Juego
         Tiles *cerrito11;
         Tiles *cerrito12;
 
+        Tiles *metrobus1;
+        Tiles *metrobus2;
+        Tiles *metrobus3;
+        Tiles *metrobus4;
+        Tiles *metrobus5;
+        Tiles *metrobus6;
+        Tiles *metrobus7;
+        Tiles *metrobus8;
+        Tiles *metrobus9;
+        Tiles *metrobus10;
+        Tiles *metrobus11;
+        Tiles *metrobus12;
+
+
 
 
 

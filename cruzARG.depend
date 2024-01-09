@@ -1359,11 +1359,11 @@
 	"BaseObject.h"
 	<SFML/Graphics.hpp>
 
-1704814265 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.cpp
+1704819611 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.cpp
 	"Juego.h"
 	"DEFINITIONS.h"
 
-1704814597 c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.h
+1704819611 c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.h
 	<SFML/Graphics.hpp>
 	"Personaje.h"
 	"Taxi.h"
@@ -1400,7 +1400,7 @@
 1704736774 c:\users\fmorelli.diagmaipu\documents\cruzarg\tiles.h
 	"BaseObject.h"
 
-1704814099 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\tiles.cpp
+1704819611 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\tiles.cpp
 	"Tiles.h"
 	"DEFINITIONS.h"
 
