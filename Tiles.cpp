@@ -1,6 +1,6 @@
 #include "Tiles.h"
 #include "DEFINITIONS.h"
-
+#include <vector>
 
 Tiles::Tiles(float posX, float posY, int tipo)
 {
@@ -43,9 +43,4 @@ Tiles::Tiles(float posX, float posY, int tipo)
 
     shape.setPosition(Vector2f(posX, posY));
     shape.setOrigin(Vector2f(shape.getSize().x / 2.0f, shape.getSize().y / 2.0f));
-}
-
-Tiles::~Tiles()
-{
-    //dtor
 }
