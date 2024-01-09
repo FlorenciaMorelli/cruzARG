@@ -24,19 +24,19 @@ Juego::Juego()
     float carlosPellegrini = carriles * 12.0f;
 
 
-    this->taxi = new Taxi(-ANCHO_TAXI, cerrito, true);
-    this->taxi2 = new Taxi(taxi->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, cerrito, true);
-    this->taxi3 = new Taxi(taxi2->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, carlosPellegrini, false);
-    this->taxi4 = new Taxi(taxi3->getPosOriginalX() - SEPARACION_PARA_PERSONAJE, nueveJulioAutos1, true);
-    this->taxi5 = new Taxi(taxi4->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, nueveJulioAutos2, false);
+    // ← Cerrito
+    this->taxi = new Taxi(window->getSize().x + ANCHO_TAXI, cerrito, false);
+    this->taxi2 = new Taxi(taxi->getPosOriginalX() + SEPARACION_ENTRE_VEHICULOS, cerrito, false);
+    this->autito = new Auto(taxi2->getPosOriginalX() + SEPARACION_ENTRE_VEHICULOS, cerrito, false);
 
-    this->autito = new Auto(window->getSize().x, nueveJulioAutos1, true);
-    this->autito2 = new Auto(autito->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, nueveJulioAutos2, false);
-    this->autito3 = new Auto(autito2->getPosOriginalX() - SEPARACION_PARA_PERSONAJE, nueveJulioAutos1, true);
-    this->autito4 = new Auto(autito3->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, carlosPellegrini, false);
-    this->autito5 = new Auto(autito4->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, cerrito, true);
-    this->autito6 = new Auto(autito5->getPosOriginalX() - SEPARACION_PARA_PERSONAJE, nueveJulioAutos2, false);
+    // Cantero
 
+    // ← 9 de Julio (autos)
+    this->autito2 = new Auto(window->getSize().x + ANCHO_AUTO, nueveJulioAutos1, false);
+    this->taxi3 = new Taxi(autito2->getPosOriginalX() + SEPARACION_PARA_PERSONAJE, nueveJulioAutos1, false);
+    this->autito3 = new Auto(taxi3->getPosOriginalX() + SEPARACION_PARA_PERSONAJE, nueveJulioAutos1, false);
+
+    //Barrera Jersey1
     this->barrera = new BarreraJersey(0.0f, newJersey1);
     this->barrera2 = new BarreraJersey(barrera->getShape().getPosition().x + ANCHO_BARRERA, newJersey1);
     this->barrera3 = new BarreraJersey(barrera2->getShape().getPosition().x + ANCHO_BARRERA, newJersey1);
@@ -67,7 +67,16 @@ Juego::Juego()
     this->asfalto11 = new Tiles(asfalto10->getShape().getPosition().x + ANCHO_BARRERA, newJersey1, 1);
     this->asfalto12 = new Tiles(asfalto11->getShape().getPosition().x + ANCHO_BARRERA, newJersey1, 1);
 
+    // → 9 de Julio (colectivos)
 
+
+    // Metrobus
+
+
+    // ← 9 de Julio (colectivos)
+
+
+    //Barrera Jersey2
     this->barrera13 = new BarreraJersey(0.0f, newJersey2);
     this->barrera14 = new BarreraJersey(barrera13->getShape().getPosition().x + ANCHO_BARRERA, newJersey2);
     this->barrera15 = new BarreraJersey(barrera14->getShape().getPosition().x + ANCHO_BARRERA, newJersey2);
@@ -97,6 +106,20 @@ Juego::Juego()
     this->asfalto22 = new Tiles(asfalto21->getShape().getPosition().x + ANCHO_BARRERA, newJersey2, 1);
     this->asfalto23 = new Tiles(asfalto22->getShape().getPosition().x + ANCHO_BARRERA, newJersey2, 1);
     this->asfalto24 = new Tiles(asfalto23->getShape().getPosition().x + ANCHO_BARRERA, newJersey2, 1);
+
+    // → 9 de Julio (autos)
+    this->autito4 = new Auto(-ANCHO_AUTO, nueveJulioAutos2, true);
+    this->autito5 = new Auto(autito4->getPosOriginalX() - SEPARACION_PARA_PERSONAJE, nueveJulioAutos2, true);
+    this->taxi4 = new Taxi(autito5->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, nueveJulioAutos2, true);
+
+    // Cantero
+
+
+    // → Carlos Pellegrini
+    this->taxi5 = new Taxi(-ANCHO_TAXI, carlosPellegrini, true);
+    this->autito6 = new Auto(taxi5->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, carlosPellegrini, true);
+
+
 
 
 
