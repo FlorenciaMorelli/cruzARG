@@ -58,6 +58,8 @@
 		</Unit>
 		<Unit filename="Juego.cpp" />
 		<Unit filename="Juego.h" />
+		<Unit filename="Mapa.cpp" />
+		<Unit filename="Mapa.h" />
 		<Unit filename="Personaje.cpp" />
 		<Unit filename="Personaje.h" />
 		<Unit filename="Taxi.cpp" />
