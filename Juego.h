@@ -2,6 +2,7 @@
 #define JUEGO_H
 
 #include <SFML/Graphics.hpp>
+#include <vector>
 #include "Personaje.h"
 #include "Taxi.h"
 #include "Auto.h"
@@ -13,6 +14,7 @@ using namespace sf;
 class Juego
 {
     private:
+        float carriles, veredaCerrito1, veredaCerrito2, cerrito, cantero1, nueveJulioAutos1, newJersey1, nueveJulioColectivos1, metrobus, nueveJulioColectivos2, newJersey2, nueveJulioAutos2, cantero2, carlosPellegrini, veredaPellegrini1, veredaPellegrini2;
         RenderWindow *window;
         Personaje *personaje;
         Taxi *taxi;
@@ -79,10 +81,11 @@ class Juego
         Tiles *asfalto22;
         Tiles *asfalto23;
         Tiles *asfalto24;
-
-
-
-
+        std::vector<Tiles*> metrobusVector;
+        std::vector<Tiles*> calleCerrito;
+        std::vector<Tiles*> pellegriniVereda;
+        std::vector<Tiles*> canteroVector1;
+        std::vector<Tiles*> canteroVector2;
 
 
 
@@ -93,6 +96,11 @@ class Juego
         ~Juego();
 
         void loop();
+        void crearMetrobus(Vector2u tamanioVentana, float posY);
+        void crearCerrito(Vector2u tamanioVentana, float posY, float posY2);
+        void crearPellegrini(Vector2u tamanioVentana, float posY, float posY2);
+        void crearCantero(std::vector<Tiles*>& vect, Vector2u tamanioVentana, float posY);
+
 };
 
 #endif // JUEGO_H
