@@ -3,12 +3,11 @@
 
 #include <SFML/Graphics.hpp>
 #include <vector>
-#include "Taxi.h"
-#include "Personaje.h"
-#include "Auto.h"
-#include "BarreraJersey.h"
 #include "Tiles.h"
 #include "Mapa.h"
+#include "Personaje.h"
+#include "Trafico.h"
+#include "BarreraJersey.h"
 
 using namespace sf;
 
@@ -18,20 +17,13 @@ class Juego
         RenderWindow *window;
         Personaje *personaje;
         Mapa *nueveDeJulio;
-        Taxi *taxi;
-        Taxi *taxi2;
-        Taxi *taxi3;
-        Taxi *taxi4;
-        Taxi *taxi5;
-        Taxi *taxi6;
-        Taxi *taxi7;
 
-        Auto *autito;
-        Auto *autito2;
-        Auto *autito3;
-        Auto *autito4;
-        Auto *autito5;
-        Auto *autito6;
+        Trafico* traficoCerrito;
+        Trafico* traficoNueveJulioAutos1;
+        Trafico* traficoNueveJulioColectivos1;
+        Trafico* traficoNueveJulioColectivos2;
+        Trafico* traficoNueveJulioAutos2;
+        Trafico* traficoCarlosPellegrini;
 
         BarreraJersey *barrera;
         BarreraJersey *barrera2;
