@@ -32,14 +32,8 @@ Juego::Juego()
     float veredaPellegrini2 = carriles * 14.0f;
 
     // ← Cerrito
-    this->taxi = new Taxi(window->getSize().x + ANCHO_TAXI, cerrito, false);
-    this->taxi2 = new Taxi(taxi->getPosOriginalX() + SEPARACION_ENTRE_VEHICULOS, cerrito, false);
-    this->autito = new Auto(taxi2->getPosOriginalX() + SEPARACION_ENTRE_VEHICULOS, cerrito, false);
-
-    // ← 9 de Julio (autos)
-    this->autito2 = new Auto(window->getSize().x + ANCHO_AUTO, nueveJulioAutos1, false);
-    this->taxi3 = new Taxi(autito2->getPosOriginalX() + SEPARACION_PARA_PERSONAJE, nueveJulioAutos1, false);
-    this->autito3 = new Auto(taxi3->getPosOriginalX() + SEPARACION_PARA_PERSONAJE, nueveJulioAutos1, false);
+    this->traficoCerrito = new Trafico(window->getSize().x + ANCHO_TAXI, cerrito, false);
+    this->traficoNueveJulioAutos1 = new Trafico(window->getSize().x + ANCHO_AUTO, nueveJulioAutos1, false);
 
     //Barrera Jersey1
     this->barrera = new BarreraJersey(0.0f, newJersey1);
@@ -110,13 +104,10 @@ Juego::Juego()
     this->asfalto24 = new Tiles(asfalto23->getShape().getPosition().x + ANCHO_BARRERA, newJersey2, 1);
 
     // → 9 de Julio (autos)
-    this->autito4 = new Auto(-ANCHO_AUTO, nueveJulioAutos2, true);
-    this->autito5 = new Auto(autito4->getPosOriginalX() - SEPARACION_PARA_PERSONAJE, nueveJulioAutos2, true);
-    this->taxi4 = new Taxi(autito5->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, nueveJulioAutos2, true);
+    this->traficoNueveJulioAutos2 = new Trafico(-ANCHO_AUTO, nueveJulioAutos2, true);
 
     // → Carlos Pellegrini
-    this->taxi5 = new Taxi(-ANCHO_TAXI, carlosPellegrini, true);
-    this->autito6 = new Auto(taxi5->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS, carlosPellegrini, true);
+    this->traficoCarlosPellegrini = new Trafico(-ANCHO_TAXI, carlosPellegrini, true);
 
 
     Image image;
@@ -155,78 +146,16 @@ void Juego::loop()
 
         //Esto pasa en todos los frames
 
-        taxi->move(window->getSize());
-        taxi2->move(window->getSize());
-        taxi3->move(window->getSize());
-        taxi4->move(window->getSize());
-        taxi5->move(window->getSize());
+        traficoCerrito->move(window->getSize());
+        traficoNueveJulioAutos1->move(window->getSize());
+        traficoNueveJulioAutos2->move(window->getSize());
+        traficoCarlosPellegrini->move(window->getSize());
 
 
-        autito->move(window->getSize());
-        autito2->move(window->getSize());
-        autito3->move(window->getSize());
-        autito4->move(window->getSize());
-        autito5->move(window->getSize());
-        autito6->move(window->getSize());
-
-
-
-
-        if(personaje->getShape().getGlobalBounds().intersects(taxi->getShape().getGlobalBounds()))
-        {
-            window->close();
-        }
-
-        if(personaje->getShape().getGlobalBounds().intersects(taxi2->getShape().getGlobalBounds()))
-        {
-            window->close();
-        }
-
-        if(personaje->getShape().getGlobalBounds().intersects(taxi3->getShape().getGlobalBounds()))
-        {
-            window->close();
-        }
-
-        if(personaje->getShape().getGlobalBounds().intersects(taxi4->getShape().getGlobalBounds()))
-        {
-            window->close();
-        }
-
-        if(personaje->getShape().getGlobalBounds().intersects(taxi5->getShape().getGlobalBounds()))
-        {
-            window->close();
-        }
-
-
-        if(personaje->getShape().getGlobalBounds().intersects(autito->getShape().getGlobalBounds()))
-        {
-            window->close();
-        }
-
-        if(personaje->getShape().getGlobalBounds().intersects(autito2->getShape().getGlobalBounds()))
-        {
-            window->close();
-        }
-
-        if(personaje->getShape().getGlobalBounds().intersects(autito3->getShape().getGlobalBounds()))
-        {
-            window->close();
-        }
-
-        if(personaje->getShape().getGlobalBounds().intersects(autito4->getShape().getGlobalBounds()))
-        {
-            window->close();
-        }
-
-        if(personaje->getShape().getGlobalBounds().intersects(autito5->getShape().getGlobalBounds()))
-        {
-            window->close();
-        }
-
-        if(personaje->getShape().getGlobalBounds().intersects(autito6->getShape().getGlobalBounds()))
-        {
-            window->close();
-        }
+        traficoCerrito->checkCollision(personaje, *window);
+        traficoNueveJulioAutos1->checkCollision(personaje, *window);
+        traficoNueveJulioAutos2->checkCollision(personaje, *window);
+        traficoCarlosPellegrini->checkCollision(personaje, *window);
 
 
         if(personaje->getShape().getGlobalBounds().intersects(barrera->getShape().getGlobalBounds()))
@@ -350,9 +279,6 @@ void Juego::loop()
 
 
 
-
-
-
         window->clear(Color(150, 150, 150)); //Color gris para el fondo de la ventana
 
         nueveDeJulio->draw(*window);
@@ -386,18 +312,11 @@ void Juego::loop()
 
         personaje->draw(*window);
 
-        taxi5->draw(*window);
-        taxi4->draw(*window);
-        taxi3->draw(*window);
-        taxi2->draw(*window);
-        taxi->draw(*window);
+        traficoCerrito->draw(*window);
+        traficoNueveJulioAutos1->draw(*window);
+        traficoNueveJulioAutos2->draw(*window);
+        traficoCarlosPellegrini->draw(*window);
 
-        autito6->draw(*window);
-        autito->draw(*window);
-        autito2->draw(*window);
-        autito3->draw(*window);
-        autito4->draw(*window);
-        autito5->draw(*window);
 
         barrera->draw(*window);
         barrera2->draw(*window);

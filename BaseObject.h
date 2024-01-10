@@ -13,7 +13,6 @@ class BaseObject
 
     public:
         BaseObject();
-        ~BaseObject();
 
         void draw(RenderWindow& window);
         RectangleShape getShape() { return this->shape; } //Para detectar colisiones

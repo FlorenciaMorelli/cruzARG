@@ -66,6 +66,10 @@
 		<Unit filename="Taxi.h" />
 		<Unit filename="Tiles.cpp" />
 		<Unit filename="Tiles.h" />
+		<Unit filename="Trafico.cpp" />
+		<Unit filename="Trafico.h" />
+		<Unit filename="Vehiculo.cpp" />
+		<Unit filename="Vehiculo.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

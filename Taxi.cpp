@@ -1,12 +1,12 @@
 #include "Taxi.h"
 
 #include <SFML/Graphics.hpp>
-#include "BaseObject.h"
+#include "Vehiculo.h"
 #include "DEFINITIONS.h"
 
 using namespace sf;
 
-Taxi::Taxi(float posX, float posY, bool direccion)
+Taxi::Taxi(float posX, float posY, bool direccion) : Vehiculo(posX, posY, direccion)
 {
     shape.setSize(Vector2f(ANCHO_TAXI, ALTURA_TAXI));
 
@@ -25,11 +25,6 @@ Taxi::Taxi(float posX, float posY, bool direccion)
     this->posOriginalX = posX;
     this->posOriginalY = posY;
 
-}
-
-Taxi::~Taxi()
-{
-    //dtor
 }
 
 void Taxi::move(Vector2u tamanioVentana)

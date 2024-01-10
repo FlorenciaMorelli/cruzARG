@@ -2,27 +2,17 @@
 #define AUTO_H
 
 #include <SFML/Graphics.hpp>
-#include "BaseObject.h"
+#include "Vehiculo.h"
 
 using namespace sf;
 
 
-class Auto : public BaseObject
+class Auto : public Vehiculo
 {
-    private:
-        float posOriginalX, posOriginalY;
-        bool direccion;
-
     public:
-        Auto(float posX, float Y, bool direccion);
-        ~Auto();
+        Auto(float posX, float posY, bool direccion);
 
-        void move(Vector2u tamanioVentana);
-        float getPosOriginalX() { return this->posOriginalX; }
-        float getPosOriginalY() { return this->posOriginalY; }
-
-    protected:
-
+        void move(const Vector2u tamanioVentana);
 };
 
 #endif // AUTO_H

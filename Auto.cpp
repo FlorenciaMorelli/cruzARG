@@ -1,12 +1,12 @@
 #include "Auto.h"
 
 #include <SFML/Graphics.hpp>
-#include "BaseObject.h"
+#include "Vehiculo.h"
 #include "DEFINITIONS.h"
 
 using namespace sf;
 
-Auto::Auto(float posX, float posY, bool direccion)
+Auto::Auto(float posX, float posY, bool direccion) : Vehiculo(posX, posY, direccion)
 {
     shape.setSize(Vector2f(ANCHO_AUTO, ALTURA_AUTO));
 
@@ -24,11 +24,6 @@ Auto::Auto(float posX, float posY, bool direccion)
 
     this->posOriginalX = posX;
     this->posOriginalY = posY;
-}
-
-Auto::~Auto()
-{
-    //dtor
 }
 
 void Auto::move(Vector2u tamanioVentana)
