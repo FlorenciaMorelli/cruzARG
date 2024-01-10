@@ -22,3 +22,4 @@
 | 09-01-2024 | 15:30 | Modelo | Alta | Función de creación automática de carriles |
 | 09-01-2024 | 20:00 | Modelo | Alta | Funciones para carriles estáticos sin coalisión: veredas, canteros, metrobus |
 | 09-01-2024 | 21:00 | Modelo + Controlador | Alta | Clase Mapa y renderización de carriles |
+| 10-01-2024 | 12:45 | Modelo | Alta | Diseño UML |
