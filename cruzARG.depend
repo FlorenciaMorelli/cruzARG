@@ -1299,51 +1299,50 @@
 1704551200 source:e:\2cuat2023\programacionii\proyectofinal\cruzarg\src\juego.cpp
 	"Juego.h"
 
-1704748378 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.cpp
+1704922800 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.cpp
 	"Taxi.h"
 	<SFML/Graphics.hpp>
-	"BaseObject.h"
+	"Vehiculo.h"
 	"DEFINITIONS.h"
 
-1704748378 d:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.h
+1704922800 d:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.h
 	<SFML/Graphics.hpp>
-	"BaseObject.h"
+	"Vehiculo.h"
 
-1704844260 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.cpp
+1704924098 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.cpp
 	"Juego.h"
 	"DEFINITIONS.h"
 	<vector>
 	"Tiles.h"
 	"Mapa.h"
 
-1704843334 d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.h
+1704922800 d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.h
 	<SFML/Graphics.hpp>
 	<vector>
-	"Taxi.h"
-	"Personaje.h"
-	"Auto.h"
-	"BarreraJersey.h"
 	"Tiles.h"
 	"Mapa.h"
+	"Personaje.h"
+	"Trafico.h"
+	"BarreraJersey.h"
 
-1704650196 d:\2cuat2023\programacionii\proyectofinal\cruzarg\baseobject.h
+1704922800 d:\2cuat2023\programacionii\proyectofinal\cruzarg\baseobject.h
 	<SFML/Graphics.hpp>
 
-1704586078 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\baseobject.cpp
+1704922800 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\baseobject.cpp
 	"BaseObject.h"
 	<SFML/Graphics.hpp>
 
-1704841808 d:\2cuat2023\programacionii\proyectofinal\cruzarg\definitions.h
+1704845478 d:\2cuat2023\programacionii\proyectofinal\cruzarg\definitions.h
 
-1704748378 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\auto.cpp
+1704922800 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\auto.cpp
 	"Auto.h"
 	<SFML/Graphics.hpp>
-	"BaseObject.h"
+	"Vehiculo.h"
 	"DEFINITIONS.h"
 
-1704748378 d:\2cuat2023\programacionii\proyectofinal\cruzarg\auto.h
+1704922800 d:\2cuat2023\programacionii\proyectofinal\cruzarg\auto.h
 	<SFML/Graphics.hpp>
-	"BaseObject.h"
+	"Vehiculo.h"
 
 1704907732 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\auto.cpp
 	"Auto.h"
@@ -1426,18 +1425,18 @@
 	"BaseObject.h"
 	<vector>
 
-1704843802 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\tiles.cpp
+1704844742 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\tiles.cpp
 	"Tiles.h"
 	"DEFINITIONS.h"
 	<vector>
 
-1704843826 d:\2cuat2023\programacionii\proyectofinal\cruzarg\mapa.h
+1704844740 d:\2cuat2023\programacionii\proyectofinal\cruzarg\mapa.h
 	<SFML/Graphics.hpp>
 	<vector>
 	"DEFINITIONS.h"
 	"Tiles.h"
 
-1704844148 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mapa.cpp
+1704844740 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mapa.cpp
 	"Mapa.h"
 	<SFML/Graphics.hpp>
 	<vector>
@@ -1480,4 +1479,30 @@
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
 	"DEFINITIONS.h"
+
+1704922800 d:\2cuat2023\programacionii\proyectofinal\cruzarg\vehiculo.h
+	<SFML/Graphics.hpp>
+	"BaseObject.h"
+	"DEFINITIONS.h"
+
+1704924098 d:\2cuat2023\programacionii\proyectofinal\cruzarg\trafico.h
+	<SFML/Graphics.hpp>
+	"DEFINITIONS.h"
+	"Auto.h"
+	"Taxi.h"
+	"Personaje.h"
+
+1704922800 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\vehiculo.cpp
+	"Vehiculo.h"
+	<SFML/Graphics.hpp>
+	"BaseObject.h"
+	"DEFINITIONS.h"
+
+1704924346 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\trafico.cpp
+	"Trafico.h"
+	<SFML/Graphics.hpp>
+	<cstdlib>
+	<ctime>
+	"DEFINITIONS.h"
+	<vector>
 

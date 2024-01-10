@@ -2,6 +2,7 @@
 #define TRAFICO_H
 
 #include <SFML/Graphics.hpp>
+
 #include "DEFINITIONS.h"
 #include "Auto.h"
 #include "Taxi.h"
@@ -11,7 +12,7 @@ using namespace sf;
 
 class Trafico {
 public:
-    Trafico(float posX, float posY, bool direccion);
+    Trafico(float tamVentana, float posY, bool direccion);
 
     void move(const Vector2u& tamVentana);
     void draw(RenderWindow& window);
