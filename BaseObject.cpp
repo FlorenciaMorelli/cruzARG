@@ -9,11 +9,6 @@ BaseObject::BaseObject()
     //ctor
 }
 
-BaseObject::~BaseObject()
-{
-    //dtor
-}
-
 void BaseObject::draw(RenderWindow& window)
 {
     window.draw(shape);

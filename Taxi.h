@@ -2,24 +2,16 @@
 #define TAXI_H
 
 #include <SFML/Graphics.hpp>
-#include "BaseObject.h"
+#include "Vehiculo.h"
 
 using namespace sf;
 
-class Taxi : public BaseObject
+class Taxi : public Vehiculo
 {
-    private:
-        float posOriginalX, posOriginalY;
-        bool direccion;
-
     public:
         Taxi(float posX, float posY, bool direccion);
-        ~Taxi();
 
         void move(Vector2u tamanioVentana);
-        float getPosOriginalX() { return this->posOriginalX; }
-        float getPosOriginalY() { return this->posOriginalY; }
-
 };
 
 #endif // TAXI_H
