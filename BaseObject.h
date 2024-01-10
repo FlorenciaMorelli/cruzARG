@@ -7,17 +7,16 @@ using namespace sf;
 
 class BaseObject
 {
+    protected: // accesible en esta clase y en las clases que la heredan
+        RectangleShape shape;
+        Texture shapeTexture;
+
     public:
         BaseObject();
         ~BaseObject();
 
         void draw(RenderWindow& window);
         RectangleShape getShape() { return this->shape; } //Para detectar colisiones
-
-    protected: // accesible en esta clase y en las clases que la heredan
-        RectangleShape shape;
-        Texture shapeTexture;
-
 };
 
 #endif // BASEOBJECT_H
