@@ -32,8 +32,8 @@ Juego::Juego()
     float veredaPellegrini2 = carriles * 14.0f;
 
     // ← Cerrito
-    this->traficoCerrito = new Trafico(window->getSize().x + ANCHO_TAXI, cerrito, false);
-    this->traficoNueveJulioAutos1 = new Trafico(window->getSize().x + ANCHO_AUTO, nueveJulioAutos1, false);
+    this->traficoCerrito = new Trafico(window->getSize().x, cerrito, false);
+    this->traficoNueveJulioAutos1 = new Trafico(window->getSize().x, nueveJulioAutos1, false);
 
     //Barrera Jersey1
     this->barrera = new BarreraJersey(0.0f, newJersey1);
@@ -104,10 +104,10 @@ Juego::Juego()
     this->asfalto24 = new Tiles(asfalto23->getShape().getPosition().x + ANCHO_BARRERA, newJersey2, 1);
 
     // → 9 de Julio (autos)
-    this->traficoNueveJulioAutos2 = new Trafico(-ANCHO_AUTO, nueveJulioAutos2, true);
+    this->traficoNueveJulioAutos2 = new Trafico(window->getSize().x, nueveJulioAutos2, true);
 
     // → Carlos Pellegrini
-    this->traficoCarlosPellegrini = new Trafico(-ANCHO_TAXI, carlosPellegrini, true);
+    this->traficoCarlosPellegrini = new Trafico(window->getSize().x, carlosPellegrini, true);
 
 
     Image image;
