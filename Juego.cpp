@@ -370,6 +370,19 @@ void Juego::loop()
         asfalto10->draw(*window);
         asfalto11->draw(*window);
         asfalto12->draw(*window);
+        asfalto13->draw(*window);
+        asfalto14->draw(*window);
+        asfalto15->draw(*window);
+        asfalto16->draw(*window);
+        asfalto17->draw(*window);
+        asfalto18->draw(*window);
+        asfalto19->draw(*window);
+        asfalto20->draw(*window);
+        asfalto21->draw(*window);
+        asfalto22->draw(*window);
+        asfalto23->draw(*window);
+        asfalto24->draw(*window);
+
 
         personaje->draw(*window);
 
