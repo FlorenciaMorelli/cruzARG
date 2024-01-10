@@ -1358,26 +1358,28 @@
 1704723544 c:\users\fmorelli.diagmaipu\documents\cruzarg\baseobject.h
 	<SFML/Graphics.hpp>
 
-1704812148 c:\users\fmorelli.diagmaipu\documents\cruzarg\definitions.h
+1704898226 c:\users\fmorelli.diagmaipu\documents\cruzarg\definitions.h
 
 1704723544 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\baseobject.cpp
 	"BaseObject.h"
 	<SFML/Graphics.hpp>
 
-1704822678 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.cpp
+1704898226 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.cpp
 	"Juego.h"
 	"DEFINITIONS.h"
 	<vector>
 	"Tiles.h"
+	"Mapa.h"
 
-1704824200 c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.h
+1704898226 c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.h
 	<SFML/Graphics.hpp>
 	<vector>
-	"Personaje.h"
 	"Taxi.h"
+	"Personaje.h"
 	"Auto.h"
 	"BarreraJersey.h"
 	"Tiles.h"
+	"Mapa.h"
 
 1704723544 c:\users\fmorelli.diagmaipu\documents\cruzarg\personaje.h
 	<SFML/Graphics.hpp>
@@ -1405,11 +1407,11 @@
 	"BarreraJersey.h"
 	"DEFINITIONS.h"
 
-1704823125 c:\users\fmorelli.diagmaipu\documents\cruzarg\tiles.h
+1704898226 c:\users\fmorelli.diagmaipu\documents\cruzarg\tiles.h
 	"BaseObject.h"
 	<vector>
 
-1704823125 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\tiles.cpp
+1704898226 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\tiles.cpp
 	"Tiles.h"
 	"DEFINITIONS.h"
 	<vector>
@@ -1437,6 +1439,19 @@
 	"Tiles.h"
 
 1704844148 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mapa.cpp
+	"Mapa.h"
+	<SFML/Graphics.hpp>
+	<vector>
+	"DEFINITIONS.h"
+	"Tiles.h"
+
+1704898226 c:\users\fmorelli.diagmaipu\documents\cruzarg\mapa.h
+	<SFML/Graphics.hpp>
+	<vector>
+	"DEFINITIONS.h"
+	"Tiles.h"
+
+1704898226 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\mapa.cpp
 	"Mapa.h"
 	<SFML/Graphics.hpp>
 	<vector>
