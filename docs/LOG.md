@@ -25,3 +25,4 @@
 | 10-01-2024 | 12:45 | Modelo | Alta | Diseño UML |
 | 10-01-2024 | 15:05 | Modelo | Alta | Creación de las clases Trafico y Vehiculo |
 | 10-01-2024 | 19:10 | Controlador | Media | Randomización en la creación de los vehículos |
+| 10-01-2024 | 23:20 | Modelo | Alta | Menú Principal y funcionamiento de clases main, Juego, MainMenu y PantallaDeJuego |
