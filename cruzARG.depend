@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1704583010 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\main.cpp
+1704930756 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Juego.h"
@@ -1309,14 +1309,11 @@
 	<SFML/Graphics.hpp>
 	"Vehiculo.h"
 
-1704924098 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.cpp
+1704930756 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.cpp
 	"Juego.h"
-	"DEFINITIONS.h"
-	<vector>
-	"Tiles.h"
-	"Mapa.h"
+	"MainMenu.h"
 
-1704922800 d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.h
+1704930758 d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.h
 	<SFML/Graphics.hpp>
 	<vector>
 	"Tiles.h"
@@ -1485,7 +1482,7 @@
 	"BaseObject.h"
 	"DEFINITIONS.h"
 
-1704924098 d:\2cuat2023\programacionii\proyectofinal\cruzarg\trafico.h
+1704924614 d:\2cuat2023\programacionii\proyectofinal\cruzarg\trafico.h
 	<SFML/Graphics.hpp>
 	"DEFINITIONS.h"
 	"Auto.h"
@@ -1498,11 +1495,37 @@
 	"BaseObject.h"
 	"DEFINITIONS.h"
 
-1704924346 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\trafico.cpp
+1704924614 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\trafico.cpp
 	"Trafico.h"
 	<SFML/Graphics.hpp>
 	<cstdlib>
 	<ctime>
 	"DEFINITIONS.h"
 	<vector>
+
+1704931252 d:\2cuat2023\programacionii\proyectofinal\cruzarg\mainmenu.h
+	<iostream>
+	<SFML/Graphics.hpp>
+
+1704929960 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.cpp
+	"PantallaDeJuego.h"
+	<vector>
+	"DEFINITIONS.h"
+	"Tiles.h"
+	"Mapa.h"
+
+1704929958 d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.h
+	<SFML/Graphics.hpp>
+	<vector>
+	"Tiles.h"
+	"Mapa.h"
+	"Personaje.h"
+	"Trafico.h"
+	"BarreraJersey.h"
+
+1704938944 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mainmenu.cpp
+	"MainMenu.h"
+	<iostream>
+	<SFML/Graphics.hpp>
+	"PantallaDeJuego.h"
 

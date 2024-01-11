@@ -8,7 +8,7 @@ int main()
 {
     Juego juego;
 
-    juego.loop();
+    juego.ejecutar();
 
     return 0;
 }
