@@ -68,6 +68,8 @@ PantallaDeJuego::PantallaDeJuego()
     this->asfalto12 = new Tiles(asfalto11->getShape().getPosition().x + ANCHO_BARRERA, newJersey1, 1);
 
     // → 9 de Julio (colectivos)
+    this->colectivo1 = new Colectivo(0.0, nueveJulioColectivos1, true);
+    this->colectivo2 = new Colectivo(colectivo1->getShape().getPosition().x + SEPARACION_ENTRE_VEHICULOS, nueveJulioColectivos1, true);
 
 
     // ← 9 de Julio (colectivos)
@@ -152,6 +154,10 @@ void PantallaDeJuego::loop()
         traficoNueveJulioAutos1->checkCollision(personaje, *window);
         traficoNueveJulioAutos2->checkCollision(personaje, *window);
         traficoCarlosPellegrini->checkCollision(personaje, *window);
+
+        colectivo1->move(window->getSize());
+        colectivo2->move(window->getSize());
+
 
 
         if(personaje->getShape().getGlobalBounds().intersects(barrera->getShape().getGlobalBounds()))
@@ -278,6 +284,9 @@ void PantallaDeJuego::loop()
         window->clear(Color(150, 150, 150)); //Color gris para el fondo de la ventana
 
         nueveDeJulio->draw(*window);
+        colectivo1->draw(*window);
+        colectivo2->draw(*window);
+
 
 
         asfalto->draw(*window);

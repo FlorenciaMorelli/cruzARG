@@ -8,6 +8,7 @@
 #include "Personaje.h"
 #include "Trafico.h"
 #include "BarreraJersey.h"
+#include "Colectivo.h"
 
 using namespace sf;
 
@@ -24,6 +25,11 @@ class PantallaDeJuego
         Trafico* traficoNueveJulioColectivos2;
         Trafico* traficoNueveJulioAutos2;
         Trafico* traficoCarlosPellegrini;
+
+        Colectivo *colectivo1;
+        Colectivo *colectivo2;
+        Colectivo *colectivo3;
+
 
         BarreraJersey *barrera;
         BarreraJersey *barrera2;

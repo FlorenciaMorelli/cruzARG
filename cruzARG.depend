@@ -422,7 +422,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1704723544 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\main.cpp
+1704983530 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Juego.h"
@@ -1341,33 +1341,30 @@
 	<SFML/Graphics.hpp>
 	"Vehiculo.h"
 
-1704907732 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\auto.cpp
+1704983529 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\auto.cpp
 	"Auto.h"
 	<SFML/Graphics.hpp>
 	"Vehiculo.h"
 	"DEFINITIONS.h"
 
-1704909673 c:\users\fmorelli.diagmaipu\documents\cruzarg\auto.h
+1704983529 c:\users\fmorelli.diagmaipu\documents\cruzarg\auto.h
 	<SFML/Graphics.hpp>
 	"Vehiculo.h"
 
-1704909753 c:\users\fmorelli.diagmaipu\documents\cruzarg\baseobject.h
+1704983529 c:\users\fmorelli.diagmaipu\documents\cruzarg\baseobject.h
 	<SFML/Graphics.hpp>
 
-1704898226 c:\users\fmorelli.diagmaipu\documents\cruzarg\definitions.h
+1704985587 c:\users\fmorelli.diagmaipu\documents\cruzarg\definitions.h
 
-1704909837 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\baseobject.cpp
+1704983529 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\baseobject.cpp
 	"BaseObject.h"
 	<SFML/Graphics.hpp>
 
-1704909554 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.cpp
+1704983529 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.cpp
 	"Juego.h"
-	"DEFINITIONS.h"
-	<vector>
-	"Tiles.h"
-	"Mapa.h"
+	"MainMenu.h"
 
-1704909883 c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.h
+1704983529 c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.h
 	<SFML/Graphics.hpp>
 	<vector>
 	"Tiles.h"
@@ -1380,7 +1377,7 @@
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
 
-1704908271 c:\users\fmorelli.diagmaipu\documents\cruzarg\taxi.h
+1704983529 c:\users\fmorelli.diagmaipu\documents\cruzarg\taxi.h
 	<SFML/Graphics.hpp>
 	"Vehiculo.h"
 
@@ -1389,7 +1386,7 @@
 	<SFML/Graphics.hpp>
 	"DEFINITIONS.h"
 
-1704907732 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\taxi.cpp
+1704983529 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\taxi.cpp
 	"Taxi.h"
 	<SFML/Graphics.hpp>
 	"Vehiculo.h"
@@ -1440,38 +1437,40 @@
 	"DEFINITIONS.h"
 	"Tiles.h"
 
-1704898226 c:\users\fmorelli.diagmaipu\documents\cruzarg\mapa.h
+1704910294 c:\users\fmorelli.diagmaipu\documents\cruzarg\mapa.h
 	<SFML/Graphics.hpp>
 	<vector>
 	"DEFINITIONS.h"
 	"Tiles.h"
 
-1704898226 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\mapa.cpp
+1704910294 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\mapa.cpp
 	"Mapa.h"
 	<SFML/Graphics.hpp>
 	<vector>
 	"DEFINITIONS.h"
 	"Tiles.h"
 
-1704908271 c:\users\fmorelli.diagmaipu\documents\cruzarg\vehiculo.h
+1704983529 c:\users\fmorelli.diagmaipu\documents\cruzarg\vehiculo.h
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
 	"DEFINITIONS.h"
 
-1704909473 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\trafico.cpp
+1704983529 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\trafico.cpp
 	"Trafico.h"
 	<SFML/Graphics.hpp>
+	<cstdlib>
+	<ctime>
 	"DEFINITIONS.h"
 	<vector>
 
-1704908091 c:\users\fmorelli.diagmaipu\documents\cruzarg\trafico.h
+1704983529 c:\users\fmorelli.diagmaipu\documents\cruzarg\trafico.h
 	<SFML/Graphics.hpp>
 	"DEFINITIONS.h"
 	"Auto.h"
 	"Taxi.h"
 	"Personaje.h"
 
-1704908271 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\vehiculo.cpp
+1704983529 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\vehiculo.cpp
 	"Vehiculo.h"
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
@@ -1528,4 +1527,38 @@
 	<iostream>
 	<SFML/Graphics.hpp>
 	"PantallaDeJuego.h"
+
+1704983529 c:\users\fmorelli.diagmaipu\documents\cruzarg\mainmenu.h
+	<iostream>
+	<SFML/Graphics.hpp>
+
+1704983529 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\mainmenu.cpp
+	"MainMenu.h"
+	<iostream>
+	<SFML/Graphics.hpp>
+	"PantallaDeJuego.h"
+
+1704985587 c:\users\fmorelli.diagmaipu\documents\cruzarg\pantalladejuego.h
+	<SFML/Graphics.hpp>
+	<vector>
+	"Tiles.h"
+	"Mapa.h"
+	"Personaje.h"
+	"Trafico.h"
+	"BarreraJersey.h"
+	"Colectivo.h"
+
+1704985587 c:\users\fmorelli.diagmaipu\documents\cruzarg\colectivo.h
+	<Vehiculo.h>
+	<SFML/Graphics.hpp>
+
+1704983529 c:\users\fmorelli.diagmaipu\documents\cruzarg\\vehiculo.h
+	<SFML/Graphics.hpp>
+	"BaseObject.h"
+	"DEFINITIONS.h"
+
+1704983529 c:\users\fmorelli.diagmaipu\documents\cruzarg\\baseobject.h
+	<SFML/Graphics.hpp>
+
+1704985587 c:\users\fmorelli.diagmaipu\documents\cruzarg\\definitions.h
 
