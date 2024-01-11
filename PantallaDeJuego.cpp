@@ -33,8 +33,8 @@ PantallaDeJuego::PantallaDeJuego()
     float veredaPellegrini2 = carriles * 14.0f;
 
     // ← Cerrito
-    this->traficoCerrito = new Trafico(window->getSize().x, cerrito, false);
-    this->traficoNueveJulioAutos1 = new Trafico(window->getSize().x, nueveJulioAutos1, false);
+    this->traficoCerrito = new Trafico(1, window->getSize().x, cerrito, false);
+    this->traficoNueveJulioAutos1 = new Trafico(1, window->getSize().x, nueveJulioAutos1, false);
 
     //Barrera Jersey1
     this->barrera = new BarreraJersey(0.0f, newJersey1);
@@ -68,12 +68,10 @@ PantallaDeJuego::PantallaDeJuego()
     this->asfalto12 = new Tiles(asfalto11->getShape().getPosition().x + ANCHO_BARRERA, newJersey1, 1);
 
     // → 9 de Julio (colectivos)
-    this->colectivo1 = new Colectivo(0.0, nueveJulioColectivos1, true);
-    this->colectivo2 = new Colectivo(colectivo1->getShape().getPosition().x + SEPARACION_ENTRE_VEHICULOS, nueveJulioColectivos1, true);
-
+    this->traficoNueveJulioColectivos1 = new Trafico(2, window->getSize().x, nueveJulioColectivos1, true);
 
     // ← 9 de Julio (colectivos)
-
+    this->traficoNueveJulioColectivos2 = new Trafico(2, window->getSize().x, nueveJulioColectivos2, false);
 
     //Barrera Jersey2
     this->barrera13 = new BarreraJersey(0.0f, newJersey2);
@@ -107,10 +105,10 @@ PantallaDeJuego::PantallaDeJuego()
     this->asfalto24 = new Tiles(asfalto23->getShape().getPosition().x + ANCHO_BARRERA, newJersey2, 1);
 
     // → 9 de Julio (autos)
-    this->traficoNueveJulioAutos2 = new Trafico(window->getSize().x, nueveJulioAutos2, true);
+    this->traficoNueveJulioAutos2 = new Trafico(1, window->getSize().x, nueveJulioAutos2, true);
 
     // → Carlos Pellegrini
-    this->traficoCarlosPellegrini = new Trafico(window->getSize().x, carlosPellegrini, true);
+    this->traficoCarlosPellegrini = new Trafico(1, window->getSize().x, carlosPellegrini, true);
 
 
     Image image;
@@ -146,17 +144,18 @@ void PantallaDeJuego::loop()
 
         traficoCerrito->move(window->getSize());
         traficoNueveJulioAutos1->move(window->getSize());
+        traficoNueveJulioColectivos1->move(window->getSize());
+        traficoNueveJulioColectivos2->move(window->getSize());
         traficoNueveJulioAutos2->move(window->getSize());
         traficoCarlosPellegrini->move(window->getSize());
 
 
         traficoCerrito->checkCollision(personaje, *window);
         traficoNueveJulioAutos1->checkCollision(personaje, *window);
+        traficoNueveJulioColectivos1->checkCollision(personaje, *window);
+        traficoNueveJulioColectivos2->checkCollision(personaje, *window);
         traficoNueveJulioAutos2->checkCollision(personaje, *window);
         traficoCarlosPellegrini->checkCollision(personaje, *window);
-
-        colectivo1->move(window->getSize());
-        colectivo2->move(window->getSize());
 
 
 
@@ -284,9 +283,6 @@ void PantallaDeJuego::loop()
         window->clear(Color(150, 150, 150)); //Color gris para el fondo de la ventana
 
         nueveDeJulio->draw(*window);
-        colectivo1->draw(*window);
-        colectivo2->draw(*window);
-
 
 
         asfalto->draw(*window);
@@ -319,6 +315,8 @@ void PantallaDeJuego::loop()
 
         traficoCerrito->draw(*window);
         traficoNueveJulioAutos1->draw(*window);
+        traficoNueveJulioColectivos1->draw(*window);
+        traficoNueveJulioColectivos2->draw(*window);
         traficoNueveJulioAutos2->draw(*window);
         traficoCarlosPellegrini->draw(*window);
 

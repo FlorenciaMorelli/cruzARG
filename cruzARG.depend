@@ -1463,11 +1463,12 @@
 	"DEFINITIONS.h"
 	<vector>
 
-1704983529 c:\users\fmorelli.diagmaipu\documents\cruzarg\trafico.h
+1704986512 c:\users\fmorelli.diagmaipu\documents\cruzarg\trafico.h
 	<SFML/Graphics.hpp>
 	"DEFINITIONS.h"
 	"Auto.h"
 	"Taxi.h"
+	"Colectivo.h"
 	"Personaje.h"
 
 1704983529 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\vehiculo.cpp
@@ -1538,7 +1539,7 @@
 	<SFML/Graphics.hpp>
 	"PantallaDeJuego.h"
 
-1704985587 c:\users\fmorelli.diagmaipu\documents\cruzarg\pantalladejuego.h
+1704986385 c:\users\fmorelli.diagmaipu\documents\cruzarg\pantalladejuego.h
 	<SFML/Graphics.hpp>
 	<vector>
 	"Tiles.h"
@@ -1546,7 +1547,6 @@
 	"Personaje.h"
 	"Trafico.h"
 	"BarreraJersey.h"
-	"Colectivo.h"
 
 1704985587 c:\users\fmorelli.diagmaipu\documents\cruzarg\colectivo.h
 	<Vehiculo.h>
@@ -1561,4 +1561,17 @@
 	<SFML/Graphics.hpp>
 
 1704985587 c:\users\fmorelli.diagmaipu\documents\cruzarg\\definitions.h
+
+1704985587 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\colectivo.cpp
+	"Colectivo.h"
+	"Vehiculo.h"
+	<SFML/Graphics.hpp>
+	"DEFINITIONS.h"
+
+1704986480 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\pantalladejuego.cpp
+	"PantallaDeJuego.h"
+	<vector>
+	"DEFINITIONS.h"
+	"Tiles.h"
+	"Mapa.h"
 
