@@ -1354,7 +1354,7 @@
 1704983529 c:\users\fmorelli.diagmaipu\documents\cruzarg\baseobject.h
 	<SFML/Graphics.hpp>
 
-1704990720 c:\users\fmorelli.diagmaipu\documents\cruzarg\definitions.h
+1704993516 c:\users\fmorelli.diagmaipu\documents\cruzarg\definitions.h
 
 1704983529 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\baseobject.cpp
 	"BaseObject.h"
@@ -1396,7 +1396,7 @@
 	"Tiles.h"
 	"Personaje.h"
 
-1704992178 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\barrerajersey.cpp
+1704993516 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\barrerajersey.cpp
 	"BarreraJersey.h"
 	"DEFINITIONS.h"
 
@@ -1438,13 +1438,13 @@
 	"DEFINITIONS.h"
 	"Tiles.h"
 
-1704991940 c:\users\fmorelli.diagmaipu\documents\cruzarg\mapa.h
+1704993516 c:\users\fmorelli.diagmaipu\documents\cruzarg\mapa.h
 	<SFML/Graphics.hpp>
 	<vector>
 	"DEFINITIONS.h"
 	"Tiles.h"
 
-1704992178 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\mapa.cpp
+1704993516 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\mapa.cpp
 	"Mapa.h"
 	<SFML/Graphics.hpp>
 	<vector>
@@ -1540,7 +1540,7 @@
 	<SFML/Graphics.hpp>
 	"PantallaDeJuego.h"
 
-1704988892 c:\users\fmorelli.diagmaipu\documents\cruzarg\pantalladejuego.h
+1704993493 c:\users\fmorelli.diagmaipu\documents\cruzarg\pantalladejuego.h
 	<SFML/Graphics.hpp>
 	<vector>
 	"Tiles.h"
@@ -1561,7 +1561,7 @@
 1704983529 c:\users\fmorelli.diagmaipu\documents\cruzarg\\baseobject.h
 	<SFML/Graphics.hpp>
 
-1704990720 c:\users\fmorelli.diagmaipu\documents\cruzarg\\definitions.h
+1704993516 c:\users\fmorelli.diagmaipu\documents\cruzarg\\definitions.h
 
 1704986789 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\colectivo.cpp
 	"Colectivo.h"
