@@ -7,6 +7,8 @@
 #include "DEFINITIONS.h"
 #include <vector>
 
+using namespace sf;
+
 Trafico::Trafico(int tipo, float tamVentana, float posY, bool direccion) {
     float posX = 0.0;
     if(tipo == 1){
@@ -15,7 +17,7 @@ Trafico::Trafico(int tipo, float tamVentana, float posY, bool direccion) {
 
             vehiculos.push_back(new Taxi(posX, posY, direccion));
 
-            for (int i = 1; i < 12; ++i) {
+            for (int i = 1; i < 12; i++) {
                 float nuevaPosicionX = vehiculos.back()->getPosOriginalX() + SEPARACION_ENTRE_VEHICULOS +
                                        rand() % (int)(SEPARACION_PARA_PERSONAJE - SEPARACION_ENTRE_VEHICULOS + 1);
 
@@ -34,7 +36,7 @@ Trafico::Trafico(int tipo, float tamVentana, float posY, bool direccion) {
 
             vehiculos.push_back(new Taxi(posX, posY, direccion));
 
-            for (int i = 1; i < 12; ++i) {
+            for (int i = 1; i < 12; i++) {
                 float nuevaPosicionX = vehiculos.back()->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS -
                                        rand() % (int)(SEPARACION_PARA_PERSONAJE - SEPARACION_ENTRE_VEHICULOS + 1);
 
@@ -56,7 +58,7 @@ Trafico::Trafico(int tipo, float tamVentana, float posY, bool direccion) {
 
             vehiculos.push_back(new Colectivo(posX, posY, direccion));
 
-            for (int i = 1; i < 7; ++i) {
+            for (int i = 1; i < 7; i++) {
                 float nuevaPosicionX = vehiculos.back()->getPosOriginalX() + SEPARACION_ENTRE_VEHICULOS +
                                        rand() % (int)(SEPARACION_PARA_PERSONAJE - SEPARACION_ENTRE_VEHICULOS + 1);
 
@@ -71,7 +73,7 @@ Trafico::Trafico(int tipo, float tamVentana, float posY, bool direccion) {
 
             vehiculos.push_back(new Colectivo(posX, posY, direccion));
 
-            for (int i = 1; i < 7; ++i) {
+            for (int i = 1; i < 7; i++) {
                 float nuevaPosicionX = vehiculos.back()->getPosOriginalX() - SEPARACION_ENTRE_VEHICULOS -
                                        rand() % (int)(SEPARACION_PARA_PERSONAJE - SEPARACION_ENTRE_VEHICULOS + 1);
 
@@ -87,19 +89,19 @@ Trafico::Trafico(int tipo, float tamVentana, float posY, bool direccion) {
 
 }
 
-void Trafico::move(const sf::Vector2u& tamVentana) {
+void Trafico::move(const Vector2u& tamVentana) {
     for (auto& vehiculo : vehiculos) {
         vehiculo->move(tamVentana);
     }
 }
 
-void Trafico::draw(sf::RenderWindow& window) {
+void Trafico::draw(RenderWindow& window) {
     for (auto& vehiculo : vehiculos) {
         vehiculo->draw(window);
     }
 }
 
-bool Trafico::checkCollision(Personaje* personaje, sf::RenderWindow& window) {
+bool Trafico::checkCollision(Personaje* personaje, RenderWindow& window) {
     for (auto& vehiculo : vehiculos) {
         if (personaje->getShape().getGlobalBounds().intersects(vehiculo->getShape().getGlobalBounds())) {
             window.close();

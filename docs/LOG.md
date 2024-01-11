@@ -28,3 +28,4 @@
 | 10-01-2024 | 23:20 | Modelo | Alta | Menú Principal y funcionamiento de clases main, Juego, MainMenu y PantallaDeJuego |
 | 11-01-2024 | 12:10 | Modelo | Media | Creación de la clase Colectivo y prueba simple |
 | 11-01-2024 | 12:25 | Controlador | Alta | Inclusión de Colectivo en la lógica de creación de Tráfico |
+| 11-01-2024 | 12:55 | Modelo + Controlador | Alta | Corrección clase BarreraNewJersey e implementación |
