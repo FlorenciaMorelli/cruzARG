@@ -11,7 +11,7 @@ Mapa::Mapa(Vector2u tamVentana)
 {
     this->tamanioVentana = tamVentana;
 
-    this->carriles =  tamanioVentana.y / 14.0f;
+    this->carriles =  CARRILES;
     this->veredaCerrito1 = carriles * 0.0f;
     this->veredaCerrito2 = carriles * 1.0f;
     this->cerrito = carriles * 2.0f;
@@ -32,9 +32,11 @@ Mapa::Mapa(Vector2u tamVentana)
     crearCalle(this->calleCerrito, this->tamanioVentana, this->cerrito);
     crearCantero(this->canteroVector1, this->tamanioVentana, this->cantero1);
     crearCalle(this->nueveAutos1, this->tamanioVentana, this->nueveJulioAutos1);
+    crearCalle(this->calleBarrera1, this->tamanioVentana, this->newJersey1);
     crearCalle(this->nueveColectivos1, this->tamanioVentana, this->nueveJulioColectivos1);
     crearMetrobus(this->tamanioVentana, this->metrobus);
     crearCalle(this->nueveColectivos2, this->tamanioVentana, this->nueveJulioColectivos2);
+    crearCalle(this->calleBarrera2, this->tamanioVentana, this->newJersey2);
     crearCalle(this->nueveAutos2, this->tamanioVentana, this->nueveJulioAutos2);
     crearCantero(this->canteroVector2, this->tamanioVentana, this->cantero2);
     crearCalle(this->callePellegrini, this->tamanioVentana, this->carlosPellegrini);
@@ -74,40 +76,40 @@ void Mapa::crearMetrobus(Vector2u tamanioVentana, float posY)
 
 void Mapa::crearCerrito(Vector2u tamanioVentana, float posY, float posY2)
 {
-    if (cerritoVereda.empty())
+    if (veredaCerrito.empty())
     {
-        this->cerritoVereda.push_back(new Tiles(0.0f, posY, 8));
-        this->cerritoVereda.push_back(new Tiles(0.0f, posY2, 5));
+        this->veredaCerrito.push_back(new Tiles(0.0f, posY, 8));
+        this->veredaCerrito.push_back(new Tiles(0.0f, posY2, 5));
 
     }
 
-    while (cerritoVereda.back()->getShape().getPosition().x < tamanioVentana.x)
+    while (veredaCerrito.back()->getShape().getPosition().x < tamanioVentana.x)
     {
-        if (cerritoVereda.size() > 2)
+        if (veredaCerrito.size() > 2)
         {
-            float posX = cerritoVereda.back()->getShape().getPosition().x + ANCHO_BARRERA;
-            this->cerritoVereda.push_back(new Tiles(posX, posY, 8));
-            this->cerritoVereda.push_back(new Tiles(posX, posY2, 5));
+            float posX = veredaCerrito.back()->getShape().getPosition().x + ANCHO_BARRERA;
+            this->veredaCerrito.push_back(new Tiles(posX, posY, 8));
+            this->veredaCerrito.push_back(new Tiles(posX, posY2, 5));
         }
 
-        float posX8 = cerritoVereda.back()->getShape().getPosition().x + ANCHO_BARRERA;
-        this->cerritoVereda.push_back(new Tiles(posX8, posY, 9));
-        this->cerritoVereda.push_back(new Tiles(posX8, posY2, 6));
+        float posX8 = veredaCerrito.back()->getShape().getPosition().x + ANCHO_BARRERA;
+        this->veredaCerrito.push_back(new Tiles(posX8, posY, 9));
+        this->veredaCerrito.push_back(new Tiles(posX8, posY2, 6));
 
-        float posX9 = cerritoVereda.back()->getShape().getPosition().x + ANCHO_BARRERA;
-        this->cerritoVereda.push_back(new Tiles(posX9, posY, 9));
-        this->cerritoVereda.push_back(new Tiles(posX9, posY2, 6));
+        float posX9 = veredaCerrito.back()->getShape().getPosition().x + ANCHO_BARRERA;
+        this->veredaCerrito.push_back(new Tiles(posX9, posY, 9));
+        this->veredaCerrito.push_back(new Tiles(posX9, posY2, 6));
 
-        float posX10 = cerritoVereda.back()->getShape().getPosition().x + ANCHO_BARRERA;
-        this->cerritoVereda.push_back(new Tiles(posX10, posY, 10));
-        this->cerritoVereda.push_back(new Tiles(posX10, posY2, 7));
+        float posX10 = veredaCerrito.back()->getShape().getPosition().x + ANCHO_BARRERA;
+        this->veredaCerrito.push_back(new Tiles(posX10, posY, 10));
+        this->veredaCerrito.push_back(new Tiles(posX10, posY2, 7));
 
 
         for (unsigned int i = 1; i <= 4; i++)
         {
-            float posX11 = cerritoVereda.back()->getShape().getPosition().x + ANCHO_BARRERA;
-            this->cerritoVereda.push_back(new Tiles(posX11, posY, 1));
-            this->cerritoVereda.push_back(new Tiles(posX11, posY2, 1));
+            float posX11 = veredaCerrito.back()->getShape().getPosition().x + ANCHO_BARRERA;
+            this->veredaCerrito.push_back(new Tiles(posX11, posY, 1));
+            this->veredaCerrito.push_back(new Tiles(posX11, posY2, 1));
 
         }
     }
@@ -115,40 +117,40 @@ void Mapa::crearCerrito(Vector2u tamanioVentana, float posY, float posY2)
 
 void Mapa::crearPellegrini(Vector2u tamanioVentana, float posY, float posY2)
 {
-    if (pellegriniVereda.empty())
+    if (veredaPellegrini.empty())
     {
-        this->pellegriniVereda.push_back(new Tiles(0.0f, posY, 2));
-        this->pellegriniVereda.push_back(new Tiles(0.0f, posY2, 5));
+        this->veredaPellegrini.push_back(new Tiles(0.0f, posY, 2));
+        this->veredaPellegrini.push_back(new Tiles(0.0f, posY2, 5));
 
     }
 
-    while (pellegriniVereda.back()->getShape().getPosition().x < tamanioVentana.x)
+    while (veredaPellegrini.back()->getShape().getPosition().x < tamanioVentana.x)
     {
-        if (pellegriniVereda.size() > 2)
+        if (veredaPellegrini.size() > 2)
         {
-            float posX = pellegriniVereda.back()->getShape().getPosition().x + ANCHO_BARRERA;
-            this->pellegriniVereda.push_back(new Tiles(posX, posY, 2));
-            this->pellegriniVereda.push_back(new Tiles(posX, posY2, 5));
+            float posX = veredaPellegrini.back()->getShape().getPosition().x + ANCHO_BARRERA;
+            this->veredaPellegrini.push_back(new Tiles(posX, posY, 2));
+            this->veredaPellegrini.push_back(new Tiles(posX, posY2, 5));
         }
 
-        float posX8 = pellegriniVereda.back()->getShape().getPosition().x + ANCHO_BARRERA;
-        this->pellegriniVereda.push_back(new Tiles(posX8, posY, 3));
-        this->pellegriniVereda.push_back(new Tiles(posX8, posY2, 6));
+        float posX8 = veredaPellegrini.back()->getShape().getPosition().x + ANCHO_BARRERA;
+        this->veredaPellegrini.push_back(new Tiles(posX8, posY, 3));
+        this->veredaPellegrini.push_back(new Tiles(posX8, posY2, 6));
 
-        float posX9 = pellegriniVereda.back()->getShape().getPosition().x + ANCHO_BARRERA;
-        this->pellegriniVereda.push_back(new Tiles(posX9, posY, 3));
-        this->pellegriniVereda.push_back(new Tiles(posX9, posY2, 6));
+        float posX9 = veredaPellegrini.back()->getShape().getPosition().x + ANCHO_BARRERA;
+        this->veredaPellegrini.push_back(new Tiles(posX9, posY, 3));
+        this->veredaPellegrini.push_back(new Tiles(posX9, posY2, 6));
 
-        float posX10 = pellegriniVereda.back()->getShape().getPosition().x + ANCHO_BARRERA;
-        this->pellegriniVereda.push_back(new Tiles(posX10, posY, 4));
-        this->pellegriniVereda.push_back(new Tiles(posX10, posY2, 7));
+        float posX10 = veredaPellegrini.back()->getShape().getPosition().x + ANCHO_BARRERA;
+        this->veredaPellegrini.push_back(new Tiles(posX10, posY, 4));
+        this->veredaPellegrini.push_back(new Tiles(posX10, posY2, 7));
 
 
         for (unsigned int i = 1; i <= 4; i++)
         {
-            float posX11 = pellegriniVereda.back()->getShape().getPosition().x + ANCHO_BARRERA;
-            this->pellegriniVereda.push_back(new Tiles(posX11, posY, 1));
-            this->pellegriniVereda.push_back(new Tiles(posX11, posY2, 1));
+            float posX11 = veredaPellegrini.back()->getShape().getPosition().x + ANCHO_BARRERA;
+            this->veredaPellegrini.push_back(new Tiles(posX11, posY, 1));
+            this->veredaPellegrini.push_back(new Tiles(posX11, posY2, 1));
 
         }
     }
@@ -194,7 +196,7 @@ void Mapa::crearCalle(std::vector<Tiles*>& vect, Vector2u tamanioVentana, float 
 
 void Mapa::draw(RenderWindow& window)
 {
-    for(Tiles* veredaCerrito: this->cerritoVereda)
+    for(Tiles* veredaCerrito: this->veredaCerrito)
         veredaCerrito->draw(window);
 
     for(Tiles* callCerrito: this->calleCerrito)
@@ -206,6 +208,9 @@ void Mapa::draw(RenderWindow& window)
     for(Tiles* nueveAuto1: this->nueveAutos1)
         nueveAuto1->draw(window);
 
+    for(Tiles* calleJersey1: this->calleBarrera1)
+        calleJersey1->draw(window);
+
     for(Tiles* nueveColectivo1: this->nueveColectivos1)
         nueveColectivo1->draw(window);
 
@@ -214,6 +219,9 @@ void Mapa::draw(RenderWindow& window)
 
     for(Tiles* nueveColectivo2: this->nueveColectivos2)
         nueveColectivo2->draw(window);
+
+    for(Tiles* calleJersey2: this->calleBarrera2)
+        calleJersey2->draw(window);
 
     for(Tiles* nueveAuto2: this->nueveAutos2)
         nueveAuto2->draw(window);
@@ -224,6 +232,6 @@ void Mapa::draw(RenderWindow& window)
     for(Tiles* callPellegrini: this->callePellegrini)
         callPellegrini->draw(window);
 
-    for(Tiles* veredaPellegrini: this->pellegriniVereda)
+    for(Tiles* veredaPellegrini: this->veredaPellegrini)
         veredaPellegrini->draw(window);
 }

@@ -18,10 +18,7 @@ BarreraJersey::BarreraJersey(float tamVentana, float posX, float posY)
 
         if (barrera.size() % 4 == 0)
         {
-            for(unsigned int i = 1; i <= 4; i++)
-            {
-                barrera.push_back(new Tiles(barrera.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, 1));
-            }
+                barrera.push_back(new Tiles(barrera.back()->getShape().getPosition().x + ESPACIO_ENTRE_CUADRAS, posY, 14));
         }
     }
 }
