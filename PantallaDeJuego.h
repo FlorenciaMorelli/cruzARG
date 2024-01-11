@@ -25,6 +25,7 @@ class PantallaDeJuego
         Trafico* traficoNueveJulioAutos2;
         Trafico* traficoCarlosPellegrini;
 
+
         BarreraJersey *barrera;
         BarreraJersey *barrera2;
         BarreraJersey *barrera3;
