@@ -26,30 +26,9 @@ class PantallaDeJuego
         Trafico* traficoCarlosPellegrini;
 
 
-        BarreraJersey *barrera;
+        BarreraJersey *barrera1;
         BarreraJersey *barrera2;
-        BarreraJersey *barrera3;
-        BarreraJersey *barrera4;
-        BarreraJersey *barrera5;
-        BarreraJersey *barrera6;
-        BarreraJersey *barrera7;
-        BarreraJersey *barrera8;
-        BarreraJersey *barrera9;
-        BarreraJersey *barrera10;
-        BarreraJersey *barrera11;
-        BarreraJersey *barrera12;
-        BarreraJersey *barrera13;
-        BarreraJersey *barrera14;
-        BarreraJersey *barrera15;
-        BarreraJersey *barrera16;
-        BarreraJersey *barrera17;
-        BarreraJersey *barrera18;
-        BarreraJersey *barrera19;
-        BarreraJersey *barrera20;
-        BarreraJersey *barrera21;
-        BarreraJersey *barrera22;
-        BarreraJersey *barrera23;
-        BarreraJersey *barrera24;
+
 
         Tiles *asfalto;
         Tiles *asfalto2;

@@ -46,6 +46,9 @@ Tiles::Tiles(float posX, float posY, int tipo)
     } else if (tipo == 13){
         this->shapeTexture.loadFromFile("./assets/asfaltoParalelo.png");
         shape.setTexture(&shapeTexture);
+    } else if (tipo == 14){
+        this->shapeTexture.loadFromFile("./assets/barreraJersey.png");
+        shape.setTexture(&shapeTexture);
     }
 
     shape.setPosition(Vector2f(posX, posY));
