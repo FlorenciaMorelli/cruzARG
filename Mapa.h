@@ -37,7 +37,7 @@ class Mapa
         void crearCalle(std::vector<Tiles*>& vect, Vector2u tamVentana, float posY);
 
 
-        void draw(RenderWindow& window);
+        void draw(RenderWindow& ventanaCruzARG);
 };
 
 #endif // MAPA_H

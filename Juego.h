@@ -13,10 +13,11 @@ using namespace sf;
 
 class Juego
 {
+    private:
+    RenderWindow *ventanaCruzARG;
+
     public:
         Juego();
-
-        void ejecutar();
 };
 
 #endif // JUEGO_H

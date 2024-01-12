@@ -17,9 +17,9 @@ class MainMenu
         Text salirDelJuego;
 
     public:
-        MainMenu();
+        MainMenu(RenderWindow& ventanaCruzARG);
 
-        void mostrarMenu();
+        void mostrarMenu(RenderWindow& ventanaCruzARG);
 };
 
 #endif // MAINMENU_H

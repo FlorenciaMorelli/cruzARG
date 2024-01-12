@@ -422,7 +422,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1704983530 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\main.cpp
+1705077607 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Juego.h"
@@ -1360,11 +1360,11 @@
 	"BaseObject.h"
 	<SFML/Graphics.hpp>
 
-1704983529 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.cpp
+1705077693 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.cpp
 	"Juego.h"
 	"MainMenu.h"
 
-1704983529 c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.h
+1705077625 c:\users\fmorelli.diagmaipu\documents\cruzarg\juego.h
 	<SFML/Graphics.hpp>
 	<vector>
 	"Tiles.h"
@@ -1438,13 +1438,13 @@
 	"DEFINITIONS.h"
 	"Tiles.h"
 
-1704993516 c:\users\fmorelli.diagmaipu\documents\cruzarg\mapa.h
+1705078687 c:\users\fmorelli.diagmaipu\documents\cruzarg\mapa.h
 	<SFML/Graphics.hpp>
 	<vector>
 	"DEFINITIONS.h"
 	"Tiles.h"
 
-1704993516 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\mapa.cpp
+1705078836 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\mapa.cpp
 	"Mapa.h"
 	<SFML/Graphics.hpp>
 	<vector>
@@ -1530,17 +1530,17 @@
 	<SFML/Graphics.hpp>
 	"PantallaDeJuego.h"
 
-1704983529 c:\users\fmorelli.diagmaipu\documents\cruzarg\mainmenu.h
+1705078825 c:\users\fmorelli.diagmaipu\documents\cruzarg\mainmenu.h
 	<iostream>
 	<SFML/Graphics.hpp>
 
-1704983529 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\mainmenu.cpp
+1705078825 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\mainmenu.cpp
 	"MainMenu.h"
 	<iostream>
 	<SFML/Graphics.hpp>
 	"PantallaDeJuego.h"
 
-1704993493 c:\users\fmorelli.diagmaipu\documents\cruzarg\pantalladejuego.h
+1705078687 c:\users\fmorelli.diagmaipu\documents\cruzarg\pantalladejuego.h
 	<SFML/Graphics.hpp>
 	<vector>
 	"Tiles.h"
@@ -1569,7 +1569,7 @@
 	<SFML/Graphics.hpp>
 	"DEFINITIONS.h"
 
-1704988892 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\pantalladejuego.cpp
+1705078687 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\pantalladejuego.cpp
 	"PantallaDeJuego.h"
 	<vector>
 	"DEFINITIONS.h"

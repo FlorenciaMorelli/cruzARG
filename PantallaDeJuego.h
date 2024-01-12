@@ -14,7 +14,6 @@ using namespace sf;
 class PantallaDeJuego
 {
     private:
-        RenderWindow *window;
         Personaje *personaje;
         Mapa *nueveDeJulio;
 
@@ -56,9 +55,9 @@ class PantallaDeJuego
         Tiles *asfalto24;
 
     public:
-        PantallaDeJuego();
+        PantallaDeJuego(RenderWindow& ventanaCruzARG);
 
-        void loop();
+        void loop(RenderWindow& ventanaCruzARG);
 };
 
 #endif // PANTALLADEJUEGO_H
