@@ -3,6 +3,8 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "PantallaDeJuego.h"
+#include "Instruccciones.h"
+
 
 using namespace sf;
 
@@ -32,11 +34,18 @@ MainMenu::MainMenu(RenderWindow& ventanaCruzARG)
     iniciarPartida.setPosition(ventanaCruzARG.getSize().x / 2.0, tituloJuego.getPosition().y + 350.0f);
     iniciarPartida.setCharacterSize(30);
 
+    comoJugar.setFont(fuenteTexto);
+    comoJugar.setString("Cómo jugar");
+    comoJugar.setColor(Color::Black);
+    comoJugar.setOrigin(comoJugar.getLocalBounds().width / 2, comoJugar.getLocalBounds().height / 2);
+    comoJugar.setPosition(ventanaCruzARG.getSize().x / 2.0, iniciarPartida.getPosition().y + 50.0f);
+    comoJugar.setCharacterSize(30);
+
     salirDelJuego.setFont(fuenteTexto);
     salirDelJuego.setString("Salir");
     salirDelJuego.setColor(Color::Black);
-    salirDelJuego.setOrigin(salirDelJuego.getLocalBounds().width / 2, tituloJuego.getLocalBounds().height / 2);
-    salirDelJuego.setPosition(ventanaCruzARG.getSize().x / 2.0, iniciarPartida.getPosition().y + 50.0f);
+    salirDelJuego.setOrigin(salirDelJuego.getLocalBounds().width / 2, salirDelJuego.getLocalBounds().height / 2);
+    salirDelJuego.setPosition(ventanaCruzARG.getSize().x / 2.0, comoJugar.getPosition().y + 50.0f);
     salirDelJuego.setCharacterSize(30);
 }
 
@@ -64,6 +73,11 @@ void MainMenu::mostrarMenu(RenderWindow& ventanaCruzARG) {
                     } else {
                         iniciarPartida.setFillColor(Color::White);
                     }
+                    if (comoJugar.getGlobalBounds().contains(evnt.mouseMove.x, evnt.mouseMove.y)) {
+                        comoJugar.setFillColor(Color::Yellow);
+                    } else {
+                        comoJugar.setFillColor(Color::White);
+                    }
                     if (salirDelJuego.getGlobalBounds().contains(evnt.mouseMove.x, evnt.mouseMove.y)) {
                         salirDelJuego.setFillColor(Color::Yellow);
                     } else {
@@ -76,6 +90,9 @@ void MainMenu::mostrarMenu(RenderWindow& ventanaCruzARG) {
                             ventanaCruzARG.clear(Color(150, 150, 150));
                             PantallaDeJuego juego(*this->ventanaMenu);
                             juego.loop(*this->ventanaMenu);
+                        } else if (comoJugar.getGlobalBounds().contains(evnt.mouseButton.x, evnt.mouseButton.y)) {
+                            Instruccciones instruc(*this->ventanaMenu);
+                            instruc.mostrar(*this->ventanaMenu);
                         } else if (salirDelJuego.getGlobalBounds().contains(evnt.mouseButton.x, evnt.mouseButton.y)) {
                             ventanaCruzARG.close();
                         }
@@ -89,6 +106,7 @@ void MainMenu::mostrarMenu(RenderWindow& ventanaCruzARG) {
         // Dibujar elementos en el menú
         ventanaCruzARG.draw(tituloJuego);
         ventanaCruzARG.draw(iniciarPartida);
+        ventanaCruzARG.draw(comoJugar);
         ventanaCruzARG.draw(salirDelJuego);
 
         ventanaCruzARG.display(); // Mostrar

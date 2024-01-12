@@ -59,6 +59,8 @@
 		<Unit filename="DEFINITIONS.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="Instruccciones.cpp" />
+		<Unit filename="Instruccciones.h" />
 		<Unit filename="Juego.cpp" />
 		<Unit filename="Juego.h" />
 		<Unit filename="MainMenu.cpp" />
