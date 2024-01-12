@@ -1530,15 +1530,16 @@
 	<SFML/Graphics.hpp>
 	"PantallaDeJuego.h"
 
-1705078825 c:\users\fmorelli.diagmaipu\documents\cruzarg\mainmenu.h
+1705080648 c:\users\fmorelli.diagmaipu\documents\cruzarg\mainmenu.h
 	<iostream>
 	<SFML/Graphics.hpp>
 
-1705078825 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\mainmenu.cpp
+1705081897 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\mainmenu.cpp
 	"MainMenu.h"
 	<iostream>
 	<SFML/Graphics.hpp>
 	"PantallaDeJuego.h"
+	"Instruccciones.h"
 
 1705078687 c:\users\fmorelli.diagmaipu\documents\cruzarg\pantalladejuego.h
 	<SFML/Graphics.hpp>
@@ -1575,4 +1576,14 @@
 	"DEFINITIONS.h"
 	"Tiles.h"
 	"Mapa.h"
+
+1705080665 c:\users\fmorelli.diagmaipu\documents\cruzarg\instruccciones.h
+	<iostream>
+	<SFML/Graphics.hpp>
+
+1705081213 source:c:\users\fmorelli.diagmaipu\documents\cruzarg\instruccciones.cpp
+	"Instruccciones.h"
+	<iostream>
+	<SFML/Graphics.hpp>
+	"MainMenu.h"
 
