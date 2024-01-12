@@ -194,44 +194,44 @@ void Mapa::crearCalle(std::vector<Tiles*>& vect, Vector2u tamanioVentana, float 
     }
 }
 
-void Mapa::draw(RenderWindow& window)
+void Mapa::draw(RenderWindow& ventanaCruzARG)
 {
     for(Tiles* veredaCerrito: this->veredaCerrito)
-        veredaCerrito->draw(window);
+        veredaCerrito->draw(ventanaCruzARG);
 
     for(Tiles* callCerrito: this->calleCerrito)
-        callCerrito->draw(window);
+        callCerrito->draw(ventanaCruzARG);
 
     for(Tiles* cantero1: this->canteroVector1)
-        cantero1->draw(window);
+        cantero1->draw(ventanaCruzARG);
 
     for(Tiles* nueveAuto1: this->nueveAutos1)
-        nueveAuto1->draw(window);
+        nueveAuto1->draw(ventanaCruzARG);
 
     for(Tiles* calleJersey1: this->calleBarrera1)
-        calleJersey1->draw(window);
+        calleJersey1->draw(ventanaCruzARG);
 
     for(Tiles* nueveColectivo1: this->nueveColectivos1)
-        nueveColectivo1->draw(window);
+        nueveColectivo1->draw(ventanaCruzARG);
 
     for(Tiles* metrobus : this->metrobusVector)
-        metrobus->draw(window);
+        metrobus->draw(ventanaCruzARG);
 
     for(Tiles* nueveColectivo2: this->nueveColectivos2)
-        nueveColectivo2->draw(window);
+        nueveColectivo2->draw(ventanaCruzARG);
 
     for(Tiles* calleJersey2: this->calleBarrera2)
-        calleJersey2->draw(window);
+        calleJersey2->draw(ventanaCruzARG);
 
     for(Tiles* nueveAuto2: this->nueveAutos2)
-        nueveAuto2->draw(window);
+        nueveAuto2->draw(ventanaCruzARG);
 
     for(Tiles* cantero2: this->canteroVector2)
-        cantero2->draw(window);
+        cantero2->draw(ventanaCruzARG);
 
     for(Tiles* callPellegrini: this->callePellegrini)
-        callPellegrini->draw(window);
+        callPellegrini->draw(ventanaCruzARG);
 
     for(Tiles* veredaPellegrini: this->veredaPellegrini)
-        veredaPellegrini->draw(window);
+        veredaPellegrini->draw(ventanaCruzARG);
 }

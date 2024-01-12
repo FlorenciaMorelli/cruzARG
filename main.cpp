@@ -6,9 +6,7 @@ using namespace sf;
 
 int main()
 {
-    Juego juego;
-
-    juego.ejecutar();
+    Juego();
 
     return 0;
 }

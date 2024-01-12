@@ -3,11 +3,8 @@
 
 Juego::Juego()
 {
+    this->ventanaCruzARG = new RenderWindow(VideoMode::getDesktopMode(), TITULO_JUEGO, Style::Close | Style::Fullscreen);
 
-}
-
-void Juego::ejecutar()
-{
-    MainMenu menu;
-    menu.mostrarMenu();
+    MainMenu menu(*ventanaCruzARG);
+    menu.mostrarMenu(*ventanaCruzARG);
 }
