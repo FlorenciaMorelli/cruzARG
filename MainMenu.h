@@ -14,6 +14,7 @@ class MainMenu
         Font fuenteTexto;
         Text tituloJuego;
         Text iniciarPartida;
+        Text comoJugar;
         Text salirDelJuego;
 
     public:
