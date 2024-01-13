@@ -31,4 +31,4 @@
 | 11-01-2024 | 12:55 | Modelo + Controlador | Alta | Corrección clase BarreraNewJersey e implementación |
 | 12-01-2024 | 14:00 | Vista | Alta | Mantener todo en la misma ventana |
 | 12-01-2024 | 15:00 | Controlador | Alta | Ventana Instrucciones |
-
+| 12-01-2024 | 15:15 | Controlador | Alta | Ventana Derrota |
