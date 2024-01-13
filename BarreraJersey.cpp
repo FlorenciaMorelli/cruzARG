@@ -1,5 +1,6 @@
 #include "BarreraJersey.h"
 #include "DEFINITIONS.h"
+#include "Derrota.h"
 
 using namespace sf;
 
@@ -32,7 +33,8 @@ void BarreraJersey::draw(RenderWindow& window) {
 bool BarreraJersey::checkCollision(Personaje* personaje, sf::RenderWindow& window) {
     for (auto& newJersey : barrera) {
         if (personaje->getShape().getGlobalBounds().intersects(newJersey->getShape().getGlobalBounds())) {
-            window.close();
+            Derrota perdiste(window);
+            perdiste.derrotado(window);
             return true;  // Colisión detectada
         }
     }

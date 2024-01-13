@@ -6,6 +6,7 @@
 
 #include "DEFINITIONS.h"
 #include <vector>
+#include "Derrota.h"
 
 using namespace sf;
 
@@ -104,7 +105,8 @@ void Trafico::draw(RenderWindow& window) {
 bool Trafico::checkCollision(Personaje* personaje, RenderWindow& window) {
     for (auto& vehiculo : vehiculos) {
         if (personaje->getShape().getGlobalBounds().intersects(vehiculo->getShape().getGlobalBounds())) {
-            window.close();
+            Derrota perdiste(window);
+            perdiste.derrotado(window);
             return true;  // Colisión detectada
         }
     }
