@@ -55,20 +55,20 @@ void Mapa::crearMetrobus(Vector2u tamanioVentana, float posY)
 {
     if (metrobusVector.empty())
     {
-        this->metrobusVector.push_back(new Tiles(0.0f, posY, 11));
+        this->metrobusVector.push_back(new Tiles(0.0f, posY, Metrobus));
     } else {
-        this->metrobusVector.push_back(new Tiles(metrobusVector.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, 11));
+        this->metrobusVector.push_back(new Tiles(metrobusVector.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, Metrobus));
     }
 
     while (metrobusVector.back()->getShape().getPosition().x < tamanioVentana.x)
     {
-        this->metrobusVector.push_back(new Tiles(metrobusVector.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, 11));
+        this->metrobusVector.push_back(new Tiles(metrobusVector.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, Metrobus));
 
         if (metrobusVector.size() % 4 == 0)
         {
             for(unsigned int i = 1; i <= 4; i++)
             {
-                this->metrobusVector.push_back(new Tiles(metrobusVector.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, 1));
+                this->metrobusVector.push_back(new Tiles(metrobusVector.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, Asfalto1));
             }
         }
     }
@@ -78,8 +78,8 @@ void Mapa::crearCerrito(Vector2u tamanioVentana, float posY, float posY2)
 {
     if (veredaCerrito.empty())
     {
-        this->veredaCerrito.push_back(new Tiles(0.0f, posY, 8));
-        this->veredaCerrito.push_back(new Tiles(0.0f, posY2, 5));
+        this->veredaCerrito.push_back(new Tiles(0.0f, posY, VeredaCerritoIzq));
+        this->veredaCerrito.push_back(new Tiles(0.0f, posY2, VeredaIzq));
 
     }
 
@@ -88,28 +88,28 @@ void Mapa::crearCerrito(Vector2u tamanioVentana, float posY, float posY2)
         if (veredaCerrito.size() > 2)
         {
             float posX = veredaCerrito.back()->getShape().getPosition().x + ANCHO_BARRERA;
-            this->veredaCerrito.push_back(new Tiles(posX, posY, 8));
-            this->veredaCerrito.push_back(new Tiles(posX, posY2, 5));
+            this->veredaCerrito.push_back(new Tiles(posX, posY, VeredaCerritoIzq));
+            this->veredaCerrito.push_back(new Tiles(posX, posY2, VeredaIzq));
         }
 
         float posX8 = veredaCerrito.back()->getShape().getPosition().x + ANCHO_BARRERA;
-        this->veredaCerrito.push_back(new Tiles(posX8, posY, 9));
-        this->veredaCerrito.push_back(new Tiles(posX8, posY2, 6));
+        this->veredaCerrito.push_back(new Tiles(posX8, posY, VeredaCerritoMed));
+        this->veredaCerrito.push_back(new Tiles(posX8, posY2, VeredaMed));
 
         float posX9 = veredaCerrito.back()->getShape().getPosition().x + ANCHO_BARRERA;
-        this->veredaCerrito.push_back(new Tiles(posX9, posY, 9));
-        this->veredaCerrito.push_back(new Tiles(posX9, posY2, 6));
+        this->veredaCerrito.push_back(new Tiles(posX9, posY, VeredaCerritoMed));
+        this->veredaCerrito.push_back(new Tiles(posX9, posY2, VeredaMed));
 
         float posX10 = veredaCerrito.back()->getShape().getPosition().x + ANCHO_BARRERA;
-        this->veredaCerrito.push_back(new Tiles(posX10, posY, 10));
-        this->veredaCerrito.push_back(new Tiles(posX10, posY2, 7));
+        this->veredaCerrito.push_back(new Tiles(posX10, posY, VeredaCerritoDer));
+        this->veredaCerrito.push_back(new Tiles(posX10, posY2, VeredaDer));
 
 
         for (unsigned int i = 1; i <= 4; i++)
         {
             float posX11 = veredaCerrito.back()->getShape().getPosition().x + ANCHO_BARRERA;
-            this->veredaCerrito.push_back(new Tiles(posX11, posY, 1));
-            this->veredaCerrito.push_back(new Tiles(posX11, posY2, 1));
+            this->veredaCerrito.push_back(new Tiles(posX11, posY, Asfalto1));
+            this->veredaCerrito.push_back(new Tiles(posX11, posY2, Asfalto1));
 
         }
     }
@@ -119,8 +119,8 @@ void Mapa::crearPellegrini(Vector2u tamanioVentana, float posY, float posY2)
 {
     if (veredaPellegrini.empty())
     {
-        this->veredaPellegrini.push_back(new Tiles(0.0f, posY, 2));
-        this->veredaPellegrini.push_back(new Tiles(0.0f, posY2, 5));
+        this->veredaPellegrini.push_back(new Tiles(0.0f, posY, VeredaPellegriniIzq));
+        this->veredaPellegrini.push_back(new Tiles(0.0f, posY2, VeredaIzq));
 
     }
 
@@ -129,28 +129,28 @@ void Mapa::crearPellegrini(Vector2u tamanioVentana, float posY, float posY2)
         if (veredaPellegrini.size() > 2)
         {
             float posX = veredaPellegrini.back()->getShape().getPosition().x + ANCHO_BARRERA;
-            this->veredaPellegrini.push_back(new Tiles(posX, posY, 2));
-            this->veredaPellegrini.push_back(new Tiles(posX, posY2, 5));
+            this->veredaPellegrini.push_back(new Tiles(posX, posY, VeredaPellegriniIzq));
+            this->veredaPellegrini.push_back(new Tiles(posX, posY2, VeredaIzq));
         }
 
         float posX8 = veredaPellegrini.back()->getShape().getPosition().x + ANCHO_BARRERA;
-        this->veredaPellegrini.push_back(new Tiles(posX8, posY, 3));
-        this->veredaPellegrini.push_back(new Tiles(posX8, posY2, 6));
+        this->veredaPellegrini.push_back(new Tiles(posX8, posY, VeredaPellegriniMed));
+        this->veredaPellegrini.push_back(new Tiles(posX8, posY2, VeredaMed));
 
         float posX9 = veredaPellegrini.back()->getShape().getPosition().x + ANCHO_BARRERA;
-        this->veredaPellegrini.push_back(new Tiles(posX9, posY, 3));
-        this->veredaPellegrini.push_back(new Tiles(posX9, posY2, 6));
+        this->veredaPellegrini.push_back(new Tiles(posX9, posY, VeredaPellegriniMed));
+        this->veredaPellegrini.push_back(new Tiles(posX9, posY2, VeredaMed));
 
         float posX10 = veredaPellegrini.back()->getShape().getPosition().x + ANCHO_BARRERA;
-        this->veredaPellegrini.push_back(new Tiles(posX10, posY, 4));
-        this->veredaPellegrini.push_back(new Tiles(posX10, posY2, 7));
+        this->veredaPellegrini.push_back(new Tiles(posX10, posY, VeredaPellegriniDer));
+        this->veredaPellegrini.push_back(new Tiles(posX10, posY2, VeredaDer));
 
 
         for (unsigned int i = 1; i <= 4; i++)
         {
             float posX11 = veredaPellegrini.back()->getShape().getPosition().x + ANCHO_BARRERA;
-            this->veredaPellegrini.push_back(new Tiles(posX11, posY, 1));
-            this->veredaPellegrini.push_back(new Tiles(posX11, posY2, 1));
+            this->veredaPellegrini.push_back(new Tiles(posX11, posY, Asfalto1));
+            this->veredaPellegrini.push_back(new Tiles(posX11, posY2, Asfalto1));
 
         }
     }
@@ -160,20 +160,20 @@ void Mapa::crearCantero(std::vector<Tiles*>& vect, Vector2u tamanioVentana, floa
 {
     if (vect.empty())
     {
-        vect.push_back(new Tiles(0.0f, posY, 12));
+        vect.push_back(new Tiles(0.0f, posY, Cantero));
     } else {
-        vect.push_back(new Tiles(vect.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, 12));
+        vect.push_back(new Tiles(vect.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, Cantero));
     }
 
     while (vect.back()->getShape().getPosition().x < tamanioVentana.x)
     {
-        vect.push_back(new Tiles(vect.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, 12));
+        vect.push_back(new Tiles(vect.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, Cantero));
 
         if (vect.size() % 4 == 0)
         {
             for(unsigned int i = 1; i <= 4; i++)
             {
-                vect.push_back(new Tiles(vect.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, 1));
+                vect.push_back(new Tiles(vect.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, Asfalto1));
             }
         }
     }
@@ -183,14 +183,14 @@ void Mapa::crearCalle(std::vector<Tiles*>& vect, Vector2u tamanioVentana, float 
 {
     if (vect.empty())
     {
-        vect.push_back(new Tiles(0.0f, posY, 13));
+        vect.push_back(new Tiles(0.0f, posY, Asfalto2));
     } else {
-        vect.push_back(new Tiles(vect.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, 13));
+        vect.push_back(new Tiles(vect.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, Asfalto2));
     }
 
     while (vect.back()->getShape().getPosition().x < tamanioVentana.x)
     {
-        vect.push_back(new Tiles(vect.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, 13));
+        vect.push_back(new Tiles(vect.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, Asfalto2));
     }
 }
 
