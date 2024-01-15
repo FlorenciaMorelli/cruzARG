@@ -1329,7 +1329,7 @@
 	"BaseObject.h"
 	<SFML/Graphics.hpp>
 
-1705170488 d:\2cuat2023\programacionii\proyectofinal\cruzarg\definitions.h
+1705358102 d:\2cuat2023\programacionii\proyectofinal\cruzarg\definitions.h
 
 1704940070 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\auto.cpp
 	"Auto.h"
@@ -1434,7 +1434,7 @@
 	"DEFINITIONS.h"
 	"Tiles.h"
 
-1705170490 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mapa.cpp
+1705355162 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mapa.cpp
 	"Mapa.h"
 	<SFML/Graphics.hpp>
 	<vector>
@@ -1513,14 +1513,14 @@
 	<iostream>
 	<SFML/Graphics.hpp>
 
-1705353204 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.cpp
+1705357614 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.cpp
 	"PantallaDeJuego.h"
 	<vector>
 	"DEFINITIONS.h"
 	"Tiles.h"
 	"Mapa.h"
 
-1705170490 d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.h
+1705357066 d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.h
 	<SFML/Graphics.hpp>
 	<vector>
 	"Tiles.h"
@@ -1528,6 +1528,7 @@
 	"Personaje.h"
 	"Trafico.h"
 	"BarreraJersey.h"
+	"Mate.h"
 
 1705351502 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mainmenu.cpp
 	"MainMenu.h"
@@ -1611,7 +1612,7 @@
 1704940070 d:\2cuat2023\programacionii\proyectofinal\cruzarg\\baseobject.h
 	<SFML/Graphics.hpp>
 
-1705170488 d:\2cuat2023\programacionii\proyectofinal\cruzarg\\definitions.h
+1705358102 d:\2cuat2023\programacionii\proyectofinal\cruzarg\\definitions.h
 
 1705170974 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\instruccciones.cpp
 	"Instruccciones.h"
@@ -1634,4 +1635,17 @@
 	"PantallaDeJuego.h"
 
 1705354740 d:\2cuat2023\programacionii\proyectofinal\cruzarg\tipodetiles.h
+
+1705357602 d:\2cuat2023\programacionii\proyectofinal\cruzarg\mate.h
+	<SFML/Graphics.hpp>
+	"BaseObject.h"
+	"DEFINITIONS.h"
+	"Personaje.h"
+
+1705358072 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mate.cpp
+	"Mate.h"
+	<cstdlib>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
 
