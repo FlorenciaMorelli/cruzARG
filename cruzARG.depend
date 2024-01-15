@@ -1636,11 +1636,12 @@
 
 1705354740 d:\2cuat2023\programacionii\proyectofinal\cruzarg\tipodetiles.h
 
-1705357602 d:\2cuat2023\programacionii\proyectofinal\cruzarg\mate.h
+1705359164 d:\2cuat2023\programacionii\proyectofinal\cruzarg\mate.h
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
 	"DEFINITIONS.h"
 	"Personaje.h"
+	"Victoria.h"
 
 1705358072 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mate.cpp
 	"Mate.h"
@@ -1648,4 +1649,14 @@
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
+
+1705358828 d:\2cuat2023\programacionii\proyectofinal\cruzarg\victoria.h
+	<iostream>
+	<SFML/Graphics.hpp>
+
+1705359018 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\victoria.cpp
+	"Victoria.h"
+	<iostream>
+	<SFML/Graphics.hpp>
+	"PantallaDeJuego.h"
 
