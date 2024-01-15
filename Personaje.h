@@ -13,6 +13,7 @@ class Personaje : public BaseObject
         ~Personaje();
 
         void move(Event evnt, Vector2u tamanioVentana);
+        void push(Event evnt);
 
 
 };

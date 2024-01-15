@@ -845,11 +845,11 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1704940070 d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.h
+1705353204 d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.h
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
 
-1704940070 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.cpp
+1705352600 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.cpp
 	"Personaje.h"
 	<SFML/Graphics.hpp>
 	"DEFINITIONS.h"
@@ -1409,7 +1409,7 @@
 	"DEFINITIONS.h"
 	<vector>
 
-1705174010 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\barrerajersey.cpp
+1705352808 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\barrerajersey.cpp
 	"BarreraJersey.h"
 	"DEFINITIONS.h"
 	"Derrota.h"
@@ -1512,7 +1512,7 @@
 	<iostream>
 	<SFML/Graphics.hpp>
 
-1705173388 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.cpp
+1705352654 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.cpp
 	"PantallaDeJuego.h"
 	<vector>
 	"DEFINITIONS.h"
@@ -1528,7 +1528,7 @@
 	"Trafico.h"
 	"BarreraJersey.h"
 
-1705170974 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mainmenu.cpp
+1705351502 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mainmenu.cpp
 	"MainMenu.h"
 	<iostream>
 	<SFML/Graphics.hpp>
@@ -1626,7 +1626,7 @@
 	<iostream>
 	<SFML/Graphics.hpp>
 
-1705171250 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\derrota.cpp
+1705351502 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\derrota.cpp
 	"Derrota.h"
 	<iostream>
 	<SFML/Graphics.hpp>
