@@ -64,7 +64,11 @@ void PantallaDeJuego::loop(RenderWindow& ventanaCruzARG)
                     }
                     break;
                 case Event::KeyReleased:
-                    personaje->move(evnt, ventanaCruzARG.getSize());
+                    if(!barrera1->checkCollision(personaje, ventanaCruzARG) && !barrera2->checkCollision(personaje, ventanaCruzARG)){
+                        personaje->move(evnt, ventanaCruzARG.getSize());
+                    } else {
+                        personaje->push(evnt);
+                    }
             }
         }
 
@@ -80,10 +84,8 @@ void PantallaDeJuego::loop(RenderWindow& ventanaCruzARG)
 
         traficoCerrito->checkCollision(personaje, ventanaCruzARG);
         traficoNueveJulioAutos1->checkCollision(personaje, ventanaCruzARG);
-        barrera1->checkCollision(personaje, ventanaCruzARG);
         traficoNueveJulioColectivos1->checkCollision(personaje, ventanaCruzARG);
         traficoNueveJulioColectivos2->checkCollision(personaje, ventanaCruzARG);
-        barrera2->checkCollision(personaje, ventanaCruzARG);
         traficoNueveJulioAutos2->checkCollision(personaje, ventanaCruzARG);
         traficoCarlosPellegrini->checkCollision(personaje, ventanaCruzARG);
 
@@ -91,7 +93,6 @@ void PantallaDeJuego::loop(RenderWindow& ventanaCruzARG)
         ventanaCruzARG.clear(Color(150, 150, 150)); //Color gris para el fondo de la ventanaCruzARG
 
         nueveDeJulio->draw(ventanaCruzARG);
-        personaje->draw(ventanaCruzARG);
 
         traficoCerrito->draw(ventanaCruzARG);
         traficoNueveJulioAutos1->draw(ventanaCruzARG);
@@ -101,6 +102,8 @@ void PantallaDeJuego::loop(RenderWindow& ventanaCruzARG)
         barrera2->draw(ventanaCruzARG);
         traficoNueveJulioAutos2->draw(ventanaCruzARG);
         traficoCarlosPellegrini->draw(ventanaCruzARG);
+
+        personaje->draw(ventanaCruzARG);
 
         ventanaCruzARG.display(); //Mostrar
     }

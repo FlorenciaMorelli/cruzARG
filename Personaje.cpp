@@ -52,3 +52,15 @@ void Personaje::move(Event evnt, Vector2u tamanioVentana)
             shape.move(0.0f, 0.0f);
         }
 }
+
+void Personaje::push(Event evnt)
+{
+    if(Keyboard::Key::Up == evnt.key.code)
+        shape.move(0.0f, PERSONAJE_CANT_MOVIMIENTO);
+    if(Keyboard::Key::Down == evnt.key.code)
+        shape.move(0.0f, -PERSONAJE_CANT_MOVIMIENTO);
+    if(Keyboard::Key::Left == evnt.key.code)
+        shape.move(PERSONAJE_CANT_MOVIMIENTO, 0.0f);
+    if(Keyboard::Key::Right == evnt.key.code)
+        shape.move(-PERSONAJE_CANT_MOVIMIENTO, 0.0f);
+}
