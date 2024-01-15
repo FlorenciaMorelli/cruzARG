@@ -68,6 +68,8 @@
 		<Unit filename="MainMenu.h" />
 		<Unit filename="Mapa.cpp" />
 		<Unit filename="Mapa.h" />
+		<Unit filename="Mate.cpp" />
+		<Unit filename="Mate.h" />
 		<Unit filename="PantallaDeJuego.cpp" />
 		<Unit filename="PantallaDeJuego.h" />
 		<Unit filename="Personaje.cpp" />

@@ -6,12 +6,14 @@
 #include "Tiles.h"
 #include "Mapa.h"
 
+
 using namespace sf;
 
 PantallaDeJuego::PantallaDeJuego(RenderWindow& ventanaCruzARG)
 {
     this->personaje = new Personaje(ventanaCruzARG.getSize());
     this->nueveDeJulio = new Mapa(ventanaCruzARG.getSize());
+    this->matecito = new Mate(ventanaCruzARG.getSize());
 
     float carriles =  ventanaCruzARG.getSize().y / 14.0f;
     float veredaCerrito1 = carriles * 0.0f;
@@ -89,6 +91,8 @@ void PantallaDeJuego::loop(RenderWindow& ventanaCruzARG)
         traficoNueveJulioAutos2->checkCollision(personaje, ventanaCruzARG);
         traficoCarlosPellegrini->checkCollision(personaje, ventanaCruzARG);
 
+        matecito->tomado(personaje);
+
 
         ventanaCruzARG.clear(Color(150, 150, 150)); //Color gris para el fondo de la ventanaCruzARG
 
@@ -102,6 +106,8 @@ void PantallaDeJuego::loop(RenderWindow& ventanaCruzARG)
         barrera2->draw(ventanaCruzARG);
         traficoNueveJulioAutos2->draw(ventanaCruzARG);
         traficoCarlosPellegrini->draw(ventanaCruzARG);
+
+        matecito->draw(ventanaCruzARG);
 
         personaje->draw(ventanaCruzARG);
 
