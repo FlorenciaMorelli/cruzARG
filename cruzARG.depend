@@ -1409,7 +1409,7 @@
 	"DEFINITIONS.h"
 	<vector>
 
-1705171250 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\barrerajersey.cpp
+1705174010 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\barrerajersey.cpp
 	"BarreraJersey.h"
 	"DEFINITIONS.h"
 	"Derrota.h"
@@ -1512,7 +1512,7 @@
 	<iostream>
 	<SFML/Graphics.hpp>
 
-1705170490 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.cpp
+1705173388 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.cpp
 	"PantallaDeJuego.h"
 	<vector>
 	"DEFINITIONS.h"
