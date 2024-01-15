@@ -91,7 +91,7 @@ void PantallaDeJuego::loop(RenderWindow& ventanaCruzARG)
         traficoNueveJulioAutos2->checkCollision(personaje, ventanaCruzARG);
         traficoCarlosPellegrini->checkCollision(personaje, ventanaCruzARG);
 
-        matecito->tomado(personaje);
+        matecito->tomado(personaje, ventanaCruzARG);
 
 
         ventanaCruzARG.clear(Color(150, 150, 150)); //Color gris para el fondo de la ventanaCruzARG

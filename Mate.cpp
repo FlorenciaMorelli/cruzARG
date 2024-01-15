@@ -20,9 +20,11 @@ Mate::Mate(Vector2u tamanioVentana)
     shape.setOrigin(TAMANO_MATE / 2, TAMANO_MATE / 2);
 }
 
-bool Mate::tomado(Personaje* personaje)
+bool Mate::tomado(Personaje* personaje, RenderWindow& window)
 {
     if (personaje->getShape().getGlobalBounds().intersects(shape.getGlobalBounds())) {
+            Victoria ganaste(window);
+            ganaste.ganador(window);
             return true;  // Colisión detectada
     }
 

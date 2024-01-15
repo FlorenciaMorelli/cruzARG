@@ -35,3 +35,5 @@
 | 15-01-2024 | 18:15 | Controlador | Alta | Corrección Coalisión con Barrera New Jersey|
 | 15-01-2024 | 18:45 | Controlador | Baja | Enum tipoDeTiles |
 | 15-01-2024 | 19:45 | Modelo | Alta | Clase Mate |
+| 15-01-2024 | 19:55 | Controlador | Alta | Ventana Victoria |
+
