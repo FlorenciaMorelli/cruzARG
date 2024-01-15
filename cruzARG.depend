@@ -849,7 +849,7 @@
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
 
-1705352600 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.cpp
+1705353204 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.cpp
 	"Personaje.h"
 	<SFML/Graphics.hpp>
 	"DEFINITIONS.h"
@@ -1409,7 +1409,7 @@
 	"DEFINITIONS.h"
 	<vector>
 
-1705352808 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\barrerajersey.cpp
+1705354818 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\barrerajersey.cpp
 	"BarreraJersey.h"
 	"DEFINITIONS.h"
 	"Derrota.h"
@@ -1418,11 +1418,12 @@
 	"Tiles.h"
 	"Personaje.h"
 
-1704940070 d:\2cuat2023\programacionii\proyectofinal\cruzarg\tiles.h
+1705354782 d:\2cuat2023\programacionii\proyectofinal\cruzarg\tiles.h
 	"BaseObject.h"
 	<vector>
+	"tipoDeTiles.h"
 
-1705170490 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\tiles.cpp
+1705354866 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\tiles.cpp
 	"Tiles.h"
 	"DEFINITIONS.h"
 	<vector>
@@ -1512,7 +1513,7 @@
 	<iostream>
 	<SFML/Graphics.hpp>
 
-1705352654 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.cpp
+1705353204 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.cpp
 	"PantallaDeJuego.h"
 	<vector>
 	"DEFINITIONS.h"
@@ -1631,4 +1632,6 @@
 	<iostream>
 	<SFML/Graphics.hpp>
 	"PantallaDeJuego.h"
+
+1705354740 d:\2cuat2023\programacionii\proyectofinal\cruzarg\tipodetiles.h
 

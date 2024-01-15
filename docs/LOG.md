@@ -33,3 +33,4 @@
 | 12-01-2024 | 15:00 | Controlador | Alta | Ventana Instrucciones |
 | 12-01-2024 | 15:15 | Controlador | Alta | Ventana Derrota |
 | 15-01-2024 | 18:15 | Controlador | Alta | Corrección Coalisión con Barrera New Jersey|
+| 15-01-2024 | 18:45 | Controlador | Baja | Enum tipoDeTiles |

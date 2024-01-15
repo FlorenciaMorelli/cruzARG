@@ -81,6 +81,9 @@
 		<Unit filename="Vehiculo.cpp" />
 		<Unit filename="Vehiculo.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="tipoDeTiles.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
