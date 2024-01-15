@@ -29,21 +29,21 @@ MainMenu::MainMenu(RenderWindow& ventanaCruzARG)
 
     iniciarPartida.setFont(fuenteTexto);
     iniciarPartida.setString("Iniciar Partida");
-    iniciarPartida.setColor(Color::Black);
+    iniciarPartida.setColor(Color::White);
     iniciarPartida.setOrigin(iniciarPartida.getLocalBounds().width / 2, iniciarPartida.getLocalBounds().height / 2);
     iniciarPartida.setPosition(ventanaCruzARG.getSize().x / 2.0, tituloJuego.getPosition().y + 350.0f);
     iniciarPartida.setCharacterSize(30);
 
     comoJugar.setFont(fuenteTexto);
     comoJugar.setString("Cómo jugar");
-    comoJugar.setColor(Color::Black);
+    comoJugar.setColor(Color::White);
     comoJugar.setOrigin(comoJugar.getLocalBounds().width / 2, comoJugar.getLocalBounds().height / 2);
     comoJugar.setPosition(ventanaCruzARG.getSize().x / 2.0, iniciarPartida.getPosition().y + 50.0f);
     comoJugar.setCharacterSize(30);
 
     salirDelJuego.setFont(fuenteTexto);
     salirDelJuego.setString("Salir");
-    salirDelJuego.setColor(Color::Black);
+    salirDelJuego.setColor(Color::White);
     salirDelJuego.setOrigin(salirDelJuego.getLocalBounds().width / 2, salirDelJuego.getLocalBounds().height / 2);
     salirDelJuego.setPosition(ventanaCruzARG.getSize().x / 2.0, comoJugar.getPosition().y + 50.0f);
     salirDelJuego.setCharacterSize(30);

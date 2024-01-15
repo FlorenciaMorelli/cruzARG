@@ -27,14 +27,14 @@ Derrota::Derrota(RenderWindow& ventanaCruzARG)
 
     volverAJugar.setFont(fuenteTexto);
     volverAJugar.setString("Volver a jugar");
-    volverAJugar.setColor(Color::Black);
+    volverAJugar.setColor(Color::White);
     volverAJugar.setOrigin(volverAJugar.getLocalBounds().width / 2, volverAJugar.getLocalBounds().height / 2);
     volverAJugar.setPosition(ventanaCruzARG.getSize().x / 2.0, tituloDerrota.getPosition().y + 350.0f);
     volverAJugar.setCharacterSize(30);
 
     salirDelJuego.setFont(fuenteTexto);
     salirDelJuego.setString("Salir");
-    salirDelJuego.setColor(Color::Black);
+    salirDelJuego.setColor(Color::White);
     salirDelJuego.setOrigin(salirDelJuego.getLocalBounds().width / 2, salirDelJuego.getLocalBounds().height / 2);
     salirDelJuego.setPosition(ventanaCruzARG.getSize().x / 2.0, volverAJugar.getPosition().y + 50.0f);
     salirDelJuego.setCharacterSize(30);
