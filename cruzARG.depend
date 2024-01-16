@@ -1329,7 +1329,7 @@
 	"BaseObject.h"
 	<SFML/Graphics.hpp>
 
-1705358102 d:\2cuat2023\programacionii\proyectofinal\cruzarg\definitions.h
+1705372588 d:\2cuat2023\programacionii\proyectofinal\cruzarg\definitions.h
 
 1704940070 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\auto.cpp
 	"Auto.h"
@@ -1514,14 +1514,14 @@
 	<SFML/Graphics.hpp>
 	"seleccionOpciones.h"
 
-1705365600 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.cpp
+1705372754 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.cpp
 	"PantallaDeJuego.h"
 	<vector>
 	"DEFINITIONS.h"
 	"Tiles.h"
 	"Mapa.h"
 
-1705365652 d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.h
+1705372588 d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.h
 	<SFML/Graphics.hpp>
 	<vector>
 	"Tiles.h"
@@ -1531,6 +1531,7 @@
 	"BarreraJersey.h"
 	"Mate.h"
 	"Derrota.h"
+	"Contador.h"
 
 1705362504 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mainmenu.cpp
 	"MainMenu.h"
@@ -1614,7 +1615,7 @@
 1704940070 d:\2cuat2023\programacionii\proyectofinal\cruzarg\\baseobject.h
 	<SFML/Graphics.hpp>
 
-1705358102 d:\2cuat2023\programacionii\proyectofinal\cruzarg\\definitions.h
+1705372588 d:\2cuat2023\programacionii\proyectofinal\cruzarg\\definitions.h
 
 1705362674 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\instruccciones.cpp
 	"Instruccciones.h"
@@ -1667,4 +1668,9 @@
 1705361970 d:\2cuat2023\programacionii\proyectofinal\cruzarg\opcionmainmenu.h
 
 1705362850 d:\2cuat2023\programacionii\proyectofinal\cruzarg\seleccionopciones.h
+
+1705372754 d:\2cuat2023\programacionii\proyectofinal\cruzarg\contador.h
+	<SFML/Graphics.hpp>
+	"DEFINITIONS.h"
+	"Derrota.h"
 

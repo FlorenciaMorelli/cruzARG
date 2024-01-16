@@ -55,6 +55,8 @@
 		<Unit filename="BaseObject.h" />
 		<Unit filename="Colectivo.cpp" />
 		<Unit filename="Colectivo.h" />
+		<Unit filename="Contador.cpp" />
+		<Unit filename="Contador.h" />
 		<Unit filename="DEFINITIONS.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>

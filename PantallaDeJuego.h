@@ -10,6 +10,7 @@
 #include "BarreraJersey.h"
 #include "Mate.h"
 #include "Derrota.h"
+#include "Contador.h"
 
 using namespace sf;
 
@@ -19,6 +20,7 @@ class PantallaDeJuego
         Personaje *personaje;
         Mapa *nueveDeJulio;
         Mate *matecito;
+        Contador *contador;
 
         Trafico* traficoCerrito;
         Trafico* traficoNueveJulioAutos1;
@@ -28,10 +30,6 @@ class PantallaDeJuego
         BarreraJersey *barrera2;
         Trafico* traficoNueveJulioAutos2;
         Trafico* traficoCarlosPellegrini;
-        Clock temporizador;
-        const int tiempoLimite = 10;
-        Font fuenteTexto;
-        Text temporizadorTexto;
 
 
     public:

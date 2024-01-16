@@ -38,3 +38,4 @@
 | 15-01-2024 | 19:55 | Controlador | Alta | Ventana Victoria |
 | 15-01-2024 | 21:05 | Controlador | Media | Manejo de menú con flechas de desplazamiento |
 | 15-01-2024 | 21:40 | Controlador | Alta | Temporizador |
+| 15-01-2024 | 23:45 | Modelo | Media | Clase Contador |
