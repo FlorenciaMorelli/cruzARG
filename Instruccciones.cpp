@@ -41,7 +41,7 @@ Instruccciones::Instruccciones(RenderWindow& ventanaCruzARG)
 
     volver.setFont(fuenteTexto);
     volver.setString("Volver");
-    volver.setColor(Color::Black);
+    volver.setColor(Color::Yellow);
     volver.setOrigin(volver.getLocalBounds().width / 2, 0.0);
     volver.setPosition(ventanaCruzARG.getSize().x / 2.0, controles.getPosition().y + objetivo.getGlobalBounds().getSize().y + 250.0f);
     volver.setCharacterSize(30);
@@ -61,25 +61,10 @@ void Instruccciones::mostrar(RenderWindow& ventanaCruzARG)
                     ventanaCruzARG.close(); //Cerrar
                     break;
                 case Event::KeyPressed: // Cerrar con ESC
-                    if(Keyboard::isKeyPressed(Keyboard::Escape))
-                    {
-                        ventanaCruzARG.close();
-                    }
-                    break;
-                case Event::MouseMoved: //Chequeamos el hover
-                    if (volver.getGlobalBounds().contains(evnt.mouseMove.x, evnt.mouseMove.y)) {
-                        volver.setFillColor(Color::Yellow);
-                    } else {
-                        volver.setFillColor(Color::White);
-                    }
-                    break;
-                case Event::MouseButtonPressed: // Evento de click. Iniciar partida o salir del juego
-                    if (evnt.mouseButton.button == Mouse::Left) {
-                        if (volver.getGlobalBounds().contains(evnt.mouseButton.x, evnt.mouseButton.y)) {
-                            ventanaCruzARG.clear(Color(150, 150, 150));
-                            MainMenu menu(ventanaCruzARG);
-                            menu.mostrarMenu(ventanaCruzARG);
-                        }
+                    if(Keyboard::isKeyPressed(Keyboard::Escape) || Keyboard::isKeyPressed(Keyboard::Enter)){
+                        ventanaCruzARG.clear(Color(150, 150, 150));
+                        MainMenu menu(ventanaCruzARG);
+                        menu.mostrarMenu(ventanaCruzARG);
                     }
                     break;
             }

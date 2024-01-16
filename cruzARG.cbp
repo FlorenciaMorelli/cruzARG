@@ -85,6 +85,7 @@
 		<Unit filename="Victoria.cpp" />
 		<Unit filename="Victoria.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="seleccionOpciones.h" />
 		<Unit filename="tipoDeTiles.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>

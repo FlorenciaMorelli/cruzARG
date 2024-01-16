@@ -29,7 +29,7 @@ MainMenu::MainMenu(RenderWindow& ventanaCruzARG)
 
     iniciarPartida.setFont(fuenteTexto);
     iniciarPartida.setString("Iniciar Partida");
-    iniciarPartida.setColor(Color::White);
+    iniciarPartida.setColor(Color::Yellow);
     iniciarPartida.setOrigin(iniciarPartida.getLocalBounds().width / 2, iniciarPartida.getLocalBounds().height / 2);
     iniciarPartida.setPosition(ventanaCruzARG.getSize().x / 2.0, tituloJuego.getPosition().y + 350.0f);
     iniciarPartida.setCharacterSize(30);
@@ -62,39 +62,52 @@ void MainMenu::mostrarMenu(RenderWindow& ventanaCruzARG) {
                     ventanaCruzARG.close(); //Cerrar
                     break;
                 case Event::KeyPressed: // Cerrar con ESC
-                    if(Keyboard::isKeyPressed(Keyboard::Escape))
-                    {
+                    if(Keyboard::isKeyPressed(Keyboard::Escape)){
                         ventanaCruzARG.close();
-                    }
-                    break;
-                case Event::MouseMoved: //Chequeamos el hover
-                    if (iniciarPartida.getGlobalBounds().contains(evnt.mouseMove.x, evnt.mouseMove.y)) {
-                        iniciarPartida.setFillColor(Color::Yellow);
-                    } else {
-                        iniciarPartida.setFillColor(Color::White);
-                    }
-                    if (comoJugar.getGlobalBounds().contains(evnt.mouseMove.x, evnt.mouseMove.y)) {
-                        comoJugar.setFillColor(Color::Yellow);
-                    } else {
-                        comoJugar.setFillColor(Color::White);
-                    }
-                    if (salirDelJuego.getGlobalBounds().contains(evnt.mouseMove.x, evnt.mouseMove.y)) {
-                        salirDelJuego.setFillColor(Color::Yellow);
-                    } else {
-                        salirDelJuego.setFillColor(Color::White);
-                    }
-                    break;
-                case Event::MouseButtonPressed: // Evento de click. Iniciar partida o salir del juego
-                    if (evnt.mouseButton.button == Mouse::Left) {
-                        if (iniciarPartida.getGlobalBounds().contains(evnt.mouseButton.x, evnt.mouseButton.y)) {
+                    } else if (Keyboard::isKeyPressed(Keyboard::Enter)){
+                        if(opcionSeleccionada == IniciarPartida){
                             ventanaCruzARG.clear(Color(150, 150, 150));
                             PantallaDeJuego juego(*this->ventanaMenu);
                             juego.loop(*this->ventanaMenu);
-                        } else if (comoJugar.getGlobalBounds().contains(evnt.mouseButton.x, evnt.mouseButton.y)) {
+                        } else if (opcionSeleccionada == ComoJugar){
                             Instruccciones instruc(*this->ventanaMenu);
                             instruc.mostrar(*this->ventanaMenu);
-                        } else if (salirDelJuego.getGlobalBounds().contains(evnt.mouseButton.x, evnt.mouseButton.y)) {
+                        } else {
                             ventanaCruzARG.close();
+                        }
+                    } else if (Keyboard::isKeyPressed(Keyboard::Down)){
+                        if (opcionSeleccionada == IniciarPartida){
+                            iniciarPartida.setFillColor(Color::White);
+                            comoJugar.setFillColor(Color::Yellow);
+                            salirDelJuego.setFillColor(Color::White);
+                            opcionSeleccionada = ComoJugar;
+                        } else if (opcionSeleccionada == ComoJugar){
+                            iniciarPartida.setFillColor(Color::White);
+                            comoJugar.setFillColor(Color::White);
+                            salirDelJuego.setFillColor(Color::Yellow);
+                            opcionSeleccionada = SalirDelJuego;
+                        } else {
+                            iniciarPartida.setFillColor(Color::Yellow);
+                            comoJugar.setFillColor(Color::White);
+                            salirDelJuego.setFillColor(Color::White);
+                            opcionSeleccionada = IniciarPartida;
+                        }
+                    } else if (Keyboard::isKeyPressed(Keyboard::Up)){
+                        if (opcionSeleccionada == IniciarPartida){
+                            iniciarPartida.setFillColor(Color::White);
+                            comoJugar.setFillColor(Color::White);
+                            salirDelJuego.setFillColor(Color::Yellow);
+                            opcionSeleccionada = SalirDelJuego;
+                        } else if (opcionSeleccionada == ComoJugar){
+                            iniciarPartida.setFillColor(Color::Yellow);
+                            comoJugar.setFillColor(Color::White);
+                            salirDelJuego.setFillColor(Color::White);
+                            opcionSeleccionada = IniciarPartida;
+                        } else {
+                            iniciarPartida.setFillColor(Color::White);
+                            comoJugar.setFillColor(Color::Yellow);
+                            salirDelJuego.setFillColor(Color::White);
+                            opcionSeleccionada = ComoJugar;
                         }
                     }
                     break;
