@@ -1509,11 +1509,12 @@
 	<vector>
 	"Derrota.h"
 
-1705170974 d:\2cuat2023\programacionii\proyectofinal\cruzarg\mainmenu.h
+1705362850 d:\2cuat2023\programacionii\proyectofinal\cruzarg\mainmenu.h
 	<iostream>
 	<SFML/Graphics.hpp>
+	"seleccionOpciones.h"
 
-1705357614 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.cpp
+1705359146 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.cpp
 	"PantallaDeJuego.h"
 	<vector>
 	"DEFINITIONS.h"
@@ -1530,7 +1531,7 @@
 	"BarreraJersey.h"
 	"Mate.h"
 
-1705351502 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mainmenu.cpp
+1705362504 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mainmenu.cpp
 	"MainMenu.h"
 	<iostream>
 	<SFML/Graphics.hpp>
@@ -1614,7 +1615,7 @@
 
 1705358102 d:\2cuat2023\programacionii\proyectofinal\cruzarg\\definitions.h
 
-1705170974 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\instruccciones.cpp
+1705362674 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\instruccciones.cpp
 	"Instruccciones.h"
 	<iostream>
 	<SFML/Graphics.hpp>
@@ -1624,9 +1625,10 @@
 	<iostream>
 	<SFML/Graphics.hpp>
 
-1705171250 d:\2cuat2023\programacionii\proyectofinal\cruzarg\derrota.h
+1705362850 d:\2cuat2023\programacionii\proyectofinal\cruzarg\derrota.h
 	<iostream>
 	<SFML/Graphics.hpp>
+	"seleccionOpciones.h"
 
 1705351502 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\derrota.cpp
 	"Derrota.h"
@@ -1643,20 +1645,25 @@
 	"Personaje.h"
 	"Victoria.h"
 
-1705358072 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mate.cpp
+1705359426 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mate.cpp
 	"Mate.h"
 	<cstdlib>
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 
-1705358828 d:\2cuat2023\programacionii\proyectofinal\cruzarg\victoria.h
+1705363418 d:\2cuat2023\programacionii\proyectofinal\cruzarg\victoria.h
 	<iostream>
 	<SFML/Graphics.hpp>
+	"seleccionOpciones.h"
 
 1705359018 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\victoria.cpp
 	"Victoria.h"
 	<iostream>
 	<SFML/Graphics.hpp>
 	"PantallaDeJuego.h"
+
+1705361970 d:\2cuat2023\programacionii\proyectofinal\cruzarg\opcionmainmenu.h
+
+1705362850 d:\2cuat2023\programacionii\proyectofinal\cruzarg\seleccionopciones.h
 

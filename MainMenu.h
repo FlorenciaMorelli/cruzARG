@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include "seleccionOpciones.h"
 
 using namespace sf;
 
@@ -16,6 +17,7 @@ class MainMenu
         Text iniciarPartida;
         Text comoJugar;
         Text salirDelJuego;
+        opciones opcionSeleccionada = IniciarPartida;
 
     public:
         MainMenu(RenderWindow& ventanaCruzARG);

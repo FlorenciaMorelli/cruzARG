@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include "seleccionOpciones.h"
 
 using namespace sf;
 
@@ -15,6 +16,7 @@ class Victoria
         Text tituloVictoria;
         Text nuevaPartida;
         Text salirDelJuego;
+        opciones opcionSeleccionada = IniciarPartida;
 
 
     public:

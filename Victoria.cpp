@@ -27,7 +27,7 @@ Victoria::Victoria(RenderWindow& ventanaCruzARG)
 
     nuevaPartida.setFont(fuenteTexto);
     nuevaPartida.setString("Nueva partida");
-    nuevaPartida.setColor(Color::White);
+    nuevaPartida.setColor(Color::Yellow);
     nuevaPartida.setOrigin(nuevaPartida.getLocalBounds().width / 2, nuevaPartida.getLocalBounds().height / 2);
     nuevaPartida.setPosition(ventanaCruzARG.getSize().x / 2.0, tituloVictoria.getPosition().y + 350.0f);
     nuevaPartida.setCharacterSize(30);
@@ -53,31 +53,35 @@ void Victoria::ganador(RenderWindow& ventanaCruzARG) {
                     ventanaCruzARG.close(); //Cerrar
                     break;
                 case Event::KeyPressed: // Cerrar con ESC
-                    if(Keyboard::isKeyPressed(Keyboard::Escape))
-                    {
+                    if(Keyboard::isKeyPressed(Keyboard::Escape)){
                         ventanaCruzARG.close();
-                    }
-                    break;
-                case Event::MouseMoved: //Chequeamos el hover
-                    if (nuevaPartida.getGlobalBounds().contains(evnt.mouseMove.x, evnt.mouseMove.y)) {
-                        nuevaPartida.setFillColor(Color::Yellow);
-                    } else {
-                        nuevaPartida.setFillColor(Color::White);
-                    }
-                    if (salirDelJuego.getGlobalBounds().contains(evnt.mouseMove.x, evnt.mouseMove.y)) {
-                        salirDelJuego.setFillColor(Color::Yellow);
-                    } else {
-                        salirDelJuego.setFillColor(Color::White);
-                    }
-                    break;
-                case Event::MouseButtonPressed: // Evento de click. Iniciar partida o salir del juego
-                    if (evnt.mouseButton.button == Mouse::Left) {
-                        if (nuevaPartida.getGlobalBounds().contains(evnt.mouseButton.x, evnt.mouseButton.y)) {
+                    } else if (Keyboard::isKeyPressed(Keyboard::Enter)){
+                        if(opcionSeleccionada == IniciarPartida){
                             ventanaCruzARG.clear(Color(150, 150, 150));
                             PantallaDeJuego juego(*this->ventanaVictoria);
                             juego.loop(*this->ventanaVictoria);
-                        } else if (salirDelJuego.getGlobalBounds().contains(evnt.mouseButton.x, evnt.mouseButton.y)) {
+                        } else {
                             ventanaCruzARG.close();
+                        }
+                    } else if (Keyboard::isKeyPressed(Keyboard::Down)){
+                        if (opcionSeleccionada == IniciarPartida){
+                            nuevaPartida.setFillColor(Color::White);
+                            salirDelJuego.setFillColor(Color::Yellow);
+                            opcionSeleccionada = SalirDelJuego;
+                        } else {
+                            nuevaPartida.setFillColor(Color::Yellow);
+                            salirDelJuego.setFillColor(Color::White);
+                            opcionSeleccionada = IniciarPartida;
+                        }
+                    } else if (Keyboard::isKeyPressed(Keyboard::Up)){
+                        if (opcionSeleccionada == IniciarPartida){
+                            nuevaPartida.setFillColor(Color::White);
+                            salirDelJuego.setFillColor(Color::Yellow);
+                            opcionSeleccionada = SalirDelJuego;
+                        } else {
+                            nuevaPartida.setFillColor(Color::Yellow);
+                            salirDelJuego.setFillColor(Color::White);
+                            opcionSeleccionada = IniciarPartida;
                         }
                     }
                     break;
