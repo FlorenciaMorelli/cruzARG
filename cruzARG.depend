@@ -1514,14 +1514,14 @@
 	<SFML/Graphics.hpp>
 	"seleccionOpciones.h"
 
-1705359146 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.cpp
+1705365600 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.cpp
 	"PantallaDeJuego.h"
 	<vector>
 	"DEFINITIONS.h"
 	"Tiles.h"
 	"Mapa.h"
 
-1705357066 d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.h
+1705365652 d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.h
 	<SFML/Graphics.hpp>
 	<vector>
 	"Tiles.h"
@@ -1530,6 +1530,7 @@
 	"Trafico.h"
 	"BarreraJersey.h"
 	"Mate.h"
+	"Derrota.h"
 
 1705362504 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mainmenu.cpp
 	"MainMenu.h"
@@ -1630,7 +1631,7 @@
 	<SFML/Graphics.hpp>
 	"seleccionOpciones.h"
 
-1705351502 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\derrota.cpp
+1705363418 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\derrota.cpp
 	"Derrota.h"
 	<iostream>
 	<SFML/Graphics.hpp>
@@ -1657,7 +1658,7 @@
 	<SFML/Graphics.hpp>
 	"seleccionOpciones.h"
 
-1705359018 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\victoria.cpp
+1705363418 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\victoria.cpp
 	"Victoria.h"
 	<iostream>
 	<SFML/Graphics.hpp>
