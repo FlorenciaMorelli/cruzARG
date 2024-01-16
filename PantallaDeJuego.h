@@ -9,6 +9,7 @@
 #include "Trafico.h"
 #include "BarreraJersey.h"
 #include "Mate.h"
+#include "Derrota.h"
 
 using namespace sf;
 
@@ -27,6 +28,10 @@ class PantallaDeJuego
         BarreraJersey *barrera2;
         Trafico* traficoNueveJulioAutos2;
         Trafico* traficoCarlosPellegrini;
+        Clock temporizador;
+        const int tiempoLimite = 10;
+        Font fuenteTexto;
+        Text temporizadorTexto;
 
 
     public:
