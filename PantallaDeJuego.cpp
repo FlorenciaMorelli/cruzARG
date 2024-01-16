@@ -14,7 +14,7 @@ PantallaDeJuego::PantallaDeJuego(RenderWindow& ventanaCruzARG)
     this->personaje = new Personaje(ventanaCruzARG.getSize());
     this->nueveDeJulio = new Mapa(ventanaCruzARG.getSize());
     this->matecito = new Mate(ventanaCruzARG.getSize());
-    temporizador.restart();
+    this->contador = new Contador(ventanaCruzARG.getSize());
 
     float carriles =  ventanaCruzARG.getSize().y / 14.0f;
     float veredaCerrito1 = carriles * 0.0f;
@@ -41,15 +41,6 @@ PantallaDeJuego::PantallaDeJuego(RenderWindow& ventanaCruzARG)
     this->barrera2 = new BarreraJersey(ventanaCruzARG.getSize().x, 0.0, newJersey2);
     this->traficoNueveJulioAutos2 = new Trafico(1, ventanaCruzARG.getSize().x, nueveJulioAutos2, true);
     this->traficoCarlosPellegrini = new Trafico(1, ventanaCruzARG.getSize().x, carlosPellegrini, true);
-
-
-    if(!fuenteTexto.loadFromFile("./assets/fonts/fuenteTexto.ttf")){
-        ventanaCruzARG.close();
-    }
-    temporizadorTexto.setFont(fuenteTexto);
-    temporizadorTexto.setCharacterSize(30);
-    temporizadorTexto.setFillColor(sf::Color::White);
-    temporizadorTexto.setPosition(10.0f, 10.0f);
 
     Image image;
     image.loadFromFile("./assets/icon.png");
@@ -86,17 +77,7 @@ void PantallaDeJuego::loop(RenderWindow& ventanaCruzARG)
 
         //Esto pasa en todos los frames
 
-        Time tiempoTranscurrido = temporizador.getElapsedTime();
-        int segundosRestantes = tiempoLimite - tiempoTranscurrido.asSeconds();
-
-        if(segundosRestantes <= 0){
-            Derrota perdiste(ventanaCruzARG);
-            perdiste.derrotado(ventanaCruzARG);
-
-            temporizador.restart();
-        }
-
-        temporizadorTexto.setString("Tiempo: " + std::to_string(segundosRestantes) + "s");
+        contador->cuentaRegresiva(ventanaCruzARG);
 
 
         traficoCerrito->move(ventanaCruzARG.getSize());
@@ -134,7 +115,7 @@ void PantallaDeJuego::loop(RenderWindow& ventanaCruzARG)
 
         personaje->draw(ventanaCruzARG);
 
-        ventanaCruzARG.draw(temporizadorTexto);
+        contador->draw(ventanaCruzARG);
 
         ventanaCruzARG.display(); //Mostrar
     }
