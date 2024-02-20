@@ -2,6 +2,7 @@
 #define DERROTA_H
 
 #include <iostream>
+#include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include "seleccionOpciones.h"
 
@@ -11,9 +12,14 @@ class Derrota
 {
     private:
         RenderWindow *ventanaDerrota;
-        Font fuenteTitulo;
+        SoundBuffer buffer;
+        Sound defeatSound;
+        SoundBuffer bufferArrow;
+        Sound arrowPressed;
+        Texture backgroundT;
         Font fuenteTexto;
-        Text tituloDerrota;
+        Color *textColor;
+        Sprite background;
         Text volverAJugar;
         Text salirDelJuego;
         opciones opcionSeleccionada = IniciarPartida;
