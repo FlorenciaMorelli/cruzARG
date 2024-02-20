@@ -1,8 +1,11 @@
 # depslib dependency file v1.0
-1708448670 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\main.cpp
+1708456798 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\main.cpp
+	"tau/tau.h"
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Juego.h"
+	"Personaje.h"
+	"Mate.h"
 
 1704420616 d:\2cuat2023\programacionii\proyectofinal\cruzarg\sfml\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -1795,4 +1798,41 @@
 1704420616 d:\2cuat2023\programacionii\proyectofinal\cruzarg\sfml\include\sfml\audio\soundfilewriter.hpp
 	<SFML/Audio/Export.hpp>
 	<string>
+
+1687866418 d:\2cuat2023\programacionii\proyectofinal\cruzarg\tau\tau.h
+	<tau/types.h>
+	<tau/misc.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	<errno.h>
+	<libgen.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/wait.h>
+	<signal.h>
+	<time.h>
+	<fcntl.h>
+	<sys/stat.h>
+	<windows.h>
+	<io.h>
+	<valgrind.h>
+	<exception>
+	<limits.h>
+	<time.h>
+	<sys/syscall.h>
+	<unistd.h>
+	<time.h>
+	<mach/mach_time.h>
+
+1687866418 d:\2cuat2023\programacionii\proyectofinal\cruzarg\tau\types.h
+	<tau/compilers.h>
+	<cstdint>
+	<stdint.h>
+
+1687866418 d:\2cuat2023\programacionii\proyectofinal\cruzarg\tau\compilers.h
+
+1687866418 d:\2cuat2023\programacionii\proyectofinal\cruzarg\tau\misc.h
+	<inttypes.h>
 
