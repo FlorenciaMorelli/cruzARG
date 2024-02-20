@@ -58,10 +58,10 @@ void MainMenu::mostrarMenu(RenderWindow& ventanaCruzARG) {
         Event evnt;
         while (ventanaCruzARG.pollEvent(evnt)) {
             switch(evnt.type) {
-                case Event::Closed: //Si se toca para cerrar
-                    ventanaCruzARG.close(); //Cerrar
+                case Event::Closed:
+                    ventanaCruzARG.close();
                     break;
-                case Event::KeyPressed: // Cerrar con ESC
+                case Event::KeyPressed:
                     if(Keyboard::isKeyPressed(Keyboard::Escape)){
                         arrowPressed.play();
                         ventanaCruzARG.close();
@@ -124,6 +124,6 @@ void MainMenu::mostrarMenu(RenderWindow& ventanaCruzARG) {
         ventanaCruzARG.draw(comoJugar);
         ventanaCruzARG.draw(salirDelJuego);
 
-        ventanaCruzARG.display(); // Mostrar
+        ventanaCruzARG.display();
     }
 }

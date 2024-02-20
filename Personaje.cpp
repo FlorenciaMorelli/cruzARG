@@ -9,7 +9,6 @@ using namespace sf;
 Personaje::Personaje(Vector2u tamanioVentana)
 {
     shape.setSize(Vector2f(ANCHO_PERSONAJE, ALTURA_PERSONAJE));
-    //Prueba de textura, no es la imagen correcta
     this->shapeTexture.loadFromFile("./assets/messi.png");
     shape.setTexture(&shapeTexture);
 
@@ -20,10 +19,7 @@ Personaje::Personaje(Vector2u tamanioVentana)
     shape.setOrigin(ANCHO_PERSONAJE / 2.0f, ALTURA_PERSONAJE);
 }
 
-Personaje::~Personaje()
-{
-    //dtor
-}
+Personaje::~Personaje(){}
 
 void Personaje::move(Event evnt, Vector2u tamanioVentana)
 {

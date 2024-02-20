@@ -4,10 +4,7 @@
 
 using namespace sf;
 
-BaseObject::BaseObject()
-{
-    //ctor
-}
+BaseObject::BaseObject(){}
 
 void BaseObject::draw(RenderWindow& window)
 {

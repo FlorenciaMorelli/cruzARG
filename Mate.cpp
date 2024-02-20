@@ -8,7 +8,6 @@
 Mate::Mate(Vector2u tamanioVentana)
 {
     shape.setSize(Vector2f(TAMANO_MATE, TAMANO_MATE));
-    //Prueba de textura, no es la imagen correcta
     this->shapeTexture.loadFromFile("./assets/mate.png");
     shape.setTexture(&shapeTexture);
 
@@ -25,8 +24,8 @@ bool Mate::tomado(Personaje* personaje, RenderWindow& window)
     if (personaje->getShape().getGlobalBounds().intersects(shape.getGlobalBounds())) {
             Victoria ganaste(window);
             ganaste.ganador(window);
-            return true;  // Colisión detectada
+            return true;
     }
 
-    return false;  // No hay colisión
+    return false;
 }

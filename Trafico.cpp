@@ -109,8 +109,8 @@ bool Trafico::checkCollision(Personaje* personaje, RenderWindow& window) {
         if (personaje->getShape().getGlobalBounds().intersects(vehiculo->getShape().getGlobalBounds())) {
             Derrota perdiste(window);
             perdiste.derrotado(window);
-            return true;  // Colisión detectada
+            return true;
         }
     }
-    return false;  // No hay colisión
+    return false;
 }
