@@ -849,7 +849,7 @@
 	<SFML/Graphics.hpp>
 	"BaseObject.h"
 
-1708450544 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.cpp
+1708454650 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\personaje.cpp
 	"Personaje.h"
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
@@ -1300,7 +1300,7 @@
 1704551200 source:e:\2cuat2023\programacionii\proyectofinal\cruzarg\src\juego.cpp
 	"Juego.h"
 
-1708452936 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.cpp
+1708453714 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\taxi.cpp
 	"Taxi.h"
 	<SFML/Audio.hpp>
 	<SFML/Graphics.hpp>
@@ -1311,12 +1311,12 @@
 	<SFML/Graphics.hpp>
 	"Vehiculo.h"
 
-1708452936 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.cpp
+1708453714 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.cpp
 	"Juego.h"
 	"MainMenu.h"
 	<SFML/Audio.hpp>
 
-1708452936 d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.h
+1708453714 d:\2cuat2023\programacionii\proyectofinal\cruzarg\juego.h
 	<SFML/Graphics.hpp>
 	<vector>
 	"Tiles.h"
@@ -1326,17 +1326,17 @@
 	"BarreraJersey.h"
 	<SFML/Audio.hpp>
 
-1708449848 d:\2cuat2023\programacionii\proyectofinal\cruzarg\baseobject.h
+1708455440 d:\2cuat2023\programacionii\proyectofinal\cruzarg\baseobject.h
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 
-1704940070 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\baseobject.cpp
+1708455440 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\baseobject.cpp
 	"BaseObject.h"
 	<SFML/Graphics.hpp>
 
 1705372588 d:\2cuat2023\programacionii\proyectofinal\cruzarg\definitions.h
 
-1708452936 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\auto.cpp
+1708453714 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\auto.cpp
 	"Auto.h"
 	<SFML/Audio.hpp>
 	<SFML/Graphics.hpp>
@@ -1415,7 +1415,7 @@
 	"DEFINITIONS.h"
 	<vector>
 
-1705354818 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\barrerajersey.cpp
+1708454650 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\barrerajersey.cpp
 	"BarreraJersey.h"
 	"DEFINITIONS.h"
 	"Derrota.h"
@@ -1429,7 +1429,7 @@
 	<vector>
 	"tipoDeTiles.h"
 
-1708439464 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\tiles.cpp
+1708453714 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\tiles.cpp
 	"Tiles.h"
 	"DEFINITIONS.h"
 	<vector>
@@ -1440,7 +1440,7 @@
 	"DEFINITIONS.h"
 	"Tiles.h"
 
-1708451250 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mapa.cpp
+1708454650 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mapa.cpp
 	"Mapa.h"
 	<SFML/Graphics.hpp>
 	<vector>
@@ -1492,7 +1492,7 @@
 	"BaseObject.h"
 	"DEFINITIONS.h"
 
-1708453308 d:\2cuat2023\programacionii\proyectofinal\cruzarg\trafico.h
+1708453714 d:\2cuat2023\programacionii\proyectofinal\cruzarg\trafico.h
 	<SFML/Graphics.hpp>
 	"DEFINITIONS.h"
 	"Auto.h"
@@ -1506,7 +1506,7 @@
 	"BaseObject.h"
 	"DEFINITIONS.h"
 
-1708453308 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\trafico.cpp
+1708454650 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\trafico.cpp
 	"Trafico.h"
 	<SFML/Graphics.hpp>
 	<cstdlib>
@@ -1515,20 +1515,20 @@
 	<vector>
 	"Derrota.h"
 
-1708452936 d:\2cuat2023\programacionii\proyectofinal\cruzarg\mainmenu.h
+1708453714 d:\2cuat2023\programacionii\proyectofinal\cruzarg\mainmenu.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	"seleccionOpciones.h"
 
-1708452384 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.cpp
+1708454650 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.cpp
 	"PantallaDeJuego.h"
 	<vector>
 	"DEFINITIONS.h"
 	"Tiles.h"
 	"Mapa.h"
 
-1708452854 d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.h
+1708453714 d:\2cuat2023\programacionii\proyectofinal\cruzarg\pantalladejuego.h
 	<SFML/Audio.hpp>
 	<SFML/Graphics.hpp>
 	<vector>
@@ -1541,7 +1541,7 @@
 	"Derrota.h"
 	"Contador.h"
 
-1708452936 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mainmenu.cpp
+1708454650 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mainmenu.cpp
 	"MainMenu.h"
 	<iostream>
 	<SFML/Graphics.hpp>
@@ -1606,7 +1606,7 @@
 	<SFML/Graphics.hpp>
 	"MainMenu.h"
 
-1708438550 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\colectivo.cpp
+1708453714 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\colectivo.cpp
 	"Colectivo.h"
 	"Vehiculo.h"
 	<cstdlib>
@@ -1629,30 +1629,30 @@
 
 1705372588 d:\2cuat2023\programacionii\proyectofinal\cruzarg\\definitions.h
 
-1708446872 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\instruccciones.cpp
+1708454650 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\instruccciones.cpp
 	"Instruccciones.h"
 	<iostream>
 	<SFML/Graphics.hpp>
 	"MainMenu.h"
 
-1708446242 d:\2cuat2023\programacionii\proyectofinal\cruzarg\instruccciones.h
+1708453714 d:\2cuat2023\programacionii\proyectofinal\cruzarg\instruccciones.h
 	<iostream>
 	<SFML/Graphics.hpp>
 
-1708453474 d:\2cuat2023\programacionii\proyectofinal\cruzarg\derrota.h
+1708453714 d:\2cuat2023\programacionii\proyectofinal\cruzarg\derrota.h
 	<iostream>
 	<SFML/Audio.hpp>
 	<SFML/Graphics.hpp>
 	"seleccionOpciones.h"
 
-1708453550 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\derrota.cpp
+1708454650 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\derrota.cpp
 	"Derrota.h"
 	<iostream>
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	"PantallaDeJuego.h"
 
-1708439904 d:\2cuat2023\programacionii\proyectofinal\cruzarg\tipodetiles.h
+1708453718 d:\2cuat2023\programacionii\proyectofinal\cruzarg\tipodetiles.h
 
 1705359164 d:\2cuat2023\programacionii\proyectofinal\cruzarg\mate.h
 	<SFML/Graphics.hpp>
@@ -1661,20 +1661,20 @@
 	"Personaje.h"
 	"Victoria.h"
 
-1705359426 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mate.cpp
+1708454650 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mate.cpp
 	"Mate.h"
 	<cstdlib>
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 
-1708449360 d:\2cuat2023\programacionii\proyectofinal\cruzarg\victoria.h
+1708453714 d:\2cuat2023\programacionii\proyectofinal\cruzarg\victoria.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	"seleccionOpciones.h"
 
-1708449360 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\victoria.cpp
+1708454650 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\victoria.cpp
 	"Victoria.h"
 	<iostream>
 	<SFML/Graphics.hpp>
