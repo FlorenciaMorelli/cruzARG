@@ -1,5 +1,7 @@
 #include "Colectivo.h"
 #include "Vehiculo.h"
+#include <cstdlib>
+#include <ctime>
 
 #include <SFML/Graphics.hpp>
 #include "DEFINITIONS.h"
@@ -12,13 +14,24 @@ Colectivo::Colectivo(float posX, float posY, bool direccion) : Vehiculo(posX, po
 
     this->direccion = direccion;
     if(direccion){
-        this->shapeTexture.loadFromFile("./assets/colectivoTrue.png");
-        shape.setTexture(&shapeTexture);
+        if (rand() % 3 == 0) {
+            this->shapeTexture.loadFromFile("./assets/colectivoTrue1.png");
+        } else if(rand() % 2 == 0){
+            this->shapeTexture.loadFromFile("./assets/colectivoTrue2.png");
+        } else {
+            this->shapeTexture.loadFromFile("./assets/colectivoTrue3.png");
+        }
     } else {
-        this->shapeTexture.loadFromFile("./assets/colectivoFalse.png");
-        shape.setTexture(&shapeTexture);
+        if (rand() % 3 == 0) {
+            this->shapeTexture.loadFromFile("./assets/colectivoFalse1.png");
+        } else if(rand() % 2 == 0){
+            this->shapeTexture.loadFromFile("./assets/colectivoFalse2.png");
+        } else {
+            this->shapeTexture.loadFromFile("./assets/colectivoFalse3.png");
+        }
     }
 
+    shape.setTexture(&shapeTexture);
     shape.setPosition(Vector2f(posX, posY));
     shape.setOrigin(Vector2f(shape.getSize().x / 2.0f, shape.getSize().y / 2.0f));
 
