@@ -75,8 +75,6 @@ void PantallaDeJuego::loop(RenderWindow& ventanaCruzARG)
             }
         }
 
-        //Esto pasa en todos los frames
-
         contador->cuentaRegresiva(ventanaCruzARG);
 
 
@@ -98,7 +96,7 @@ void PantallaDeJuego::loop(RenderWindow& ventanaCruzARG)
         matecito->tomado(personaje, ventanaCruzARG);
 
 
-        ventanaCruzARG.clear(Color(150, 150, 150)); //Color gris para el fondo de la ventanaCruzARG
+        ventanaCruzARG.clear(Color(150, 150, 150));
 
         nueveDeJulio->draw(ventanaCruzARG);
 

@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "PantallaDeJuego.h"
 
 using namespace sf;
@@ -10,26 +11,30 @@ Derrota::Derrota(RenderWindow& ventanaCruzARG)
 {
     this->ventanaDerrota = &ventanaCruzARG;
 
-    if(!fuenteTitulo.loadFromFile("./assets/fonts/fuenteTitulo.ttf")){
-        ventanaCruzARG.close();
-    }
+    backgroundT.loadFromFile("./assets/ventanaPerdedor.png");
+    background.setTexture(backgroundT);
+    background.setOrigin(background.getLocalBounds().width / 2.0, background.getLocalBounds().height / 2.0);
+    background.setPosition(ventanaCruzARG.getSize().x / 2.0, ventanaCruzARG.getSize().y / 2.0);
+
+    this->bufferArrow.loadFromFile("./assets/sounds/moveArrow.wav");
+    this->arrowPressed.setBuffer(bufferArrow);
+
+    this->buffer.loadFromFile("./assets/sounds/loose.wav");
+    this->defeatSound.setBuffer(buffer);
+
+    this->defeatSound.play();
+
+    this->textColor = new Color(132, 53, 17);
 
     if(!fuenteTexto.loadFromFile("./assets/fonts/fuenteTexto.ttf")){
         ventanaCruzARG.close();
     }
 
-
-    tituloDerrota.setFont(fuenteTitulo);
-    tituloDerrota.setString("Perdiste :(");
-    tituloDerrota.setOrigin(tituloDerrota.getLocalBounds().width / 2, tituloDerrota.getLocalBounds().height / 2);
-    tituloDerrota.setPosition(ventanaCruzARG.getSize().x / 2.0, ventanaCruzARG.getSize().y / 2 - 200.0f);
-//    tituloJuego.setCharacterSize(72);
-
     volverAJugar.setFont(fuenteTexto);
     volverAJugar.setString("Volver a jugar");
-    volverAJugar.setColor(Color::Yellow);
+    volverAJugar.setColor(*textColor);
     volverAJugar.setOrigin(volverAJugar.getLocalBounds().width / 2, volverAJugar.getLocalBounds().height / 2);
-    volverAJugar.setPosition(ventanaCruzARG.getSize().x / 2.0, tituloDerrota.getPosition().y + 350.0f);
+    volverAJugar.setPosition(ventanaCruzARG.getSize().x / 2.0, ventanaCruzARG.getSize().y / 2.0);
     volverAJugar.setCharacterSize(30);
 
     salirDelJuego.setFont(fuenteTexto);
@@ -54,8 +59,10 @@ void Derrota::derrotado(RenderWindow& ventanaCruzARG) {
                     break;
                 case Event::KeyPressed: // Cerrar con ESC
                     if(Keyboard::isKeyPressed(Keyboard::Escape)){
+                        arrowPressed.play();
                         ventanaCruzARG.close();
                     } else if (Keyboard::isKeyPressed(Keyboard::Enter)){
+                        arrowPressed.play();
                         if(opcionSeleccionada == IniciarPartida){
                             ventanaCruzARG.clear(Color(150, 150, 150));
                             PantallaDeJuego juego(*this->ventanaDerrota);
@@ -64,22 +71,24 @@ void Derrota::derrotado(RenderWindow& ventanaCruzARG) {
                             ventanaCruzARG.close();
                         }
                     } else if (Keyboard::isKeyPressed(Keyboard::Down)){
+                        arrowPressed.play();
                         if (opcionSeleccionada == IniciarPartida){
                             volverAJugar.setFillColor(Color::White);
-                            salirDelJuego.setFillColor(Color::Yellow);
+                            salirDelJuego.setFillColor(*textColor);
                             opcionSeleccionada = SalirDelJuego;
                         } else {
-                            volverAJugar.setFillColor(Color::Yellow);
+                            volverAJugar.setFillColor(*textColor);
                             salirDelJuego.setFillColor(Color::White);
                             opcionSeleccionada = IniciarPartida;
                         }
                     } else if (Keyboard::isKeyPressed(Keyboard::Up)){
+                        arrowPressed.play();
                         if (opcionSeleccionada == IniciarPartida){
                             volverAJugar.setFillColor(Color::White);
-                            salirDelJuego.setFillColor(Color::Yellow);
+                            salirDelJuego.setFillColor(*textColor);
                             opcionSeleccionada = SalirDelJuego;
                         } else {
-                            volverAJugar.setFillColor(Color::Yellow);
+                            volverAJugar.setFillColor(*textColor);
                             salirDelJuego.setFillColor(Color::White);
                             opcionSeleccionada = IniciarPartida;
                         }
@@ -88,13 +97,12 @@ void Derrota::derrotado(RenderWindow& ventanaCruzARG) {
             }
         }
 
-        ventanaCruzARG.clear(Color(150, 150, 150)); // Color gris para el fondo de la ventanaCruzARG
-
-        // Dibujar elementos en el menú
-        ventanaCruzARG.draw(tituloDerrota);
+        ventanaCruzARG.clear(Color(150, 150, 150));
+        defeatSound.play();
+        ventanaCruzARG.draw(background);
         ventanaCruzARG.draw(volverAJugar);
         ventanaCruzARG.draw(salirDelJuego);
 
-        ventanaCruzARG.display(); // Mostrar
+        ventanaCruzARG.display();
     }
 }

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "seleccionOpciones.h"
 
 using namespace sf;
@@ -11,9 +12,12 @@ class Victoria
 {
     private:
         RenderWindow *ventanaVictoria;
-        Font fuenteTitulo;
+        SoundBuffer buffer;
+        Sound winSound;
+        Texture backgroundT;
         Font fuenteTexto;
-        Text tituloVictoria;
+        Color *textColor;
+        Sprite background;
         Text nuevaPartida;
         Text salirDelJuego;
         opciones opcionSeleccionada = IniciarPartida;

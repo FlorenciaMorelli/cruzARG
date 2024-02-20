@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "seleccionOpciones.h"
 
 using namespace sf;
@@ -11,9 +12,12 @@ class MainMenu
 {
     private:
         RenderWindow *ventanaMenu;
-        Font fuenteTitulo;
+        SoundBuffer bufferArrow;
+        Sound arrowPressed;
+        Texture backgroundT;
         Font fuenteTexto;
-        Text tituloJuego;
+        Color *textColor;
+        Sprite background;
         Text iniciarPartida;
         Text comoJugar;
         Text salirDelJuego;

@@ -13,6 +13,9 @@ using namespace sf;
 
 class Trafico
 {
+    private:
+        std::vector<Vehiculo*> vehiculos;
+
     public:
         Trafico(int tipo, float tamVentana, float posY, bool direccion);
 
@@ -20,8 +23,6 @@ class Trafico
         void draw(RenderWindow& window);
         bool checkCollision(Personaje* personaje, RenderWindow& window);
 
-    private:
-        std::vector<Vehiculo*> vehiculos;
 };
 
 #endif // TRAFICO_H
