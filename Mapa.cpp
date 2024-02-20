@@ -160,21 +160,32 @@ void Mapa::crearCantero(std::vector<Tiles*>& vect, Vector2u tamanioVentana, floa
 {
     if (vect.empty())
     {
-        vect.push_back(new Tiles(0.0f, posY, Cantero));
-    } else {
-        vect.push_back(new Tiles(vect.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, Cantero));
+        vect.push_back(new Tiles(0.0f, posY, CanteroIzq));
     }
 
     while (vect.back()->getShape().getPosition().x < tamanioVentana.x)
     {
-        vect.push_back(new Tiles(vect.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, Cantero));
-
-        if (vect.size() % 4 == 0)
+        if (vect.size() > 2)
         {
-            for(unsigned int i = 1; i <= 4; i++)
-            {
-                vect.push_back(new Tiles(vect.back()->getShape().getPosition().x + ANCHO_BARRERA, posY, Asfalto1));
-            }
+            float posX = vect.back()->getShape().getPosition().x + ANCHO_BARRERA;
+            vect.push_back(new Tiles(posX, posY, CanteroIzq));
+        }
+
+        float posX2 = vect.back()->getShape().getPosition().x + ANCHO_BARRERA;
+        vect.push_back(new Tiles(posX2, posY, CanteroMed));
+
+        float posX3 = vect.back()->getShape().getPosition().x + ANCHO_BARRERA;
+        vect.push_back(new Tiles(posX3, posY, CanteroMed));
+
+        float posX4 = vect.back()->getShape().getPosition().x + ANCHO_BARRERA;
+        vect.push_back(new Tiles(posX4, posY, CanteroDer));
+
+
+        for (unsigned int i = 1; i <= 4; i++)
+        {
+            float posX5 = vect.back()->getShape().getPosition().x + ANCHO_BARRERA;
+            vect.push_back(new Tiles(posX5, posY, Asfalto1));
+
         }
     }
 }

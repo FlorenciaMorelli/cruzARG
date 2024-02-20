@@ -1423,7 +1423,7 @@
 	<vector>
 	"tipoDeTiles.h"
 
-1705354866 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\tiles.cpp
+1708439464 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\tiles.cpp
 	"Tiles.h"
 	"DEFINITIONS.h"
 	<vector>
@@ -1434,7 +1434,7 @@
 	"DEFINITIONS.h"
 	"Tiles.h"
 
-1705355162 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mapa.cpp
+1708439984 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\mapa.cpp
 	"Mapa.h"
 	<SFML/Graphics.hpp>
 	<vector>
@@ -1597,9 +1597,11 @@
 	<SFML/Graphics.hpp>
 	"MainMenu.h"
 
-1705170488 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\colectivo.cpp
+1708438550 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\colectivo.cpp
 	"Colectivo.h"
 	"Vehiculo.h"
+	<cstdlib>
+	<ctime>
 	<SFML/Graphics.hpp>
 	"DEFINITIONS.h"
 
@@ -1638,7 +1640,7 @@
 	<SFML/Graphics.hpp>
 	"PantallaDeJuego.h"
 
-1705354740 d:\2cuat2023\programacionii\proyectofinal\cruzarg\tipodetiles.h
+1708439904 d:\2cuat2023\programacionii\proyectofinal\cruzarg\tipodetiles.h
 
 1705359164 d:\2cuat2023\programacionii\proyectofinal\cruzarg\mate.h
 	<SFML/Graphics.hpp>
@@ -1673,4 +1675,7 @@
 	<SFML/Graphics.hpp>
 	"DEFINITIONS.h"
 	"Derrota.h"
+
+1705372982 source:d:\2cuat2023\programacionii\proyectofinal\cruzarg\contador.cpp
+	"Contador.h"
 
