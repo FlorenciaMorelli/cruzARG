@@ -19,6 +19,7 @@ class BaseObject
 
         void draw(RenderWindow& window);
         RectangleShape getShape() { return this->shape; } //Para detectar colisiones
+        void setPosicion(double posX, double posY);
 };
 
 #endif // BASEOBJECT_H
