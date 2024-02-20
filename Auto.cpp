@@ -1,5 +1,6 @@
 #include "Auto.h"
 
+#include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include "Vehiculo.h"
 #include "DEFINITIONS.h"

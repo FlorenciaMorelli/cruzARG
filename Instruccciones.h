@@ -10,11 +10,10 @@ class Instruccciones
 {
     private:
         RenderWindow *ventanaInstrucciones;
-        Font fuenteTitulo;
+        Texture backgroundT;
         Font fuenteTexto;
-        Text tituloInstrucciones;
-        Text controles;
-        Text objetivo;
+        Color *textColor;
+        Sprite background;
         Text volver;
 
 

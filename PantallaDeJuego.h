@@ -1,6 +1,7 @@
 #ifndef PANTALLADEJUEGO_H
 #define PANTALLADEJUEGO_H
 
+#include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include "Tiles.h"

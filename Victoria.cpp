@@ -10,26 +10,26 @@ Victoria::Victoria(RenderWindow& ventanaCruzARG)
 {
     this->ventanaVictoria = &ventanaCruzARG;
 
-    if(!fuenteTitulo.loadFromFile("./assets/fonts/fuenteTitulo.ttf")){
-        ventanaCruzARG.close();
-    }
+    backgroundT.loadFromFile("./assets/ventanaGanador.png");
+    background.setTexture(backgroundT);
+    background.setOrigin(background.getLocalBounds().width / 2.0, background.getLocalBounds().height / 2.0);
+    background.setPosition(ventanaCruzARG.getSize().x / 2.0, ventanaCruzARG.getSize().y / 2.0);
+
+    this->buffer.loadFromFile("./assets/sounds/win.wav");
+    this->winSound.setBuffer(buffer);
+
+
+    this->textColor = new Color(132, 53, 17);
 
     if(!fuenteTexto.loadFromFile("./assets/fonts/fuenteTexto.ttf")){
         ventanaCruzARG.close();
     }
 
-
-    tituloVictoria.setFont(fuenteTitulo);
-    tituloVictoria.setString("Ganaste, campeon del mundo");
-    tituloVictoria.setOrigin(tituloVictoria.getLocalBounds().width / 2, tituloVictoria.getLocalBounds().height / 2);
-    tituloVictoria.setPosition(ventanaCruzARG.getSize().x / 2.0, ventanaCruzARG.getSize().y / 2 - 200.0f);
-//    tituloVictoria.setCharacterSize(72);
-
     nuevaPartida.setFont(fuenteTexto);
     nuevaPartida.setString("Nueva partida");
-    nuevaPartida.setColor(Color::Yellow);
+    nuevaPartida.setColor(*textColor);
     nuevaPartida.setOrigin(nuevaPartida.getLocalBounds().width / 2, nuevaPartida.getLocalBounds().height / 2);
-    nuevaPartida.setPosition(ventanaCruzARG.getSize().x / 2.0, tituloVictoria.getPosition().y + 350.0f);
+    nuevaPartida.setPosition(ventanaCruzARG.getSize().x / 2.0, ventanaCruzARG.getSize().y / 2.0 - 120.0);
     nuevaPartida.setCharacterSize(30);
 
     salirDelJuego.setFont(fuenteTexto);
@@ -66,20 +66,20 @@ void Victoria::ganador(RenderWindow& ventanaCruzARG) {
                     } else if (Keyboard::isKeyPressed(Keyboard::Down)){
                         if (opcionSeleccionada == IniciarPartida){
                             nuevaPartida.setFillColor(Color::White);
-                            salirDelJuego.setFillColor(Color::Yellow);
+                            salirDelJuego.setFillColor(*textColor);
                             opcionSeleccionada = SalirDelJuego;
                         } else {
-                            nuevaPartida.setFillColor(Color::Yellow);
+                            nuevaPartida.setFillColor(*textColor);
                             salirDelJuego.setFillColor(Color::White);
                             opcionSeleccionada = IniciarPartida;
                         }
                     } else if (Keyboard::isKeyPressed(Keyboard::Up)){
                         if (opcionSeleccionada == IniciarPartida){
                             nuevaPartida.setFillColor(Color::White);
-                            salirDelJuego.setFillColor(Color::Yellow);
+                            salirDelJuego.setFillColor(*textColor);
                             opcionSeleccionada = SalirDelJuego;
                         } else {
-                            nuevaPartida.setFillColor(Color::Yellow);
+                            nuevaPartida.setFillColor(*textColor);
                             salirDelJuego.setFillColor(Color::White);
                             opcionSeleccionada = IniciarPartida;
                         }
@@ -88,13 +88,13 @@ void Victoria::ganador(RenderWindow& ventanaCruzARG) {
             }
         }
 
-        ventanaCruzARG.clear(Color(150, 150, 150)); // Color gris para el fondo de la ventanaCruzARG
+        ventanaCruzARG.clear(Color(150, 150, 150));
 
-        // Dibujar elementos en el menú
-        ventanaCruzARG.draw(tituloVictoria);
+        winSound.play();
+        ventanaCruzARG.draw(background);
         ventanaCruzARG.draw(nuevaPartida);
         ventanaCruzARG.draw(salirDelJuego);
 
-        ventanaCruzARG.display(); // Mostrar
+        ventanaCruzARG.display();
     }
 }
