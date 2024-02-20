@@ -8,7 +8,7 @@ using namespace sf;
 
 class BaseObject
 {
-    protected: // accesible en esta clase y en las clases que la heredan
+    protected:
         RectangleShape shape;
         Texture shapeTexture;
         SoundBuffer soundBuffer;
@@ -18,7 +18,7 @@ class BaseObject
         BaseObject();
 
         void draw(RenderWindow& window);
-        RectangleShape getShape() { return this->shape; } //Para detectar colisiones
+        RectangleShape getShape() { return this->shape; }
 };
 
 #endif // BASEOBJECT_H

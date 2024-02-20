@@ -50,15 +50,15 @@ PantallaDeJuego::PantallaDeJuego(RenderWindow& ventanaCruzARG)
 
 void PantallaDeJuego::loop(RenderWindow& ventanaCruzARG)
 {
-    while (ventanaCruzARG.isOpen()) //Mientras que la ventanaCruzARG est� abierta
+    while (ventanaCruzARG.isOpen())
     {
         Event evnt;
         while (ventanaCruzARG.pollEvent(evnt))
         {
             switch(evnt.type)
             {
-                case Event::Closed: //Si se toca para cerrar
-                    ventanaCruzARG.close(); //Cerrar
+                case Event::Closed:
+                    ventanaCruzARG.close();
                     break;
                 case Event::KeyPressed:
                     if(Keyboard::isKeyPressed(Keyboard::Escape))
@@ -115,6 +115,6 @@ void PantallaDeJuego::loop(RenderWindow& ventanaCruzARG)
 
         contador->draw(ventanaCruzARG);
 
-        ventanaCruzARG.display(); //Mostrar
+        ventanaCruzARG.display();
     }
 }

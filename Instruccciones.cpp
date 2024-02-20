@@ -39,10 +39,10 @@ void Instruccciones::mostrar(RenderWindow& ventanaCruzARG)
         Event evnt;
         while (ventanaCruzARG.pollEvent(evnt)) {
             switch(evnt.type) {
-                case Event::Closed: //Si se toca para cerrar
-                    ventanaCruzARG.close(); //Cerrar
+                case Event::Closed:
+                    ventanaCruzARG.close();
                     break;
-                case Event::KeyPressed: // Cerrar con ESC
+                case Event::KeyPressed:
                     if(Keyboard::isKeyPressed(Keyboard::Escape) || Keyboard::isKeyPressed(Keyboard::Enter)){
                         ventanaCruzARG.clear(Color(150, 150, 150));
                         MainMenu menu(ventanaCruzARG);
@@ -52,10 +52,10 @@ void Instruccciones::mostrar(RenderWindow& ventanaCruzARG)
             }
         }
 
-        ventanaCruzARG.clear(Color(150, 150, 150)); // Color gris para el fondo de la ventanaCruzARG
+        ventanaCruzARG.clear(Color(150, 150, 150));
         ventanaCruzARG.draw(background);
         ventanaCruzARG.draw(volver);
 
-        ventanaCruzARG.display(); // Mostrar
+        ventanaCruzARG.display();
     }
 }

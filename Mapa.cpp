@@ -45,10 +45,7 @@ Mapa::Mapa(Vector2u tamVentana)
 
 }
 
-Mapa::~Mapa()
-{
-    //dtor
-}
+Mapa::~Mapa(){}
 
 
 void Mapa::crearMetrobus(Vector2u tamanioVentana, float posY)

@@ -33,8 +33,8 @@ void BarreraJersey::draw(RenderWindow& window) {
 bool BarreraJersey::checkCollision(Personaje* personaje, sf::RenderWindow& window) {
     for (auto& newJersey : barrera) {
         if (personaje->getShape().getGlobalBounds().intersects(newJersey->getShape().getGlobalBounds())) {
-            return true;  // Colisión detectada
+            return true;
         }
     }
-    return false;  // No hay colisión
+    return false;
 }
