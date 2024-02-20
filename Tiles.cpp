@@ -43,8 +43,14 @@ Tiles::Tiles(float posX, float posY, tipoDeTiles tipo)
     } else if (tipo == Metrobus){
         this->shapeTexture.loadFromFile("./assets/metrobus.png");
         shape.setTexture(&shapeTexture);
-    } else if (tipo == Cantero){
-        this->shapeTexture.loadFromFile("./assets/planta.png");
+    } else if (tipo == CanteroIzq){
+        this->shapeTexture.loadFromFile("./assets/canteroIzq.png");
+        shape.setTexture(&shapeTexture);
+    } else if (tipo == CanteroMed){
+        this->shapeTexture.loadFromFile("./assets/canteroMed.png");
+        shape.setTexture(&shapeTexture);
+    } else if (tipo == CanteroDer){
+        this->shapeTexture.loadFromFile("./assets/canteroDer.png");
         shape.setTexture(&shapeTexture);
     } else if (tipo == Barrera){
         this->shapeTexture.loadFromFile("./assets/barreraJersey.png");

@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "PantallaDeJuego.h"
 #include "Instruccciones.h"
 
@@ -12,26 +13,25 @@ MainMenu::MainMenu(RenderWindow& ventanaCruzARG)
 {
     this->ventanaMenu = &ventanaCruzARG;
 
-    if(!fuenteTitulo.loadFromFile("./assets/fonts/fuenteTitulo.ttf")){
-        ventanaCruzARG.close();
-    }
+    backgroundT.loadFromFile("./assets/background.png");
+    background.setTexture(backgroundT);
+    background.setOrigin(background.getLocalBounds().width / 2.0, background.getLocalBounds().height / 2.0);
+    background.setPosition(ventanaCruzARG.getSize().x / 2.0, ventanaCruzARG.getSize().y / 2.0);
+
+    this->bufferArrow.loadFromFile("./assets/sounds/moveArrow.wav");
+    this->arrowPressed.setBuffer(bufferArrow);
+
+    this->textColor = new Color(132, 53, 17);
 
     if(!fuenteTexto.loadFromFile("./assets/fonts/fuenteTexto.ttf")){
         ventanaCruzARG.close();
     }
 
-
-    tituloJuego.setFont(fuenteTitulo);
-    tituloJuego.setString("CruzARG");
-    tituloJuego.setOrigin(tituloJuego.getLocalBounds().width / 2, tituloJuego.getLocalBounds().height / 2);
-    tituloJuego.setPosition(ventanaCruzARG.getSize().x / 2.0, ventanaCruzARG.getSize().y / 2 - 200.0f);
-//    tituloJuego.setCharacterSize(72);
-
     iniciarPartida.setFont(fuenteTexto);
     iniciarPartida.setString("Iniciar Partida");
-    iniciarPartida.setColor(Color::Yellow);
+    iniciarPartida.setColor(*textColor);
     iniciarPartida.setOrigin(iniciarPartida.getLocalBounds().width / 2, iniciarPartida.getLocalBounds().height / 2);
-    iniciarPartida.setPosition(ventanaCruzARG.getSize().x / 2.0, tituloJuego.getPosition().y + 350.0f);
+    iniciarPartida.setPosition(ventanaCruzARG.getSize().x / 2.0, ventanaCruzARG.getSize().y / 2.0);
     iniciarPartida.setCharacterSize(30);
 
     comoJugar.setFont(fuenteTexto);
@@ -63,8 +63,10 @@ void MainMenu::mostrarMenu(RenderWindow& ventanaCruzARG) {
                     break;
                 case Event::KeyPressed: // Cerrar con ESC
                     if(Keyboard::isKeyPressed(Keyboard::Escape)){
+                        arrowPressed.play();
                         ventanaCruzARG.close();
                     } else if (Keyboard::isKeyPressed(Keyboard::Enter)){
+                        arrowPressed.play();
                         if(opcionSeleccionada == IniciarPartida){
                             ventanaCruzARG.clear(Color(150, 150, 150));
                             PantallaDeJuego juego(*this->ventanaMenu);
@@ -76,36 +78,38 @@ void MainMenu::mostrarMenu(RenderWindow& ventanaCruzARG) {
                             ventanaCruzARG.close();
                         }
                     } else if (Keyboard::isKeyPressed(Keyboard::Down)){
+                        arrowPressed.play();
                         if (opcionSeleccionada == IniciarPartida){
                             iniciarPartida.setFillColor(Color::White);
-                            comoJugar.setFillColor(Color::Yellow);
+                            comoJugar.setFillColor(*textColor);
                             salirDelJuego.setFillColor(Color::White);
                             opcionSeleccionada = ComoJugar;
                         } else if (opcionSeleccionada == ComoJugar){
                             iniciarPartida.setFillColor(Color::White);
                             comoJugar.setFillColor(Color::White);
-                            salirDelJuego.setFillColor(Color::Yellow);
+                            salirDelJuego.setFillColor(*textColor);
                             opcionSeleccionada = SalirDelJuego;
                         } else {
-                            iniciarPartida.setFillColor(Color::Yellow);
+                            iniciarPartida.setFillColor(*textColor);
                             comoJugar.setFillColor(Color::White);
                             salirDelJuego.setFillColor(Color::White);
                             opcionSeleccionada = IniciarPartida;
                         }
                     } else if (Keyboard::isKeyPressed(Keyboard::Up)){
+                        arrowPressed.play();
                         if (opcionSeleccionada == IniciarPartida){
                             iniciarPartida.setFillColor(Color::White);
                             comoJugar.setFillColor(Color::White);
-                            salirDelJuego.setFillColor(Color::Yellow);
+                            salirDelJuego.setFillColor(*textColor);
                             opcionSeleccionada = SalirDelJuego;
                         } else if (opcionSeleccionada == ComoJugar){
-                            iniciarPartida.setFillColor(Color::Yellow);
+                            iniciarPartida.setFillColor(*textColor);
                             comoJugar.setFillColor(Color::White);
                             salirDelJuego.setFillColor(Color::White);
                             opcionSeleccionada = IniciarPartida;
                         } else {
                             iniciarPartida.setFillColor(Color::White);
-                            comoJugar.setFillColor(Color::Yellow);
+                            comoJugar.setFillColor(*textColor);
                             salirDelJuego.setFillColor(Color::White);
                             opcionSeleccionada = ComoJugar;
                         }
@@ -114,10 +118,8 @@ void MainMenu::mostrarMenu(RenderWindow& ventanaCruzARG) {
             }
         }
 
-        ventanaCruzARG.clear(Color(150, 150, 150)); // Color gris para el fondo de la ventanaCruzARG
-
-        // Dibujar elementos en el menú
-        ventanaCruzARG.draw(tituloJuego);
+        ventanaCruzARG.clear(Color(150, 150, 150));
+        ventanaCruzARG.draw(background);
         ventanaCruzARG.draw(iniciarPartida);
         ventanaCruzARG.draw(comoJugar);
         ventanaCruzARG.draw(salirDelJuego);

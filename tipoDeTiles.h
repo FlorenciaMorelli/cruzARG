@@ -14,7 +14,9 @@ enum tipoDeTiles{
     VeredaMed,
     VeredaDer,
     Metrobus,
-    Cantero,
+    CanteroIzq,
+    CanteroMed,
+    CanteroDer,
     Barrera
 };
 

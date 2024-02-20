@@ -10,7 +10,8 @@
 
 using namespace sf;
 
-Trafico::Trafico(int tipo, float tamVentana, float posY, bool direccion) {
+Trafico::Trafico(int tipo, float tamVentana, float posY, bool direccion)
+{
     float posX = 0.0;
     if(tipo == 1){
         if(direccion){
@@ -90,7 +91,8 @@ Trafico::Trafico(int tipo, float tamVentana, float posY, bool direccion) {
 
 }
 
-void Trafico::move(const Vector2u& tamVentana) {
+void Trafico::move(const Vector2u& tamVentana)
+{
     for (auto& vehiculo : vehiculos) {
         vehiculo->move(tamVentana);
     }
